@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="750,465" roundcorner="5,5" caption="0,0,0,30">
+    <Include source="config.xml" />
+    <Default name="CheckBox" value="height=&quot;16&quot; align=&quot;left&quot; textpadding=&quot;16,0,0,0&quot; padding=&quot;0,0,0,0&quot; normalimage=&quot;file='YTing/checkbox.png' source='0,0,13,13' dest='0,2,13,15'&quot; selectedimage=&quot;file='YTing/checkbox.png' source='23,0,36,13' dest='0,2,13,15'&quot; selectedhotimage=&quot;file='YTing/checkbox.png' source='23,0,36,13' dest='0,2,13,15'&quot;"/>
+    <HorizontalLayout name="BK" bkimage="file=&apos;YTing/bg_007.jpg&apos; corner=&apos;5,5,5,5&apos;">
+        <VerticalLayout bordersize="0"  inset="1,1,1,1" bkimage="file='YTing/border.png' corner='5,5,5,5' hole='true'">
+            <VerticalLayout bkimage="file=&apos;YTing/popwnd_mask.png&apos; corner=&apos;3,35,3,3&apos;">
+                <!--topCaption-->
+                <HorizontalLayout height="34">
+                    <Label name="title" text="更换皮肤" float="true" pos="2,2,0,0" width="82" height="30" textpadding="5,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="5" />
+                    <Control />
+                   <FadeButton name="close" width="25" height="26" tooltip="关闭"
+            		normalimage="file=&apos;YTing/sys-close.png&apos; source=&apos;0,0,25,26&apos;"
+            		hotimage="file=&apos;YTing/sys-close.png&apos; source=&apos;25,0,50,26&apos;"
+            		pushedimage="file=&apos;YTing/sys-close.png&apos; source=&apos;50,0,75,26&apos;"/>
+            	<Control width="4"/>
+                </HorizontalLayout>
+                <!--End topCaption-->
+                <Control height="1" bkcolor="#FFD9E4EB" />
+                <HorizontalLayout height="24" padding="0,4,0,0">
+                    <FadeOption name="tab1" text="系统皮肤" width="70" padding="20,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" selected="true"
+                     		 hotimage="file=&apos;YTing/btn_skinwnd_tab.png&apos; source=&apos;2,0,7,26&apos; corner=&apos;2,2,2,2&apos;" group="skintab" 
+                     		 selectedimage="file=&apos;YTing/btn_skinwnd_tab.png&apos; source=&apos;8,0,13,26&apos; corner=&apos;2,2,2,2&apos;" tag="0"/>
+                    <FadeOption name="tab2" text="我的皮肤" width="70" padding="20,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" 
+                    		 hotimage="file=&apos;YTing/btn_skinwnd_tab.png&apos; source=&apos;2,0,7,26&apos; corner=&apos;2,2,2,2&apos;" group="skintab" 
+                    		 selectedimage="file=&apos;YTing/btn_skinwnd_tab.png&apos; source=&apos;8,0,13,26&apos; corner=&apos;2,2,2,2&apos;" tag="1"/>
+                    <FadeOption name="tab3" text="网络推荐" width="70" padding="20,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" 
+                             hotimage="file=&apos;YTing/btn_skinwnd_tab.png&apos; source=&apos;2,0,7,26&apos; corner=&apos;2,2,2,2&apos;" group="skintab" 
+                             selectedimage="file=&apos;YTing/btn_skinwnd_tab.png&apos; source=&apos;8,0,13,26&apos; corner=&apos;2,2,2,2&apos;" tag="2"/>
+                </HorizontalLayout>
+                <AnimationTabLayout name="tabs" padding="10,2,10,0">
+                    <SysSkin name="SysSkinLayout" header="hidden"  menu="true"  itemshowhtml="true"
+      			 vscrollbar="true" scrollselect="false" itemendellipsis="true" bordersize="0" childpadding="1" tag="0"
+      		    	 itemselectedimage="YTing\mask.png" itemhotimage="YTing\mask.png">
+                        
+                    </SysSkin>
+                    <MySkin name="MySkinLayout" header="hidden"  menu="true"   itemshowhtml="true"
+      	 		vscrollbar="true" scrollselect="false" itemendellipsis="true" bordersize="0" childpadding="1" tag="1"
+      	 		 itemselectedimage="YTing\mask.png" itemhotimage="YTing\mask.png">
+                        
+                    </MySkin>
+                     <WebBrowser name="web_skin" autonavi="true" vscrollbar="false" hscrollbar="false" homepage="http://localhost/YMusic/WebSkin/index.html" tag="2"/>
+                </AnimationTabLayout>
+                <!--/TabLayout-->
+                <HorizontalLayout height="25" padding="10,2,10,0" >
+	             <CheckBox float="true" pos="9, 5, 0, 0" width="100" name="wndalpha" text="开启透明" />
+                    <Slider float="true" pos="100,5,0,0" width="260" height="15" name="alpha" visible="false" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" min="0" max="255" value="255" hor="true" thumbimage="file=&apos;YTing\Main\progress-btn-volume.png&apos; source=&apos;0,0,7,15&apos; corner=&apos;4,0,4,0&apos;" thumbhotimage="file=&apos;YTing\Main\progress-btn-volume.png&apos; source=&apos;0,15,7,30&apos; corner=&apos;4,0,4,0&apos;" thumbpushedimage="file=&apos;YTing\Main\progress-btn-volume.png&apos; source=&apos;0,30,7,45&apos; corner=&apos;4,0,4,0&apos;" thumbsize="7,15" />
+                </HorizontalLayout>
+	</VerticalLayout>
+        </VerticalLayout>
+    </HorizontalLayout>
+</Window>

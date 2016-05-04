@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StyleConfigure>
+	<Style name="prev" width="30" height="25" tooltip="上一曲" 
+          normalimage="file=&apos;YTing/Main/control-prev.png&apos; source=&apos;0,0,30,25&apos;"
+          hotimage="file=&apos;YTing/Main/control-prev.png&apos; source=&apos;0,25,30,50&apos;"
+          pushedimage="file=&apos;YTing/Main/control-prev.png&apos; source=&apos;0,50,30,75&apos;" />
+      <Style name="play"  width="30" height="25" tag="1" tooltip="播放"
+          normalimage="file=&apos;YTing/Main/control-play.png&apos; source=&apos;0,0,30,25&apos;"
+          hotimage="file=&apos;YTing/Main/control-play.png&apos; source=&apos;0,25,30,50&apos;"
+          pushedimage="file=&apos;YTing/Main/control-play.png&apos; source=&apos;0,50,30,75&apos;" />
+      <Style name="pause"  width="30" height="25" tag="0" tooltip="暂停"  visible="false"
+          normalimage="file=&apos;YTing/Main/control-pause.png&apos; source=&apos;0,0,30,25&apos;"
+          hotimage="file=&apos;YTing/Main/control-pause.png&apos; source=&apos;0,25,30,50&apos;"
+          pushedimage="file=&apos;YTing/Main/control-pause.png&apos; source=&apos;0,50,30,75&apos;" />
+     <Style name="next" width="30" height="25" tooltip="下一曲" 
+          normalimage="file=&apos;YTing/Main/control-next.png&apos; source=&apos;0,0,30,25&apos;"
+          hotimage="file=&apos;YTing/Main/control-next.png&apos; source=&apos;0,25,30,50&apos;"
+          pushedimage="file=&apos;YTing/Main/control-next.png&apos; source=&apos;0,50,30,75&apos;"/>
+     <Style name="volume" tooltip="静音" width="30"
+          normalimage="file='YTing/Main/control-volume.png' source='0,0,30,25'"
+          hotimage="file='YTing/Main/control-volume.png' source='0,25,30,50'"
+          pushedimage="file='YTing/Main/control-volume.png' source='0,50,30,75'"
+          selectedimage="file='YTing/Main/control-volume-off.png' source='0,0,30,25'"
+          selectedhotimage="file='YTing/Main/control-volume-off.png' source='0,25,30,50'"
+          selectedpushedimage="file='YTing/Main/control-volume-off.png' source='0,50,30,75'"/>
+      <Style name="listMode" tooltip="顺序播放" height="25" menu="true" userdata="play_mode" tag="0"
+                      normalimage="file='YTing/Main/control-mode-list.png' source='0,0,30,25'"
+                      hotimage="file='YTing/Main/control-mode-list.png' source='0,25,30,50'"
+                      pushedimage="file='YTing/Main/control-mode-list.png' source='0,50,30,75'"/>
+     <Style  name="listLoopMode" tooltip="列表循环" height="25" menu="true" userdata="play_mode" tag="1"
+                      normalimage="file='YTing/Main/control-mode-listloop.png' source='0,0,30,25'"
+                      hotimage="file='YTing/Main/control-mode-listloop.png' source='0,25,30,50'"
+                      pushedimage="file='YTing/Main/control-mode-listloop.png' source='0,50,30,75'"/>
+     <Style name="singleMode" tooltip="单曲播放" height="25" menu="true" userdata="play_mode" tag="2"
+                      normalimage="file='YTing/Main/control-mode-listloop.png' source='0,0,30,25'"
+                      hotimage="file='YTing/Main/control-mode-listloop.png' source='0,25,30,50'"
+                      pushedimage="file='YTing/Main/control-mode-listloop.png' source='0,50,30,75'"/>
+     <Style  name="singleLoopMode" tooltip="单曲循环" height="25" menu="true" userdata="play_mode" tag="3"
+                      normalimage="file='YTing/Main/control-mode-singleloop.png' source='0,0,30,25'"
+                      hotimage="file='YTing/Main/control-mode-singleloop.png' source='0,25,30,50'"
+                      pushedimage="file='YTing/Main/control-mode-singleloop.png' source='0,50,30,75'"/>
+     <Style name="randomMode" tooltip="随机播放" height="25" menu="true" userdata="play_mode" tag="4"
+                      normalimage="file='YTing/Main/control-mode-random.png' source='0,0,30,25'"
+                      hotimage="file='YTing/Main/control-mode-random.png' source='0,25,30,50'"
+                      pushedimage="file='YTing/Main/control-mode-random.png' source='0,50,30,75'"/>
+     <Style name="lrc" width="30" tooltip="歌词" tag="1"
+                      normalimage="file='YTing/Main/control-lyric.png' source='0,0,30,25'"
+                      hotimage="file='YTing/Main/control-lyric.png' source='0,25,30,50'"
+                      pushedimage="file='YTing/Main/control-lyric.png' source='0,50,30,75'"
+                      selectedimage="file='YTing/Main/control-lyric.png' source='0,0,30,25'"
+                      selectedhotimage="file='YTing/Main/control-lyric.png' source='0,25,30,50'"
+                      selectedpushedimage="file='YTing/Main/control-lyric.png' source='0,50,30,75'"/>
+     <Style name="volume_slider"  maxwidth="80" value="50" height="15" padding="0,5,0,5" tooltip="调整音量"
+                thumbsize="7,15" min="0" max="100"
+                thumbimage="file='YTing/Main/progress-btn-volume.png'  source='0,0,7,15'" 
+                thumbhotimage="file='YTing/Main/progress-btn-volume.png'  source='0,15,7,30'" 
+                thumbpushedimage="file='YTing/Main/progress-btn-volume.png' source='0,30,7,45'" />
+     <Style name="similarsong" tooltip="漫游歌曲" width="30"
+          normalimage="file='YTing/Main/control-similar.png' source='0,0,30,25'"
+          hotimage="file='YTing/Main/control-similar.png' source='0,25,30,50'"
+          pushedimage="file='YTing/Main/control-similar.png' source='0,50,30,75'"/>
+</StyleConfigure>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window>
+  <Include source="style002.xml"/>
+  <Control width="10" />
+  <AlbumButton name="albumlogo" style="albumlogo"/>
+  <Control width="5" />
+  <VerticalLayout>
+    <Control height="5" />
+    <HorizontalLayout height="17">
+      <HorizontalLayout>
+        <Label name="songname" style="songname" />
+      </HorizontalLayout>
+      <FadeCheckBox name="collect" style="collect"/>
+      <Control width="2"/>
+      <FadeButton name="share" style="share"/>
+    </HorizontalLayout>
+    <Control height="2" />
+    <Label name="author" style="author"/>
+    <HorizontalLayout>
+      <Label name="time_used" style="time_used"/>
+      <Control />
+      <Label name="time_total" style="time_total"/>
+    </HorizontalLayout>
+    <HorizontalLayout height="15">
+      <Progress name="downpro" mouse="false" />
+      <HorizontalLayout pos="0,0,227,13" float="true" relativepos="0,0,100,0">
+        <Slider name="playpro"  tooltip="调整进度"  enabled="false" mouse="false" min="0" max="1000" value="0"/>
+      </HorizontalLayout>
+    </HorizontalLayout>
+  </VerticalLayout>
+  <Control width="10" />
+</Window>

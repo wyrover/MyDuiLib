@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="457,335" roundcorner="5,5" caption="0,0,0,30">
+   <HorizontalLayout height="100" childpadding="1">
+   	<AlbumButton name="image_1" width="140" visible="true"
+         bkhotimage=""
+         normalimage=""
+         hotimage=""
+         pushedimage=""/>
+   <AlbumButton name="image_2" width="140"  visible="false"
+         bkhotimage=""
+         normalimage=""
+         hotimage=""
+         pushedimage=""/>
+   <AlbumButton name="image_3" width="140" visible="false"
+         bkhotimage=""
+         normalimage=""
+         hotimage=""
+         pushedimage=""/>
+   <AlbumButton name="image_4" width="140" visible="false"
+         bkhotimage=""
+         normalimage=""
+         hotimage=""
+         pushedimage=""/>
+   <AlbumButton name="image_5" width="140" visible="false"
+         bkhotimage=""
+         normalimage=""
+         hotimage=""
+         pushedimage=""/>
+   </HorizontalLayout>
+</Window>

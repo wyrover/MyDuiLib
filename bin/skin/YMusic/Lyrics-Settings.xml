@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window>
+    <VerticalLayout inset="15,10,5,5">
+                             <HorizontalLayout height="20">
+                                 <Label text="歌词设置" width="58" height="20" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA"  />
+                                 <Control bkimage="file='YTing/line-point.png'" height="1" padding="0,10,0,0"/>
+                              </HorizontalLayout>	
+                              <HorizontalLayout height="48">
+                                 <Label text="歌词文件保存路径" width="100" height="20" float="true" pos="27,11,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA"  />
+				     <Edit name="LyricsFile_EDT_SavePath" width="234" height="24" float="true" pos="130,10,0,0" readonly="true"  />
+				      <Button name="LyricsFile_BTN_OpenFolder" text="浏览" width="73" height="24" float="true" pos="375,10,0,0" />
+                              </HorizontalLayout>	
+                              <HorizontalLayout height="20">
+                                    <Label text="显示设置" width="58" height="20" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA"  />
+                                    <Control bkimage="file='YTing/line-point.png'" height="1" padding="0,10,0,0"/>
+                              </HorizontalLayout>
+                              <VerticalLayout height="160" inset="15,0,15,0">
+                                  <HorizontalLayout height="40">
+                                        <Label text="字体名称" float="true" pos="13,10,0,0" width="60" height="22" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA"  />
+                                        <Combo name="font_name" float="true" pos="81,8,0,0" droptype="droplist" text="12" width="102" height="26" itemtextcolor="#FF000000" itembkcolor="#FFFFFFFF" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFA9B2B8" itemhottextcolor="#FF000000" itemhotbkcolor="#FFD9E2E8" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" dropboxsize="0,150" >
+                                        		<ListLabelElement text=" 方正舒体" userdata="方正舒体" height="22"  />
+							<ListLabelElement text=" 方正姚体" userdata="方正姚体" height="22" />
+                                        		<ListLabelElement text=" 仿宋" userdata="仿宋" height="22" />
+							<ListLabelElement text=" 黑体" userdata="黑体" height="22"  />
+							<ListLabelElement text=" 华文彩云" userdata="华文彩云" height="22" />
+							<ListLabelElement text=" 华文仿宋" userdata="华文仿宋" height="22"  />
+							<ListLabelElement text=" 华文行楷" userdata="华文行楷" height="22"  />
+							<ListLabelElement text=" 华文琥珀" userdata="华文琥珀" height="22"  />
+							<ListLabelElement text=" 华文楷体" userdata="华文隶书" height="22"  />
+							<ListLabelElement text=" 华文隶书" userdata="9" height="22"  />
+							<ListLabelElement text=" 华文宋体" userdata="华文宋体" height="22"  />
+							<ListLabelElement text=" 华文细黑" userdata="华文细黑" height="22" />
+							<ListLabelElement text=" 华文中宋" userdata="华文中宋" height="22"  />
+							<ListLabelElement text=" 楷体" userdata="楷体" height="22"  />
+							<ListLabelElement text=" 隶书" userdata="隶书" height="22"  />
+							<ListLabelElement text=" 宋体" userdata="宋体" height="22"  />
+							<ListLabelElement text=" 微软雅黑" userdata="微软雅黑" height="22"  selected="true" />
+							<ListLabelElement text=" 新宋体" userdata="新宋体" height="22" />
+							<ListLabelElement text=" 幼圆" userdata="幼圆" height="22"/>
+					     </Combo>
+                                        <Label text="字体大小" float="true" pos="216,10,0,0" width="60" height="22" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" />
+                                        <Combo name="font_size" float="true" pos="283,8,0,0" droptype="droplist" text="12" width="102" height="26" itemtextcolor="#FF000000" itembkcolor="#FFFFFFFF" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFA9B2B8" itemhottextcolor="#FF000000" itemhotbkcolor="#FFD9E2E8" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" dropboxsize="0,150">
+											<ListLabelElement text=" 12" userdata="12" height="22" />
+											<ListLabelElement text=" 14" userdata="14" height="22"/>
+											<ListLabelElement text=" 16" userdata="16" height="22" />
+											<ListLabelElement text=" 18" userdata="18" height="22" />
+											<ListLabelElement text=" 20" userdata="20" height="22"/>
+											<ListLabelElement text=" 22" userdata="22" height="22" />
+											<ListLabelElement text=" 24" userdata="24" height="22" />
+											<ListLabelElement text=" 26" userdata="26" height="22" />
+											<ListLabelElement text=" 28" userdata="28" height="22" />
+											<ListLabelElement text=" 28" userdata="30" height="22" />
+											<ListLabelElement text=" 36" userdata="36" height="22" />
+											<ListLabelElement text=" 40" userdata="40" height="22" />
+											<ListLabelElement text=" 42" userdata="42" height="22" />
+											<ListLabelElement text=" 44" userdata="44" height="22" />
+											<ListLabelElement text=" 46" userdata="46" height="22"/>
+											<ListLabelElement text=" 48" userdata="48" height="22" />
+											<ListLabelElement text=" 50" userdata="50" height="22"   selected="true" />
+											<ListLabelElement text=" 52" userdata="52" height="22" />
+											<ListLabelElement text=" 54" userdata="54" height="22" />
+											<ListLabelElement text=" 56" userdata="56" height="22"/>
+											<ListLabelElement text=" 58" userdata="58" height="22" />
+											<ListLabelElement text=" 60" userdata="60" height="22" />
+											<ListLabelElement text=" 70" userdata="70" height="22" />
+											<ListLabelElement text=" 72" userdata="72" height="22" />
+											<ListLabelElement text=" 76" userdata="76" height="22"/>
+											<ListLabelElement text=" 78" userdata="78" height="22" />
+											<ListLabelElement text=" 80" userdata="80" height="22" />
+											<ListLabelElement text=" 82" userdata="82" height="22" />
+											<ListLabelElement text=" 84" userdata="84" height="22" />
+											<ListLabelElement text=" 86" userdata="86" height="22"/>
+											<ListLabelElement text=" 88" userdata="88" height="22" />
+											<ListLabelElement text=" 90" userdata="90" height="22"/>
+											<ListLabelElement text=" 100" userdata="100" height="22"/>
+                                        </Combo>										
+                                    </HorizontalLayout>
+                                    <HorizontalLayout height="40" inset="0,15,0,0">
+                                       <Label text="歌词颜色" float="true" pos="13,10,0,0" width="60" height="22" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA"  />
+                                        <HorizontalLayout name="color" float="true" pos="83,8,0,0" width="98" height="25" 
+                                        				bkimage="file='ConfigWnd/cfg_edit.png' source='0,0,13,24' corner='6,0,6,0'">
+                                        		<Label name="font_color" padding="2,5,2,5" bkcolor="#FF00FF00" />
+                                        		<Control width="2" />
+                                        		<Button name="color_picker" width="15" height="15" padding="0,5,1,5" tooltip="颜色采集器"
+                                        										bkimage="file='ConfigWnd/skin.png'"
+                                        										normalimage="file='ConfigWnd/skin.png'"
+                                        										hotimage="file='ConfigWnd/skin.png'"
+                                        										pushedimage="file='ConfigWnd/skin.png'"/>
+						</HorizontalLayout>
+                                       <Label text="歌词字型" float="true" pos="216,10,0,0" width="60" height="22" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA"  />
+                                        <Combo name="font_style" float="true" pos="283,8,0,0"  droptype="droplist" width="102" height="26" itemtextcolor="#FF000000" itembkcolor="#FFFFFFFF" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFA9B2B8" itemhottextcolor="#FF000000" itemhotbkcolor="#FFD9E2E8" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" dropboxsize="0,150">
+							<ListLabelElement text=" 常规" userdata="0" height="22" />
+							<ListLabelElement text=" 粗体" userdata="1" height="22" selected="true"  />
+							<ListLabelElement text=" 斜体" userdata="2" height="22" />
+							<ListLabelElement text=" 粗体|斜体" userdata="3" height="22" />
+                                        </Combo>
+                                     </HorizontalLayout>
+                                    <HorizontalLayout height="40" inset="0,15,0,0">
+                                     </HorizontalLayout>
+                                    <HorizontalLayout height="40" inset="0,15,0,0">
+                                    </HorizontalLayout>
+                                </VerticalLayout>
+                                <HorizontalLayout height="20">
+                                    <Label text="预览" width="34" height="20" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA"/>
+                                    <Control height="1" padding="1,9,0,0" bkimage="ConfigWnd/cfg_line.png" mouse="false" />
+                                </HorizontalLayout>
+                                <VerticalLayout width="410" height="80" padding="15,10,0,0" bkcolor="#00F7F7F7" bordercolor="#FFD2D2D2">
+                                    <LrcPreView name="font_show" text="听音乐，用虾听!" height="60" textcolor="#FF00FF00" disabledtextcolor="#FFA7A6AA"  align="center" />
+                                </VerticalLayout>
+                            </VerticalLayout>
+</Window>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window >
+<VerticalLayout>
+ 	<HorizontalLayout text="缓存设置" >
+              <VerticalLayout inset="20,10,10,5">
+                <HorizontalLayout height="20" >
+                  <Label text="缓存设置" width="60" font="1" textcolor="#FF000000"/>
+                  <Control bkimage="file='YTing/line-point.png'" height="1" padding="0,10,0,0"/>
+                </HorizontalLayout>
+                <Label text="将虾米音乐的缓存存放在此目录下" width="200"  textcolor="#FF000000"/>
+                <HorizontalLayout inset="0,10,0,0" height="40">
+                  <Edit name="CacheDir"  readonly="true"/>
+                  <Control width="10"/>
+                  <Button name="ChangeDir" height="23" width="80" text="更改目录" padding="10,0,0,0" />
+                </HorizontalLayout>
+                <Button name="OpenDir" height="23" width="80" text="打开文件夹"  />
+                <HorizontalLayout height="40">
+                  <Label text="设置最大占用空间看（推荐512M-1024M）"  height="23" padding="0,10,0,0"/>
+                  <Control width="10"/>
+                  <Edit name="MaxCache" width="50" numberonly="true" />
+                </HorizontalLayout>
+                <HorizontalLayout height="40">
+                  <Label name="CachedLabel" text="已缓存512M"  height="23" padding="0,10,0,0"/>
+                  <Control width="10"/>
+                  <Button name="ClearCache" height="23" width="80" text="清空缓存"  padding="10,10,0,0" />
+                </HorizontalLayout>
+              </VerticalLayout>
+            </HorizontalLayout>
+            </VerticalLayout>
+</Window>

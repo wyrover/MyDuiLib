@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window>
+<Include source="style004.xml"/>
+  <HorizontalLayout>
+	<VerticalLayout bkimage="file='YTing/Main/lyric-bg.png' source='0,0,320,200' corner='2,25,2,2' mask='#FFFF00FF'">
+		  
+		  <HorizontalLayout height ="20" padding="0,4,0,0">
+			  <Control width="10"/>
+			  <Button name="GoBack" style="goback" tag="-1"/>
+			  <Control />
+			  <Button name="GoDesk" style="godesk" tag="0"/>
+			  <Control width="5" />
+			  <Button name="GoNext" style="gonext" tag="-1"/>
+			  <Control width="10"/>
+		  </HorizontalLayout>
+		  
+		 <AnimationTabLayout name="lrcview_layout" animation_direction="horizontal" selectedid="0" tag="0" menu="true">
+		  <LrcView name="LrcView" font="2" menu="true" tag="0">
+		  </LrcView>
+		  <LrcView name="LrcView2" font="2" menu="true" tag="1">
+		  </LrcView>
+		   <LrcView name="LrcView3" font="2" menu="true" tag="2">
+		  </LrcView>
+		   <LrcView name="LrcView4" font="2" menu="true" tag="3">
+		  </LrcView>
+		</AnimationTabLayout>
+		  <Button name="SearchLrc" style="searchlrc"/>
+	  </VerticalLayout>
+  </HorizontalLayout>
+</Window>

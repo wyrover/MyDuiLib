@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="760,620"  caption="0,0,0,38" defaultfontcolor="#FF333333" showdirty="false">
+  <Default name="VScrollBar" value="width=&quot;6&quot; button1normalimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20' mask='#FFFF00FF'&quot; button1hotimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20' mask='#FFFF00FF'&quot; button1pushedimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20' mask='#FFFF00FF'&quot; button1disabledimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20' mask='#FFFF00FF'&quot; button2normalimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20' mask='#FFFF00FF'&quot; button2hotimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20' mask='#FFFF00FF'&quot; button2pushedimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20' mask='#FFFF00FF'&quot; button2disabledimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20' mask='#FFFF00FF'&quot; thumbnormalimage=&quot;file='YTing/system-scrollbar.png' source='0,0,6,20' mask='#FFFF00FF'&quot; thumbhotimage=&quot;file='YTing/system-scrollbar.png' source='6,0,12,20' mask='#FFFF00FF'&quot; thumbpushedimage=&quot;file='YTing/system-scrollbar.png' source='12,0,18,20'corner='2,2,2,2' mask='#FFFF00FF'&quot; thumbdisabledimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20'corner='2,2,2,2' mask='#FFFF00FF'&quot; railnormalimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20'corner='2,2,2,2' mask='#FFFF00FF'&quot; railhotimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20'corner='2,2,2,2' mask='#FFFF00FF'&quot; railpushedimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20'corner='2,2,2,2' mask='#FFFF00FF'&quot; raildisabledimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20'corner='2,2,2,2' mask='#FFFF00FF'&quot; bknormalimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20'corner='2,2,2,2' mask='#FFFF00FF'&quot; bkhotimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20'corner='2,2,2,2' mask='#FFFF00FF'&quot; bkpushedimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20'corner='2,2,2,2' mask='#FFFF00FF'&quot; bkdisabledimage=&quot;file='YTing/system-scrollbar.png' source='18,0,24,20'corner='2,2,2,2' mask='#FFFF00FF'&quot; showbutton1=&quot;false&quot; showbutton2=&quot;false&quot; autohide=&quot;false&quot;" />
+  <Default name="FadeOption" value="setcursor=&quot;true&quot; font=&quot;1&quot; textcolor=&quot;#FFFFFFFF&quot; selectedtextcolor=&quot;#FF000000&quot; pushedtextcolor=&quot;#FF000000&quot; normalimage=&quot;file='YTing/MusicLib/tabbg.png' source='0,0,100,36' corner='4,4,4,4'&quot; hotimage=&quot;file='YTing/MusicLib/tabbg.png' source='0,36,100,72' corner='4,4,4,4'&quot; pushedimage=&quot;file='YTing/MusicLib/tabbg.png' source='0,72,100,108' corner='4,4,4,4'&quot; selectedimage=&quot;file='YTing/MusicLib/tabbg.png' source='0,72,100,108' corner='4,4,4,4'&quot; selectedhotimage=&quot;file='YTing/MusicLib/tabbg.png' source='0,72,100,108' corner='4,4,4,4'&quot; height=&quot;36&quot; "/>
+  <Default name="TreeView" value="font=&quot;0&quot; childpadding=&quot;0&quot; itemtextcolor=&quot;FF000000&quot; itemselectedtextcolor=&quot;#FF000000&quot; itemhottextcolor=&quot;#FF000000&quot; itemselectedbkcolor=&quot;#FFee6746&quot; itemhotbkcolor=&quot;#FFfa9d75&quot; itemdisabledbkcolor=&quot;#00000000&quot;"/>
+  <Default name="TreeNode" textpadding="38,0,0,0" value="font=&quot;0&quot; height=&quot;24&quot; itemoff=&quot;24&quot;" />
+  <!--
+  <Default name="CheckBox" value="height=&quot;16&quot; width=&quot;65&quot; align=&quot;left&quot; textpadding=&quot;16,0,0,0&quot; padding=&quot;0,5,0,0&quot; normalimage=&quot;file='YTing/checkbox.png' source='0,0,13,13' dest='0,2,13,15'&quot; selectedimage=&quot;file='YTing/checkbox.png' source='23,0,36,13' dest='0,2,13,15'&quot; selectedhotimage=&quot;file='YTing/checkbox.png' source='23,0,36,13' dest='0,2,13,15'&quot; textcolor=&quot;#00000000&quot; disabledtextcolor=&quot;#FFA7A6AA&quot;"/>
+ -->
+  <!--Default End-->
+  <HorizontalLayout colorhsl="true" bkimage="file=&apos;YTing/bg_007.jpg&apos; corner=&apos;5,5,5,5&apos;">
+    <VerticalLayout  bordersize="0"  inset="1,1,1,2" bkimage="file='YTing/border.png' corner='5,5,5,5' hole='true'">
+      <!--header-->
+      <HorizontalLayout  height="38" bordersize="0" bkimage="file='YTing/MusicLib/bg_line.png' corner='0,0,1,1'">
+        <HorizontalLayout width="89" inset="15,7,15,6" childpadding="5">
+          <FadeButton name="back" tooltip="后退" width="27" height="25"
+                  normalimage="file=&apos;YTing/MusicLib/back.png&apos; source=&apos;0,0,27,25&apos;"
+                  hotimage="file=&apos;YTing/MusicLib/back.png&apos; source=&apos;0,25,27,50&apos;"
+                  pushedimage="file=&apos;YTing/MusicLib/back.png&apos; source=&apos;0,50,27,75&apos;" />
+          <FadeButton name="refresh" tooltip="刷新页面" width="27" height="25"
+                 normalimage="file=&apos;YTing/MusicLib/refresh.png&apos; source=&apos;0,0,27,25&apos;"
+                 hotimage="file=&apos;YTing/MusicLib/refresh.png&apos; source=&apos;0,25,27,50&apos;"
+                 pushedimage="file=&apos;YTing/MusicLib/refresh.png&apos; source=&apos;0,50,27,75&apos;" />
+        </HorizontalLayout>
+
+        <!--table-->
+        <HorizontalLayout width="210" inset="0,2,0,0" childpadding="5">
+          <FadeOption name="MyMusicLib" tag="0"  width="100" text="我的音乐库" group="a" tooltip="我的音乐库" align="vcenter,singleline"/>
+          <FadeOption name="FindMusic" tag="1" width="100" text="发现音乐" group="a" tooltip="发现音乐"  selected="true" />
+          <!--<Option tag="2"   text="虾米猜" group="a" tooltip="发现好音乐"/>-->
+        </HorizontalLayout>
+        <!--table end-->
+        
+        <HorizontalLayout width="150">
+          <Edit name="content"  padding="0,7,0,6" textpadding="4,3,29,3" textcolor="#FF000000"  disabledtextcolor="#FFA7A6AA"
+                prompt="传奇" tag="1"
+                normalimage="file='YTing/MusicLib/search.png' corner='5,5,5,5'"
+                borderround="2,2" 
+                bordersize="0"  
+                bkcolor="#00000000" 
+                nativebkcolor="#FFf5f5f5" 
+                bordercolor="#FF00f0f0"/>
+          <FadeButton name="search" tooltip="搜索" float="true" pos="-26,7,-1,33"
+                  normalimage="file=&apos;YTing/MusicLib/findbtn.png&apos; source=&apos;0,0,25,26&apos;"
+                  hotimage="file=&apos;YTing/MusicLib/findbtn.png&apos; source=&apos;25,0,50,26&apos;" 
+                  pushedimage="file=&apos;YTing/MusicLib/findbtn.png&apos; source=&apos;50,0,75,26&apos;"/>
+        </HorizontalLayout>
+       
+        <HorizontalLayout>     
+        </HorizontalLayout>
+        
+        <!-- systembtn-->
+        <HorizontalLayout width="27" inset="5,5,5,0">
+          <FadeButton name="closebtn" width="17" height="17" align="center"
+                  normalimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,0,17,17&apos;"
+                  hotimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,17,17,34&apos;"
+                  pushedimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,34,17,51&apos;" />
+        </HorizontalLayout>
+      </HorizontalLayout>
+      <!--header End-->
+
+      <!--<HorizontalLayout height="1" bkcolor="#FFFFFFFF" padding="2,0,2,0"/>-->
+
+      <!--switch-->
+      <HorizontalLayout   bkimage="file=&apos;YTing/info_bg.bmp&apos;" bordersize="0" inset="0,0,0,0">
+        <TabLayout name="table" selectedid="1">
+          <HorizontalLayout >
+            <TreeView name ="playlist" bordersize="0" padding="10,15,0,15" width="150"  visiblefolderbtn="false" visiblecheckbtn="false" vscrollbar="true" itemendellipsis="true" menu="true">
+              <TreeNode name="imylisten"  enabled="false" itemattr="foreimage=&quot;file='YTing/MusicLib/fav.png' source='0,0,13,15' dest='10,4,23,19'&quot; textpadding=&quot;25,0,0,0&quot;"  text="我的收听"  font="1" itemendellipsis="true"  folderattr="padding=&quot;0,1,0,0&quot; width=&quot;16&quot; height=&quot;16&quot; normalimage=&quot;file='YTing/treeview_b.png' source='0,0,16,16' &quot; hotimage=&quot;file='YTing/treeview_b.png' source='16,0,32,16' &quot; selectedimage=&quot;file='YTing/treeview_a.png' source='0,0,16,16' &quot; selectedhotimage=&quot;file='YTing/treeview_a.png' source='16,0,32,16' &quot;" tag="-1">
+                <TreeNode name ="fav_node" text="我的收藏" textpadding="7,0,0,0"/>
+                <TreeNode name="his_node" text="播放历史"  textpadding="7,0,0,0" />
+              </TreeNode>
+              <TreeNode name="idownload" enabled="false" itemattr="foreimage=&quot;file='YTing/MusicLib/listicon.png' source='0,0,13,15' dest='10,4,23,19'&quot; textpadding=&quot;25,0,0,0&quot;" text="本地管理"  font="1" itemendellipsis="true" folderattr="padding=&quot;0,1,0,0&quot; width=&quot;16&quot; height=&quot;16&quot; normalimage=&quot;file='YTing/treeview_b.png' source='0,0,16,16' &quot; hotimage=&quot;file='YTing/treeview_b.png' source='16,0,32,16' &quot; selectedimage=&quot;file='YTing/treeview_a.png' source='0,0,16,16' &quot; selectedhotimage=&quot;file='YTing/treeview_a.png' source='16,0,32,16' &quot;" tag="-2" >
+         	   <TreeNode name ="downloading" text="正在下载" textpadding="7,0,0,0"/>
+         	   <TreeNode name ="downloaded" text="下载完成" textpadding="7,0,0,0"/>
+         	</TreeNode>
+            </TreeView>
+            <Control bkimage="file='YTing/line-point.png'" width="1" padding="5,15,0,15"/>
+            <TabLayout name="table2" selectedid="0">
+            	<WebBrowser name="user_ie" autonavi="true" homepage="http://pianku.xmp.kankan.com/moviestore_index.html" vscrollbar="true" tag="0"/>
+            	<List name="downing_list" padding="0,0,2,0" header="hidden"  menu="true"  tag="1"
+			      	 headerbkimage="file=&apos;YTing/list_header_bg.png&apos;" itemshowhtml="true" 
+			      	 vscrollbar="true" scrollselect="false" itemendellipsis="true" bordersize="0" 
+			      	 itemselectedbkcolor="#2A000000" itemhotbkcolor="#2A000000">
+			  </List>
+			  <VerticalLayout>
+			  	<HorizontalLayout height="30" inset="2,6,2,6">
+			  	    <CheckBox name="selectall_checkbox" height="16" width="60"
+			  	      align="left" textpadding="17,0,0,0" text="全选" tooltip="全部选择" selectedtooltip="取消全选"
+			  		normalimage="file='YTing/checkbox.png' source='0,0,13,13' dest='0,0,16,16'" 
+			  		selectedimage="file='YTing/checkbox.png' source='23,0,36,13' dest='0,0,16,16'" 
+			  		selectedhotimage="file='YTing/checkbox.png' source='23,0,36,13' dest='0,0,16,16'" 
+			  		textcolor="#00000000" disabledtextcolor="#FFA7A6AA"/>
+			  	</HorizontalLayout>
+			  	<List name="downed_list" padding="0,0,2,0" header="hidden"  menu="true"  tag="2"
+		               headerbkimage="file=&apos;YTing/list_header_bg.png&apos;" itemshowhtml="true" 
+		               vscrollbar="true" scrollselect="false" itemendellipsis="true" bordersize="0" 
+		               itemselectedbkcolor="#2A000000" itemhotbkcolor="#2A000000">
+				</List>
+			  </VerticalLayout>
+	             
+            </TabLayout>
+          </HorizontalLayout>
+          <HorizontalLayout >
+            <!--ActiveX name="ie" clsid="{8856F961-340A-11D0-A96B-00C04FD705A2}" delaycreate="false" bordersize="0"/-->
+            <WebBrowser name="xiami_ie" autonavi="true" tag="1" vscrollbar="true" homepage="http://localhost/YMusic/index.html" />
+            <!--WebBrowser name="xiami_ie" autonavi="true" vscrollbar="true" homepage="http://topmusic.kuwo.cn/today_recommend/music/zhaoge_summer_610.htm" /-->
+            <!--WebBrowser name="xiami_ie" autonavi="true" vscrollbar="true" homepage="http://127.0.0.1/zhaoge_summer_610.htm"/-->
+          </HorizontalLayout>
+        </TabLayout>
+      </HorizontalLayout>
+      <!--switch end-->
+
+      <!--<HorizontalLayout height="60" padding="10,0,10,10">
+      </HorizontalLayout>-->
+    </VerticalLayout>
+  </HorizontalLayout>
+</Window>

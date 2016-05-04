@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window >
+   <VerticalLayout>
+   <HorizontalLayout text="热键设置">
+              <VerticalLayout inset="25,10,5,5">
+                <HorizontalLayout height="20" >
+                  <Label text="窗口" width="30" font="1" textcolor="#FF000000"/>
+                  <Control bkimage="file='YTing/line-point.png'" height="1" padding="0,10,0,0"/>
+                </HorizontalLayout>
+                <HorizontalLayout height="30">
+                  <Label text="最小化/正常模式" width="150" height="23"  align="right" />
+                  <HotKey name="HK_Mode" padding="10,0,0,0" width="150" />
+                </HorizontalLayout>
+                <HorizontalLayout height="30">
+                  <Label text="显示/隐藏桌面歌词" width="150" height="23" padding="0,0,0,0" align="right" />
+                  <HotKey name="HK_Lrc" padding="10,0,0,0" width="150" />
+                </HorizontalLayout>
+                <HorizontalLayout height="20" >
+                  <Label text="播放控制" width="60" font="1" textcolor="#FF000000"/>
+                  <Control bkimage="file='YTing/line-point.png'" height="1" padding="0,10,0,0"/>
+                </HorizontalLayout>
+                <HorizontalLayout height="30">
+                  <Label text="播放/暂停" width="150" height="23" padding="0,10,0,0" align="right" />
+                  <HotKey name="HK_PlayPause" padding="10,10,0,0" width="150" />
+                </HorizontalLayout>
+                <HorizontalLayout height="30">
+                  <Label text="上一首" width="150" height="23" padding="0,10,0,0" align="right" />
+                  <HotKey name="HK_PreSong" padding="10,10,0,0" width="150" />
+                </HorizontalLayout>
+                <HorizontalLayout height="30">
+                  <Label text="下一首" width="150" height="23" padding="0,10,0,0" align="right" />
+                  <HotKey name="HK_NextSong" padding="10,10,0,0" width="150" />
+                </HorizontalLayout>
+                <HorizontalLayout height="30">
+                  <Label text="增大音量" width="150" height="23" padding="0,10,0,0" align="right" />
+                  <HotKey name="HK_VolUp" padding="10,10,0,0" width="150" />
+                </HorizontalLayout>
+                <HorizontalLayout height="30">
+                  <Label text="减小音量" width="150" height="23" padding="0,10,0,0" align="right" />
+                  <HotKey name="HK_VolDown" padding="10,10,0,0" width="150" />
+                </HorizontalLayout>
+              </VerticalLayout>
+            </HorizontalLayout>
+    </VerticalLayout>
+</Window>

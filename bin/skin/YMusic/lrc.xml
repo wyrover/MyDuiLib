@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<Window size="1166,80" sizebox="0,6,0,6" caption="0,0,0,80">
+    <VerticalLayout name="VerticalLayoutUI1" >
+	<HorizontalLayout name="HorizontalLayoutUI1">
+	</HorizontalLayout>
+    </VerticalLayout>
+</Window>

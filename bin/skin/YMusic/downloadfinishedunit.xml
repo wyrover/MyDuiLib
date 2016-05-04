@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+
+  <HorizontalLayout>
+    <HorizontalLayout name="downed_layout0" width="20" inset="2,12,2,12">
+      <CheckBox name="downed_checkbox" height="16" width="16" align="left" 
+  		normalimage="file='YTing/checkbox.png' source='0,0,13,13'" 
+  		selectedimage="file='YTing/checkbox.png' source='23,0,36,13'" 
+  		selectedhotimage="file='YTing/checkbox.png' source='23,0,36,13'" 
+  		textcolor="#00000000" disabledtextcolor="#FFA7A6AA"/>
+    </HorizontalLayout>
+    <HorizontalLayout name="donwed_layout1" width="150">
+      <Label name="downed_titlelab" text="刘德华 - 今天.mp3" textpadding="5,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+    </HorizontalLayout>
+    <HorizontalLayout name="donwed_layout2" inset="0,15,0,15">
+    </HorizontalLayout>
+    <HorizontalLayout name="donwed_layout3" width="80">
+      <Label name="downed_sizelab" text="0 MB" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+    </HorizontalLayout>
+    <HorizontalLayout name="donwed_layout4" width="80">
+   </HorizontalLayout>
+    <HorizontalLayout name="donwed_layout5" width="60" inset="0,12,0,12" childpadding="4">
+      <Button name="downed_playbtn" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;YTing/icon_uidownload_start.png&apos; source=&apos;0,0,16,16&apos;" hotimage="file=&apos;YTing/icon_uidownload_start.png&apos; source=&apos;17,0,33,16&apos;" pushedimage="file=&apos;YTing/icon_uidownload_start.png&apos; source=&apos;34,0,50,16&apos;" tooltip="播放"/>
+      <Button name="downed_addbtn" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;YTing/icon_uidownload_pause.png&apos; source=&apos;0,0,16,16&apos;" hotimage="file=&apos;YTing/icon_uidownload_pause.png&apos; source=&apos;17,0,33,16&apos;" pushedimage="file=&apos;YTing/icon_uidownload_pause.png&apos; source=&apos;34,0,50,16&apos;" tooltip="添加"/>
+      <Button name="downed_deletbtn" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;YTing/icon_uidownload_delete.png&apos; source=&apos;0,0,16,16&apos;" hotimage="file=&apos;YTing/icon_uidownload_delete.png&apos; source=&apos;17,0,33,16&apos;" pushedimage="file=&apos;YTing/icon_uidownload_delete.png&apos; source=&apos;34,0,50,16&apos;" tooltip="删除"/>
+    </HorizontalLayout>
+  </HorizontalLayout>
+</Window>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--maxinfo="650,750"-->
+<Window  size="330,620" sizebox="4,4,4,4" mininfo="330,520"  caption="0,0,0,154" bottom_caption="0,0,0,25" roundcorner="5,5" maxinfo="330,750">
+  <Include source="config.xml"/>
+  <HorizontalLayout name="BK" bkimage="file=&apos;YTing/bg_007.jpg&apos; corner=&apos;5,5,5,5&apos;">
+     <VerticalLayout bordersize="0"   inset="1,1,1,1" bkimage="file='YTing/border.png' corner='5,5,5,5' hole='true'">
+       <!--Caption-->
+       <VerticalLayout height="154">
+         <!--Title-->
+         <HorizontalLayout height="30">
+           <Include source="sys-caption.xml"/>
+         </HorizontalLayout>
+         <!--End Title-->
+         <HorizontalLayout height="2" />
+         <!--SongInfo-->
+         <HorizontalLayout height="80">
+            <Include source="song-caption.xml"/>
+         </HorizontalLayout>
+         <!--End SongInfo-->
+         <!--Play Control-->
+         <HorizontalLayout height="40" inset="0,8,0,7">
+           <Include source="play-control.xml" />
+         </HorizontalLayout>
+         <!--End Control-->
+         <!--HorizontalLayout height="2" bkimage="YTing/line_h.png" mouse="false" /-->
+       </VerticalLayout>
+       <!--End Caption-->
+       <VerticalLayout >
+         <Include source="main-container.xml" />
+       </VerticalLayout>
+       <HorizontalLayout height="1" bkimage="YTing/line_h.png" mouse="false" />
+       <HorizontalLayout name="info" height="25" inset="10,5,10,5" bkimage="file='YTing/info_bg.bmp'" visible="false">
+       	<Label name="info_label" text="" />
+       </HorizontalLayout>
+       <HorizontalLayout height="30" inset="10,5,10,5">
+         <Label name="version-text" text="全新逸听上架，全新体验快来围观。" textcolor="#00FFFBF0"/>
+       </HorizontalLayout>
+     </VerticalLayout>
+   </HorizontalLayout>
+</Window>

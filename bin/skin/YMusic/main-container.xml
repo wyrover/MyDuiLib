@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window>
+  <HorizontalLayout>
+    <AnimationTabLayout name="switch" animation_direction="horizontal" selectedid="0">
+      <Include source="song-container.xml" />
+      <Include source="lrc-container.xml" />
+    </AnimationTabLayout>
+  </HorizontalLayout>
+</Window>

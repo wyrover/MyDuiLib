@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window>
+  <HorizontalLayout minwidth="100" >
+    <VerticalLayout inset="1,2,0,1" >
+      <List name="song_list" padding="0,0,2,0" multiselect="true" header="hidden"  menu="true"  
+      	 headerbkimage="file=&apos;YTing/list_header_bg.png&apos;" itemshowhtml="true" 
+      	 vscrollbar="true" scrollselect="false" itemendellipsis="true" bordersize="0" 
+      	 itemselectedbkcolor="#2A000000" itemhotbkcolor="#2A000000">
+      </List>
+      
+      <HorizontalLayout height="24" inset="2,0,2,0" >
+        <FadeCheckBox name="splitbtn" width="18" height="20" visible="false"
+                      normalimage="YTing/split/left_normal.png"
+                      hotimage="YTing/split/left_hot.png"
+                      selectedimage="YTing/split/right_normal.png" />
+        <Label  name="show_count" width="75" text="共0首歌曲" textcolor="#00FFFBF0" />
+        <Control />
+        <TabLayout name="list_operate_tab" width="100" >
+          <HorizontalLayout>
+            <Button name="store_new_list"  text="保存为新列表" tooltip="保存为新列表" textcolor="#00FFFBF0" hottextcolor="0xFF00FFAA"/>
+          </HorizontalLayout>
+          <HorizontalLayout>
+            <Button name="change_songs"  text="换一批歌曲" tooltip="换一批歌曲" textcolor="#00FFFBF0" hottextcolor="0xFF00FFAA"/>
+          </HorizontalLayout>
+        </TabLayout>
+      </HorizontalLayout>
+    </VerticalLayout>
+  
+  </HorizontalLayout>
+</Window>

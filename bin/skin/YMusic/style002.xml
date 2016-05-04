@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StyleConfigure>
+	<Style name="albumlogo" width="80" height="80" padding="0,0,0,0"
+          tooltip="" bordersize="0" tag="0"
+         bkimage="file='YTing/Main/graph-cover-btn.png' source='0,0,71,71' corner='5,5,5,5'"
+         bkhotimage="file='YTing/Main/graph-cover-btn.png' source='0,71,71,142' corner='5,5,5,5'"
+         normalimage="file='YTing/logo.png' dest='8,8,72,72' corner='5,5,5,5'"
+         hotimage=""
+         pushedimage=""/>
+      <Style name="songname" endellipsis="true" align="left"
+            textcolor="#00FFFBF0" text="红尘客栈"/>
+      <Style name="collect" width="16" height="16" tooltip="收藏" selectedtooltip="取消收藏" visible="false" tag="0"
+              normalimage="file=&apos;YTing/Main/collect-normal.png&apos;"
+              hotimage="file=&apos;YTing/Main/collect-selected.png&apos;"
+              pushedimage="file=&apos;YTing/Main/collect-selected.png&apos;"
+              selectedimage="file=&apos;YTing/Main/collect-selected.png&apos;"
+              selectedhotimage="file=&apos;YTing/Main/collect-normal.png&apos;"
+              selectedpushedimage="file=&apos;YTing/Main/collect-normal.png&apos;"/>
+     <Style name="share" width="16" height="16" tooltip="分享" visible="false"
+              normalimage="file=&apos;YTing/Main/share-normal.png&apos;"
+              hotimage="file=&apos;YTing/Main/share-selected.png&apos;"
+              pushedimage="file=&apos;YTing/Main/share-selected.png&apos;"/>
+     <Style name="author" endellipsis="true" align="left"
+           textcolor="#00FFFBF0" text="周杰伦"/>
+     <Style name="time_used" text="00:00" ndellipsis="true" align="left"
+           textcolor="#00FFFBF0"/>
+     <Style name="time_total" text="00:00" ndellipsis="true" align="right"
+           textcolor="#00FFFBF0"/>
+</StyleConfigure>

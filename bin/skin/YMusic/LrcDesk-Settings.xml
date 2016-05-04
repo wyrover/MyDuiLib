@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window >
+  <VerticalLayout>
+    <HorizontalLayout text="歌词显示" >
+      <VerticalLayout inset="25,10,20,5">
+        <HorizontalLayout height="20" >
+          <Label text="字体样式" width="60" font="1" textcolor="#FF000000"/>
+          <Control bkimage="file='YTing/line-point.png'" height="1" padding="0,10,0,0"/>
+        </HorizontalLayout>
+        <HorizontalLayout  height="26">
+          <HorizontalLayout>
+          	<Label text="字     体" width="60" font="0" textcolor="#FF000000"/>
+          	<Combo name="font_name2" droptype="droplist" text="12" width="102" height="26" itemtextcolor="#FF000000" itembkcolor="#FFFFFFFF" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFA9B2B8" itemhottextcolor="#FF000000" itemhotbkcolor="#FFD9E2E8" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" dropboxsize="0,150" >
+                   <ListLabelElement text=" 方正舒体" userdata="方正舒体" height="22"  />
+			<ListLabelElement text=" 方正姚体" userdata="方正姚体" height="22" />
+                   <ListLabelElement text=" 仿宋" userdata="仿宋" height="22" />
+			<ListLabelElement text=" 黑体" userdata="黑体" height="22"  />
+			<ListLabelElement text=" 华文彩云" userdata="华文彩云" height="22" />
+			<ListLabelElement text=" 华文仿宋" userdata="华文仿宋" height="22"  />
+			<ListLabelElement text=" 华文行楷" userdata="华文行楷" height="22"  />
+			<ListLabelElement text=" 华文琥珀" userdata="华文琥珀" height="22"  />
+			<ListLabelElement text=" 华文楷体" userdata="华文隶书" height="22"  />
+			<ListLabelElement text=" 华文隶书" userdata="华文隶书" height="22"  />
+			<ListLabelElement text=" 华文宋体" userdata="华文宋体" height="22"  />
+			<ListLabelElement text=" 华文细黑" userdata="华文细黑" height="22" />
+			<ListLabelElement text=" 华文中宋" userdata="华文中宋" height="22"  />
+			<ListLabelElement text=" 楷体" userdata="楷体" height="22"  />
+			<ListLabelElement text=" 隶书" userdata="隶书" height="22"  />
+			<ListLabelElement text=" 宋体" userdata="宋体" height="22"  />
+			<ListLabelElement text=" 微软雅黑" userdata="微软雅黑" height="22"  selected="true" />
+			<ListLabelElement text=" 新宋体" userdata="新宋体" height="22" />
+			<ListLabelElement text=" 幼圆" userdata="幼圆" height="22"/>
+		</Combo>
+          </HorizontalLayout>
+          <HorizontalLayout>
+          	<Label text="字     型" width="60" font="0" textcolor="#FF000000"/>
+          	<Combo name="font_style2" droptype="droplist" width="102" height="26" itemtextcolor="#FF000000" itembkcolor="#FFFFFFFF" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFA9B2B8" itemhottextcolor="#FF000000" itemhotbkcolor="#FFD9E2E8" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" dropboxsize="0,150">
+			<ListLabelElement text=" 常规" userdata="0" height="22" />
+			<ListLabelElement text=" 粗体" userdata="1" height="22" selected="true"  />
+			<ListLabelElement text=" 斜体" userdata="2" height="22" />
+			<ListLabelElement text=" 粗体|斜体" userdata="3" height="22" />
+             </Combo>
+          </HorizontalLayout>
+        </HorizontalLayout>
+        <HorizontalLayout  height="26">
+          <HorizontalLayout>
+           <Label text="字体大小" width="60" font="0" textcolor="#FF000000"/>
+           <Combo name="font_size2" droptype="droplist" text="12" width="102" height="26" itemtextcolor="#FF000000" itembkcolor="#FFFFFFFF" itemselectedtextcolor="#FF000000" itemselectedbkcolor="#FFA9B2B8" itemhottextcolor="#FF000000" itemhotbkcolor="#FFD9E2E8" itemdisabledtextcolor="#FFCCCCCC" itemdisabledbkcolor="#FFFFFFFF" dropboxsize="0,150">
+			<ListLabelElement text=" 12" userdata="0" height="22" />
+			<ListLabelElement text=" 14" userdata="1" height="22"/>
+			<ListLabelElement text=" 16" userdata="2" height="22" />
+			<ListLabelElement text=" 18" userdata="3" height="22" />
+			<ListLabelElement text=" 20" userdata="4" height="22"/>
+			<ListLabelElement text=" 22" userdata="5" height="22" />
+			<ListLabelElement text=" 24" userdata="6" height="22" />
+			<ListLabelElement text=" 26" userdata="7" height="22" />
+			<ListLabelElement text=" 28" userdata="8" height="22" />
+			<ListLabelElement text=" 30" userdata="9" height="22" />
+			<ListLabelElement text=" 36" userdata="10" height="22" />
+			<ListLabelElement text=" 40" userdata="11" height="22" />
+			<ListLabelElement text=" 42" userdata="12" height="22" />
+			<ListLabelElement text=" 44" userdata="13" height="22" />
+			<ListLabelElement text=" 46" userdata="14" height="22"/>
+			<ListLabelElement text=" 48" userdata="15" height="22" />
+			<ListLabelElement text=" 50" userdata="16" height="22"   selected="true" />
+			<ListLabelElement text=" 52" userdata="17" height="22" />
+			<ListLabelElement text=" 54" userdata="18" height="22" />
+			<ListLabelElement text=" 56" userdata="19" height="22"/>
+			<ListLabelElement text=" 58" userdata="20" height="22" />
+			<ListLabelElement text=" 60" userdata="21" height="22" />
+			<ListLabelElement text=" 70" userdata="22" height="22" />
+			<ListLabelElement text=" 72" userdata="23" height="22" />
+			<ListLabelElement text=" 76" userdata="24" height="22"/>
+			<ListLabelElement text=" 78" userdata="25" height="22" />
+			<ListLabelElement text=" 80" userdata="26" height="22" />
+             </Combo>	
+            </HorizontalLayout>
+            <HorizontalLayout>
+              <CheckBox name="karaok" text="开启卡拉Ok效果"/>
+            </HorizontalLayout>									
+        </HorizontalLayout>
+        <HorizontalLayout height="25" padding="0,5,0,0">
+          <HorizontalLayout>
+          	<Label text="已播放歌词" width="75" font="0" textcolor="#FF000000"/>
+          	<HorizontalLayout name="color4"  width="98" height="25" 
+                                          bkimage="file='YTing/cfg_edit.png' source='0,0,13,24' corner='6,0,6,0'">
+                     <Label name="font_color4" padding="2,5,2,5" bkcolor="#FF00FF00" />
+                     <Control width="2" />
+                     <Button name="color_picker4" width="15" height="15" padding="0,5,1,5" tooltip="颜色采集器"
+                                   bkimage="file='YTing/skin.png'"
+                                   normalimage="file='YTing/skin.png'"
+                                   hotimage="file='YTing/skin.png'"
+                                   pushedimage="file='YTing/skin.png'"/>
+		</HorizontalLayout>
+          </HorizontalLayout>
+          <HorizontalLayout>
+          	<Label text="未播放歌词" width="75" font="0" textcolor="#FF000000"/>
+          	<HorizontalLayout name="color5" width="98" height="25" 
+                                          bkimage="file='YTing/cfg_edit.png' source='0,0,13,24' corner='6,0,6,0'">
+                     <Label name="font_color5" padding="2,5,2,5" bkcolor="#FF00FF00" />
+                     <Control width="2" />
+                     <Button name="color_picker5" width="15" height="15" padding="0,5,1,5" tooltip="颜色采集器"
+                                   bkimage="file='YTing/skin.png'"
+                                   normalimage="file='YTing/skin.png'"
+                                   hotimage="file='YTing/skin.png'"
+                                   pushedimage="file='YTing/skin.png'"/>
+		</HorizontalLayout>
+          </HorizontalLayout>
+        </HorizontalLayout>
+      
+        <HorizontalLayout  height="20" padding="0,10,0,10">
+          <Label text="预览" width="45" font="1" textcolor="#FF000000"/>
+        </HorizontalLayout>
+       <HorizontalLayout  height="150" bordersize="1" bordercolor="#FFD2D2D2">
+          <LrcPreView name="lrcPreView"/>
+        </HorizontalLayout>
+      </VerticalLayout>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>
+

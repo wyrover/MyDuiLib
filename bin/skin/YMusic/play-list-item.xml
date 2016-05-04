@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window>
+  <!--ListContainerElement height="30"-->
+    <HorizontalLayout name="listitem">
+      <Control name="list_ico" visible="false" width="30" height="30" bkimage="YTing/SongItem/list_play.jpg" userdata="YTing/SongItem/list_pause.jpg"/>
+      <Label name="list-name" text="" textpadding="10,0,0,0" endellipsis="true" showhtml="true" textcolor="#00FFFBF0" />
+      <Edit name="rename" visible="false" text="" textpadding="4,0,4,0" textcolor="#FF000000" borderround="2,2" 
+                bordersize="0"   />
+    </HorizontalLayout>
+  <!--/ListContainerElement-->
+</Window>

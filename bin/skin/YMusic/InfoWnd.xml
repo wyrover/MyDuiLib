@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="100,20" roundcorner="5,5">
+  <VerticalLayout  bordersize="0"  bkcolor="#FFBCE6FF">
+    <VerticalLayout bordersize="0" bkimage="file='YTing/border.png' corner='5,5,5,5'" inset="10,2,10,2">
+      <Label name="msg" text="msg" align="center"/>
+    </VerticalLayout>
+  </VerticalLayout>
+</Window>

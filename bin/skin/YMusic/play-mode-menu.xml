@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window size="110,222"  caption="0,0,0,222" roundcorner="0,0" showdirty="false">
+   <Default name="Control" value="bkcolor=&quot;#FFDDDDDD&quot; height=&quot;1&quot;"/>
+   <Default name="Menu" value="bordersize=&quot;0&quot; borderround=&quot;0,0&quot; bordercolor=&quot;#FFCCCCCC&quot; inset=&quot;2,2,2,2&quot; itemtextpadding=&quot;30,0,0,0&quot; bkimage=&quot;file='YTing/Menu/bg.png' corner='5,5,5,5'&quot; itemselectedimage=&quot;file='YTing/Menu/hover.png' corner='5,5,5,5'&quot; itemhotimage=&quot;file='YTing/Menu/hover.png' corner='5,5,5,5'&quot; itemselectedbkcolor=&quot;#FFEE6746&quot; itemhotbkcolor=&quot;#00000000&quot; itemdisabledbkcolor=&quot;#00000000&quot; itemselectedtextcolor=&quot;#FFFFFFFF&quot;" />
+  <Default name="MenuElement" value="height=&quot;24&quot;"/>
+  <Default name="Option" value="name=&quot;checkbox&quot; width=&quot;16&quot; height=&quot;16&quot; notfilterselected=&quot;true&quot; selectedimage=&quot;file='YTing/Menu/selected.png' dest='1,4,17,20'&quot;" />
+
+  <Menu>
+     <MenuElement text="顺序播放" name="listPlay" tag="0">
+      <Option />
+    </MenuElement>
+    <MenuElement text="列表循环" name="listLoop" tag="1">
+      <Option />
+    </MenuElement>
+    <!--
+    <MenuElement text="单曲播放" name="singlePlay" tag="2">
+      <Option />
+    </MenuElement>
+    -->
+    <MenuElement text="单曲循环" name="singleLoop" tag="2">
+      <Option />
+    </MenuElement>   
+    <MenuElement text="随机播放" name="randomPlay" tag="3">
+      <Option />
+    </MenuElement>
+  </Menu>
+</Window>

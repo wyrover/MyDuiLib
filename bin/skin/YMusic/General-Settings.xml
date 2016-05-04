@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window >
+  <VerticalLayout>
+    <HorizontalLayout text="常规设置" >
+      <VerticalLayout inset="25,10,20,5">
+        <HorizontalLayout height="20" >
+          <Label text="启动时" width="45" font="1" textcolor="#FF000000"/>
+          <Control bkimage="file='YTing/line-point.png'" height="1" padding="0,10,0,0"/>
+        </HorizontalLayout>
+        <HorizontalLayout  height="20">
+          <CheckBox name="Startup_AutoLogin" text="自动登录账户" />
+          <CheckBox name="Startup_AutoPlay" text="自动播放歌曲" />
+        </HorizontalLayout>
+        <HorizontalLayout  height="20">
+          <CheckBox name="Startup_AutoRun" text="开机启动逸听" />
+          <CheckBox name="Startup_AutoOpenLRC" text="自动打开桌面歌词" />
+        </HorizontalLayout>
+        <HorizontalLayout height="20" padding="0,25,0,0">
+          <Label text="关闭时" width="85" font="1" textcolor="#FF000000"/>
+          <Control bkimage="file='YTing/line-point.png'" height="1" padding="0,10,0,0"/>
+        </HorizontalLayout>
+        <HorizontalLayout  height="30">
+         <Option name="Exit" group="InsertLocation" text="立即退出"
+        		height="16" align="left" textpadding="16,0,0,0" padding="0,5,0,0"
+      		normalimage="file='YTing/form-singlebox.png' source='0,0,15,15' dest='0,0,15,15'"
+      		hotimage="file='YTing/form-singlebox.png' source='0,0,15,15' dest='0,0,15,15'"
+        		selectedimage="file='YTing/form-singlebox.png' source='0,15,15,30' dest='0,0,15,15'"
+      		selectedhotimage="file='YTing/form-singlebox.png' source='0,15,15,30' dest='0,0,15,15'"/>
+          <Option name="ToTray" group="InsertLocation" text="最小化到系统托盘" selected="true"
+      		height="16" align="left" textpadding="16,0,0,0" padding="0,5,0,0"
+      		normalimage="file='YTing/form-singlebox.png' source='0,0,15,15' dest='0,0,15,15'"
+      		hotimage="file='YTing/form-singlebox.png' source='0,0,15,15' dest='0,0,15,15'"
+        		selectedimage="file='YTing/form-singlebox.png' source='0,15,15,30' dest='0,0,15,15'"
+      		selectedhotimage="file='YTing/form-singlebox.png' source='0,15,15,30' dest='0,0,15,15'"/>
+        </HorizontalLayout>
+        <HorizontalLayout height="20" padding="0,25,0,0">
+          <Label text="漫游列表" width="60" font="1" textcolor="#FF000000"/>
+          <Control bkimage="file='YTing/line-point.png'" height="1" padding="0,10,0,0"/>
+        </HorizontalLayout>
+        <HorizontalLayout height="20">
+          <CheckBox name="PlayRoaming" text="生成后立即播放" />
+        </HorizontalLayout>
+        <HorizontalLayout height="20"  padding="0,25,0,0">
+          <Label text="文件关联" width="60" font="1" textcolor="#FF000000"/>
+          <Control bkimage="file='YTing/line-point.png'" height="1" padding="0,10,0,0"/>
+        </HorizontalLayout>
+        <HorizontalLayout height="20" >
+          <CheckBox name="RelateFile" text="将逸听设置为默认播放器" />
+        </HorizontalLayout>
+      </VerticalLayout>
+    </HorizontalLayout>
+  </VerticalLayout>
+</Window>

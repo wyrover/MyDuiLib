@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="tinyxml">
+      <UniqueIdentifier>{b1563504-e0a2-453b-a540-e5f9ae55f021}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog">
+      <UniqueIdentifier>{6570b36a-c781-48d5-a467-41f43b6ebadf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog\CheckUpdate">
+      <UniqueIdentifier>{81411c27-0bef-4a85-85af-7b228c3920da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog\CustomFonts">
+      <UniqueIdentifier>{1257de5d-99ec-4f8e-af9c-8a0c7c33987e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog\DefaultAttribute">
+      <UniqueIdentifier>{6c2a1edd-4eb9-45c0-bf89-1ddeadfa66b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog\ProjectNew">
+      <UniqueIdentifier>{b9df546d-9ba3-47ba-8606-c9cb8346d894}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog\Save">
+      <UniqueIdentifier>{10a1e244-f9f2-4352-b121-ba076e8d71fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog\SkinNew">
+      <UniqueIdentifier>{7f8f2c8d-02c9-4128-94a0-be3dd2cce258}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog\TemplateOpen">
+      <UniqueIdentifier>{4346c4a4-82e0-4fd2-afe4-873e6177e7a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog\AttributeEdit">
+      <UniqueIdentifier>{275fcf29-4fff-4819-8525-fd0be31e0b81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Global">
+      <UniqueIdentifier>{b9548bb2-2850-4e06-ba97-d2dd19cf4eb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hook">
+      <UniqueIdentifier>{305d2545-922f-4ddd-93a0-ff88dff20a50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{df8c357f-9613-4b2d-a4e4-3abfb1104705}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tool">
+      <UniqueIdentifier>{3e091d42-c843-43d7-b2df-7a50a94046af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog\Image">
+      <UniqueIdentifier>{9dbbd026-1e35-42b1-bf78-fd0609a4c0fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ctrls">
+      <UniqueIdentifier>{34290a5f-ee89-49ef-b6fd-132039c0d770}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ctrls\ViewTree">
+      <UniqueIdentifier>{8ca2d0f0-4f2f-47a1-8d0f-20cbdbc4bc15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ctrls\FileView">
+      <UniqueIdentifier>{1518b195-0d25-4659-86c1-bb85cf16e3d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ctrls\Image">
+      <UniqueIdentifier>{7d5ddcdf-429e-475c-ba85-25f115717b36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ctrls\Property">
+      <UniqueIdentifier>{b96dd585-b60d-4dad-af50-2066a3de5dff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pane">
+      <UniqueIdentifier>{20e6af7e-eef1-4dee-b03d-79b346b056b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ctrls\ToolBox">
+      <UniqueIdentifier>{9b790e00-0002-4e35-80f3-c61957786b0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pane\Property">
+      <UniqueIdentifier>{d06101a3-93c0-4b9a-bfcb-bc7c4f29e520}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pane\ToolBox">
+      <UniqueIdentifier>{c5199a30-e395-4ba6-bed2-fe081f5f4e12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tool\Util">
+      <UniqueIdentifier>{0304352e-1df1-4b07-bb49-02ea853a0719}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tool\Trace">
+      <UniqueIdentifier>{51c856e1-3210-46e3-94a5-25c86cada078}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pane\ClassView">
+      <UniqueIdentifier>{b44df553-959f-4ed0-bee3-43869f7e4551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pane\Designer">
+      <UniqueIdentifier>{75c9dd46-1e47-4f08-8fc3-a77f919ecfe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pane\Resource">
+      <UniqueIdentifier>{08caaa11-daf0-478a-b201-452ee1447577}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layout">
+      <UniqueIdentifier>{fb371765-a480-4d19-94be-aed969343990}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Frm">
+      <UniqueIdentifier>{6466e7fb-970f-44cb-9d94-902057b75357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Frm\MainFrm">
+      <UniqueIdentifier>{aa5fc888-11f3-4863-a3c5-729efba07de2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Frm\ChildFrm">
+      <UniqueIdentifier>{03c2153e-6cb7-4e5d-adaf-d4239c0d4229}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="App Entry">
+      <UniqueIdentifier>{7e9411c5-87e3-4fb9-b7f4-1811f4971005}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="third_party\tinyxml\tinystr.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="third_party\tinyxml\tinyxml.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="third_party\tinyxml\tinyxmlerror.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="third_party\tinyxml\tinyxmlparser.cpp">
+      <Filter>tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="ChildFrm.cpp">
+      <Filter>Frm\ChildFrm</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassView.cpp">
+      <Filter>Pane\ClassView</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogCheckUpdate.cpp">
+      <Filter>Dialog\CheckUpdate</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogCustomFonts.cpp">
+      <Filter>Dialog\CustomFonts</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogDefaultAttribList.cpp">
+      <Filter>Dialog\DefaultAttribute</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogProjectNew.cpp">
+      <Filter>Dialog\ProjectNew</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogSaveAsName.cpp">
+      <Filter>Dialog\Save</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogSkinFileNew.cpp">
+      <Filter>Dialog\SkinNew</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogTemplateOpen.cpp">
+      <Filter>Dialog\TemplateOpen</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogUIAttribEdit.cpp">
+      <Filter>Dialog\AttributeEdit</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalVariable.cpp">
+      <Filter>Global</Filter>
+    </ClCompile>
+    <ClCompile Include="HookAPI.cpp">
+      <Filter>Hook</Filter>
+    </ClCompile>
+    <ClCompile Include="UICommandHistory.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIDesignerDoc.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="UIProperties.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewTree.cpp">
+      <Filter>Ctrls\ViewTree</Filter>
+    </ClCompile>
+    <ClCompile Include="FileView.cpp">
+      <Filter>Ctrls\FileView</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageDialog.cpp">
+      <Filter>Dialog\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="ImagePreview.cpp">
+      <Filter>Ctrls\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertyTabLayoutUI.cpp">
+      <Filter>Ctrls\Property</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolBoxCtrl.cpp">
+      <Filter>Ctrls\ToolBox</Filter>
+    </ClCompile>
+    <ClCompile Include="PropertiesWnd.cpp">
+      <Filter>Pane\Property</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolBoxWnd.cpp">
+      <Filter>Pane\ToolBox</Filter>
+    </ClCompile>
+    <ClCompile Include="UIUtil.cpp">
+      <Filter>Tool\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiUITracker.cpp">
+      <Filter>Tool\Trace</Filter>
+    </ClCompile>
+    <ClCompile Include="UIDesignerView.cpp">
+      <Filter>Pane\Designer</Filter>
+    </ClCompile>
+    <ClCompile Include="UIImagePreview.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceView.cpp">
+      <Filter>Pane\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="LayoutManager.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Frm\MainFrm</Filter>
+    </ClCompile>
+    <ClCompile Include="DuiDesigner.cpp">
+      <Filter>App Entry</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="third_party\tinyxml\tinystr.h">
+      <Filter>tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="third_party\tinyxml\tinyxml.h">
+      <Filter>tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="ChildFrm.h">
+      <Filter>Frm\ChildFrm</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassView.h">
+      <Filter>Pane\ClassView</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogCheckUpdate.h">
+      <Filter>Dialog\CheckUpdate</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogCustomFonts.h">
+      <Filter>Dialog\CustomFonts</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogDefaultAttribList.h">
+      <Filter>Dialog\DefaultAttribute</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogProjectNew.h">
+      <Filter>Dialog\ProjectNew</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogSaveAsName.h">
+      <Filter>Dialog\Save</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogSkinFileNew.h">
+      <Filter>Dialog\SkinNew</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogTemplateOpen.h">
+      <Filter>Dialog\TemplateOpen</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogUIAttribEdit.h">
+      <Filter>Dialog\AttributeEdit</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalVariable.h">
+      <Filter>Global</Filter>
+    </ClInclude>
+    <ClInclude Include="HookAPI.h">
+      <Filter>Hook</Filter>
+    </ClInclude>
+    <ClInclude Include="UICommandHistory.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIDesignerDoc.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="UIProperties.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewTree.h">
+      <Filter>Ctrls\ViewTree</Filter>
+    </ClInclude>
+    <ClInclude Include="FileView.h">
+      <Filter>Ctrls\FileView</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageDialog.h">
+      <Filter>Dialog\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="ImagePreview.h">
+      <Filter>Ctrls\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyTabLayoutUI.h">
+      <Filter>Ctrls\Property</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolBoxCtrl.h">
+      <Filter>Ctrls\ToolBox</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertiesWnd.h">
+      <Filter>Pane\Property</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolBoxWnd.h">
+      <Filter>Pane\ToolBox</Filter>
+    </ClInclude>
+    <ClInclude Include="UIUtil.h">
+      <Filter>Tool\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="MultiUITracker.h">
+      <Filter>Tool\Trace</Filter>
+    </ClInclude>
+    <ClInclude Include="UIDesignerView.h">
+      <Filter>Pane\Designer</Filter>
+    </ClInclude>
+    <ClInclude Include="UIImagePreview.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceView.h">
+      <Filter>Pane\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="LayoutManager.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Frm\MainFrm</Filter>
+    </ClInclude>
+    <ClInclude Include="DuiDesigner.h">
+      <Filter>App Entry</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\ToolBox\Active.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\banner.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\bitmap1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\Button.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\CheckBox.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\class_view.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\class_view_hc.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\classview.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\classview_hc.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\Combo.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\ComboBox.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\Container.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\Control.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\DialogLayout.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\DuiDesigner.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\DuiDesignerDoc.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\Edit.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\explorer.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\explorer_hc.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\file_view.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\file_view_hc.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\fileview.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\fileview_hc.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\formedit.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\formedit_hc.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\HorizontalLayout.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\icon1.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\Label.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\menuimages.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\menuimages_hc.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\movehandle.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\Option.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\Pointer.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\Progress.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\project_explorer_hc.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\properties.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\properties_hc.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\properties_wnd.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\properties_wnd_hc.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\res_view.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\res_view_hc.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\resource.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\resource24.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\ScrollBar.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\Slider.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\sort.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\sort_hc.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\TabLayout.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\TabTabLayout.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\Text.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\TileLayout.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\toolbar1.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Toolbar256.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\Toolbar_hc.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\toolbox_wnd_hc.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\UIDesigner.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\UIDesignerDoc.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\uimenu.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="UserImages.bmp">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\ToolBox\VerticalLayout.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DuiDesigner.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\DuiDesigner.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="DuiDesigner.reg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

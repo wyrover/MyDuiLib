@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="340,244" caption="0,0,0,30" roundcorner="5,5">
+    <Include source="config.xml"/>
+
+    <HorizontalLayout name="BK" bkimage="file=&apos;YTing/bg_007.jpg&apos; corner=&apos;5,5,5,5&apos;">
+        <VerticalLayout bkimage="file=&apos;border.png&apos; corner=&apos;5,5,5,5&apos; hole=&apos;true&apos;" inset="1,1,1,1">
+            <!--caption-->
+            <HorizontalLayout name="title" height="29">
+                <Label name="caption" text="Tag修改" padding="10,0,0,0" mouse="false" textcolor="#00FFFFFF" disabledtextcolor="#FFA7A6AA" font="1" />
+                <Control mouse="false" />
+                <FadeButton name="close" tooltip="关闭" width="17" height="17" padding="0,5,0,5" textcolor="#FF333333" 
+                    disabledtextcolor="#FFA7A6AA" align="center" 
+                    normalimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,0,17,17&apos; " 
+                    hotimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,34,17,51&apos; " 
+                    pushedimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,17,17,34&apos; " />
+            </HorizontalLayout>
+            <!--end caption-->
+
+            <VerticalLayout  bkimage="file=&apos;YTing/info_bg.bmp&apos;">
+                <Label text="歌名" float="true" pos="49,26,0,0" width="33" height="30" 
+                    textcolor="#FF333333" disabledtextcolor="#FFA7A6AA" align="center" />
+                <Edit name="song_name" float="true" pos="106,26,0,0" width="190" height="30" 
+                    bkcolor="#00000000" textpadding="2,2,2,2" prompt="在此输入歌曲名称"
+                    normalimage="file='YTing/form-input-normal.png' corner='20,10,20,10' mask='#FFFF00FF'" 
+                    hotimage="file='YTing/form-input-normal.png' corner='20,10,20,10' mask='0FFFF00FF'" 
+                    focusedimage="file='YTing/form-input-normal.png' corner='20,10,20,10' mask='0FFFF00FF'" />
+                <Label  text="艺人" float="true" pos="49,73,0,0" width="33" height="30" 
+                    textcolor="#FF333333" disabledtextcolor="#FFA7A6AA" align="center" />
+                <Edit name="artist_name" float="true" pos="106,73,0,0" width="190" height="30" 
+                    bkcolor="#00000000" textpadding="2,2,2,2" prompt="在此输入歌曲艺人"
+                    normalimage="file='YTing/form-input-normal.png' corner='20,10,20,10' mask='#FFFF00FF'" 
+                    hotimage="file='YTing/form-input-normal.png' corner='20,10,20,10' mask='0FFFF00FF'" 
+                    focusedimage="file='YTing/form-input-normal.png' corner='20,10,20,10' mask='0FFFF00FF'" />
+                <Label text="专辑" float="true" pos="49,123,0,0" width="33" height="30" 
+                    textcolor="#FF333333" disabledtextcolor="#FFA7A6AA" align="center" />
+                <Edit name="album_name" float="true" pos="106,123,0,0" width="190" height="30" 
+                    bkcolor="#00000000" textpadding="2,2,2,2"  prompt="在此输入歌曲专辑"
+                    normalimage="file='YTing/form-input-normal.png' corner='20,10,20,10' mask='#FFFF00FF'" 
+                    hotimage="file='YTing/form-input-normal.png' corner='20,10,20,10' mask='0FFFF00FF'" 
+                    focusedimage="file='YTing/form-input-normal.png' corner='20,10,20,10' mask='0FFFF00FF'" />
+                <FadeButton text="确认修改" float="true" pos="207,169,0,0" width="89" height="30" 
+                    textcolor="#FF333333" disabledtextcolor="#FFA7A6AA" align="center" 
+                    normalimage="file='YTing/btn.png'" name="modify"
+                    hotimage="file='YTing/btn_click.png'" 
+                    pushedimage="file='YTing/btn.png'" 
+                    disabledimage="file='YTing/btn_disable.png' source='0,0,28,30'" />
+                <FadeButton text="暂不修改" float="true" pos="49,169,0,0" width="89" height="30" 
+                    textcolor="#FF333333" disabledtextcolor="#FFA7A6AA" align="center" 
+                    normalimage="file='YTing/btn.png'" name="cancle"
+                    hotimage="file='YTing/btn_click.png'" 
+                    pushedimage="file='YTing/btn.png'" 
+                    disabledimage="file='YTing/btn_disable.png' source='0,0,28,30'" />
+            </VerticalLayout>
+        </VerticalLayout>
+    </HorizontalLayout>
+</Window>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+  <Window size="150,220"   roundcorner="4,4" showdirty="false">
+  <Default name="Menu" value="bordersize=&quot;0&quot; borderround=&quot;0,0&quot; bordercolor=&quot;#FFCCCCCC&quot; inset=&quot;2,2,2,2&quot; itemtextpadding=&quot;30,0,0,0&quot; bkimage=&quot;file='YTing/Menu/bg.png' corner='5,5,5,5'&quot; itemselectedimage=&quot;file='YTing/Menu/hover.png' corner='5,5,5,5'&quot; itemhotimage=&quot;file='YTing/Menu/hover.png' corner='5,5,5,5'&quot; itemselectedbkcolor=&quot;#FFEE6746&quot; itemhotbkcolor=&quot;#00000000&quot; itemdisabledbkcolor=&quot;#00000000&quot; itemselectedtextcolor=&quot;#FFFFFFFF&quot;" />
+  <Default name="MenuElement" value="height=&quot;24&quot;"/>
+  <Default name="Control" value="bkcolor=&quot;#FFDDDDDD&quot; height=&quot;1&quot;"/>
+  <Style name="linestyle" height="1" padding="30,0,0,0" enabled="false"/>
+  <Style name="line" height="1" bordersize="1" bkcolor="#FFDDDDDD" />
+ <Style name="arr" width="24" bkimage="file=&apos;YTing/Menu/arrow.png&apos; source=&apos;0,0,24,24&apos;" />
+  <Style name="search"  align="left" width="25"  height="26"
+                  bkimage="file=&apos;YTing/MusicLib/findbtn.png&apos; source=&apos;25,0,50,26&apos;" /> 
+  <Menu>
+   <MenuElement text="歌词搜索" name="search">
+      <HorizontalLayout>
+        <Button name="searchico" style="search"/>
+   	  <Button />
+    </HorizontalLayout>
+   </MenuElement>
+   <MenuElement name="Sep" style="linestyle">
+    	<Label style="line"/>
+    </MenuElement>
+   <MenuElement text="歌词调整" name="modify">
+     <HorizontalLayout>
+        <Button />
+        <Button width="24" style="arr" />
+      </HorizontalLayout>
+      <MenuElement text="前进0.5s " name="advance"/>
+      <MenuElement text="后退0.5s " name="back"/>
+      <MenuElement text="歌词还原" name="reset"/>
+   </MenuElement>
+
+    <MenuElement name="Sep" style="linestyle">
+    	<Label style="line"/>
+    </MenuElement>
+    
+    <MenuElement text="关联本地歌词" name="linklocalrc"/>
+    
+    <MenuElement text="编辑歌词" name="editlrc"/>
+    <MenuElement text="歌词设置" name="lrcsetting"/>
+    <MenuElement name="Sep" style="linestyle">
+    	<Label style="line"/>
+    </MenuElement>
+     <MenuElement text="打开歌词目录" name="lrcdir"/>
+    <MenuElement text="切换至桌面歌词" name="desklrc"/>
+   
+  </Menu>
+  
+</Window>

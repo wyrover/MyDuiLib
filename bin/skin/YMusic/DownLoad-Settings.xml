@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window >
+   <VerticalLayout  inset="15,10,5,5">
+   	<HorizontalLayout height="20">
+             <Label text="下载设置" width="58" height="20" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" />
+             <Control bkimage="file='YTing/line-point.png'" height="1" padding="0,10,0,0"/>
+         </HorizontalLayout>
+         <HorizontalLayout height="40" inset="10,1,1,1">
+           <VerticalLayout>
+             <HorizontalLayout>
+         	  <CheckBox name="autoloadlrc" text="自动下载音乐歌词" selected="true"/>
+         	  <CheckBox name="autoloadalbum" text="自动下载专辑图片" selected="true" />
+            </HorizontalLayout>
+         </VerticalLayout>
+      </HorizontalLayout>
+      <HorizontalLayout height="20">
+             <Label text="缓存设置" width="58" height="20" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" />
+             <Control bkimage="file='YTing/line-point.png'" height="1" padding="0,10,0,0"/>
+       </HorizontalLayout>
+      <HorizontalLayout height="24">
+         <Label text="缓存目录" width="58" height="20" float="true" pos="27,1,0,0" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA"  />
+	  <Edit name="CacheFile_EDT_SavePath" width="240" height="24" float="true" pos="100,1,0,0" readonly="true"  />
+	  <Button name="CacheFile_BTN_OpenBrose" text="浏览" width="73" height="24" float="true" pos="375,1,0,0" />
+       </HorizontalLayout>
+       <HorizontalLayout height="28" >
+         <Button name="CacheFile_BTN_OpenFloder" text="打开所在目录" width="80" height="24" float="true" pos="30,3,0,0" />
+       </HorizontalLayout>	
+    </VerticalLayout>
+</Window>

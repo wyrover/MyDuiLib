@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+    <VerticalLayout>
+        <HorizontalLayout name="songitemnormallayout" height="25"  mouse="false" bkcolor="#2A000000">
+            <Label name="norindexlab" width="30" height="25" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA" align="center" text=""/>
+            <Label name="norname" height="25" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+            <Label name="noraritst" height="25" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+            <Button name="normenu" height="14" width="14" padding="0,5,0,6" visible="false" menu="true"
+            		normalimage="file=&apos;YTing/SongItem/songitem-menu.png&apos; source=&apos;0,0,14,14&apos;"
+            		hotimage="file=&apos;YTing/SongItem/songitem-menu.png&apos; source=&apos;14,0,28,14&apos;"
+            		pushedimage="file=&apos;YTing/SongItem/songitem-menu.png&apos; source=&apos;28,0,42,14&apos;"/>
+            <Control width="5" mouse="false" />
+        </HorizontalLayout>
+        <HorizontalLayout name="songitemexplayout" height="40" bkcolor="#2A000000" mouse="false" visible="false">
+            <HorizontalLayout width="40" height="40" bkcolor="#2A000000">
+                <Control name="song_ico" visible="true" width="40" height="40"  pos="0,0,40,40" bkimage="YTing/SongItem/list_play.jpg" userdata="YTing/SongItem/list_pause.jpg"/>
+                <Label name="pusindexlab" height="40" width="40" float="true" pos="0,0,40,40" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA" align="center" text="" font="5"/>
+            </HorizontalLayout>
+            <Control width="2" />
+            <VerticalLayout>
+                <HorizontalLayout height="20">
+                    <Label name="pusname" height="25" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+            	<Label name="pusaritst" height="25" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+                </HorizontalLayout>
+                <HorizontalLayout height="20">
+                    <Label name="pusalbum" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+                   <HorizontalLayout>
+                   	<Button name="pusremovebtn" tooltip="移除歌曲" width="13" height="13" padding="0,4,0,0" 
+                    		  normalimage="file='YTing/SongItem/songitem-remove.png' source='0,0,13,14'" 
+                    		  hotimage="file='YTing/SongItem/songitem-remove.png' source='13,0,26,14'" 
+                    		  pushedimage="file='YTing/SongItem/songitem-remove.png' source='26,0,42,14'"  
+                    		  textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+                   	<Control width="10" mouse="false" />
+                    	<CheckBox name="pusheartbtn" tooltip="收藏这歌曲" selectedtooltip="取消收藏" width="13" height="14" padding="0,4,0,0" tag="0"
+                    			normalimage="file='YTing/SongItem/songitem-collect.png' source='0,0,13,14'" 
+                    			hotimage="file='YTing/SongItem/songitem-collect.png' source='13,0,27,14'" 
+                    			pushedimage="file='YTing/SongItem/songitem-collect.png' source='28,0,42,14'" 
+                    			selectedimage="file='YTing/SongItem/songitem-collect.png' source='13,0,27,14'" 
+                    			selectedhotimage="file='YTing/SongItem/songitem-collect.png' source='0,0,13,14'"
+                    			selectedpushedimage="file='YTing/SongItem/songitem-collect.png' source='0,0,13,14'"
+                    			textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+                    	<Control width="10" mouse="false" />
+                    	<Button name="pussharebtn" tooltip="分享这歌曲" width="13" height="14" padding="0,4,0,0" 
+                    		 normalimage="file='YTing/SongItem/songitem-share.png' source='0,0,13,14'" 
+                    		 hotimage="file='YTing/SongItem/songitem-share.png' source='13,0,26,14'" 
+                    		 pushedimage="file='YTing/SongItem/songitem-share.png' source='26,0,42,14'"  
+                    		 textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+                    	<Control width="10" mouse="false" />
+                     	<Button name="pusdownbtn" tooltip="下载这歌曲" width="13" height="14" padding="0,4,0,0" 
+                     		   normalimage="file='YTing/SongItem/songitem-download.png' source='0,0,13,14'" 
+                     		   hotimage="file='YTing/SongItem/songitem-download.png' source='14,0,28,14'" 
+                     		   pushedimage="file='YTing/SongItem/songitem-download.png' source='28,0,42,14'" 
+                     		   textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"/>                 
+                    	<Control width="10" mouse="false" />
+                   </HorizontalLayout>
+                </HorizontalLayout>
+            </VerticalLayout>
+        </HorizontalLayout>
+    </VerticalLayout>
+</Window>

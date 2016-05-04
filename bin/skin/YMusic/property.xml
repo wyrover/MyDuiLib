@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="266,351" caption="0,0,0,350" roundcorner="5,5">
+     <Include source="config.xml"/>
+     <HorizontalLayout name="BK" width="266" height="351" bkimage="file=&apos;YTing/Setting/fileasso_bg.png&apos; corner=&apos;5,5,5,5&apos;">
+        <VerticalLayout bkimage="file=&apos;YTing/border.png&apos; corner=&apos;5,5,5,5&apos;" inset="1,1,1,1">
+            <HorizontalLayout width="264" height="35">
+                <Label name="caption" text="文件信息" padding="10,0,0,0" mouse="false" textcolor="#00000080" disabledtextcolor="#FFA7A6AA" font="1" />
+                <Control mouse="false" />
+                <FadeButton name="close" tooltip="关闭" width="25" height="26" padding="10,5,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;YTing/sys-close.png&apos; source=&apos;0,0,25,26&apos;" hotimage="file=&apos;YTing/sys-close.png&apos; source=&apos;25,0,50,26&apos;" pushedimage="file=&apos;YTing/sys-close.png&apos; source=&apos;50,0,75,26&apos;" />
+            </HorizontalLayout>
+            <VerticalLayout>
+                <Label text="文件名" float="true" pos="19,34,0,0" width="56" height="27" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label name="file_name" text="白天不懂夜的黑.mp3" float="true" pos="93,32,0,0" width="150" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label text="歌名" float="true" pos="20,82,0,0" width="56" height="27" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label name="song_name" text="白天不懂夜的黑" float="true" pos="93,80,0,0" width="150" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label text="艺人" float="true" pos="21,127,0,0" width="56" height="27" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label name="artist_name" text="那英" float="true" pos="93,125,0,0" width="150" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label text="专辑" float="true" pos="22,170,0,0" width="56" height="27" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label name="album_name" text="白天不懂夜的黑" float="true" pos="93,168,0,0" width="150" height="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Label text="资源位置" float="true" pos="22,217,0,0" width="56" height="27" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+                <Button name="file_pos" text="本地资源" 
+                		    float="true" pos="93,215,0,0" 
+                		    width="54" height="30" 
+                		    bkimage="YTing/btn.png" tooltip="打开文件所在目录"
+                		    textcolor="#00000800" disabledtextcolor="#00000080" align="center" />
+                <FadeButton name="ok" text="确定" 
+                			     float="true" pos="185,264,0,0" 
+                			     width="60" height="30" 
+                			     textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" 
+                			     align="center" 
+                			     normalimage="file='YTing/btn.png'" 
+                    				hotimage="file='YTing/btn_click.png'" 
+                    				pushedimage="file='YTing/btn.png'" 
+                    				disabledimage="file='YTing/btn_disable.png' source='0,0,28,30'" />
+            </VerticalLayout>
+        </VerticalLayout>
+    </HorizontalLayout>
+</Window>

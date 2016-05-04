@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="120,416">
+    <Font name="宋体" size="11" bold="false" italic="false" />
+    <Font name="宋体" size="12" bold="false" italic="false" default="true" />
+   <Default name="Control" value="bkcolor=&quot;#FFDDDDDD&quot; height=&quot;1&quot;"/>
+   <Default name="Menu" value="bordersize=&quot;0&quot; borderround=&quot;0,0&quot; bordercolor=&quot;#FFCCCCCC&quot; inset=&quot;2,2,2,2&quot; itemtextpadding=&quot;30,0,0,0&quot; bkimage=&quot;file='YTing/Menu/bg.png' corner='5,5,5,5'&quot; itemselectedimage=&quot;file='YTing/Menu/hover.png' corner='5,5,5,5'&quot; itemhotimage=&quot;file='YTing/Menu/hover.png' corner='5,5,5,5'&quot; itemselectedbkcolor=&quot;#FFEE6746&quot; itemhotbkcolor=&quot;#00000000&quot; itemdisabledbkcolor=&quot;#00000000&quot; itemselectedtextcolor=&quot;#FFFFFFFF&quot;" />
+  <Default name="MenuElement" value="height=&quot;24&quot;"/>
+  <Style name="linestyle" height="1" padding="30,0,0,0" enabled="false"/>
+  <Style name="line" height="1" bordersize="1" bkcolor="#FFDDDDDD" />
+  <Style name="arr" width="24" bkimage="file=&apos;YTing/Menu/arrow.png&apos; source=&apos;0,0,24,24&apos;" />
+ <Style name="topcheck_menu"  textpadding="0,0,0,0"  width="16"  height="16"  selected="false"  mouse="false"
+         normalimage="file='YTing/Menu/nottop_hot.png' dest='1,4,17,20'"
+         selectedimage="file='YTing/Menu/top_hot.png' dest='1,4,17,20'"/>
+  <Style name="mode_menu"  textpadding="0,0,0,0"  width="16"  height="16"  mouse="false" group="mode"
+         selectedimage="file='YTing/Menu/selected.png'  dest='1,4,17,20'"/>
+  <Style name="login" width="16" height="16"  mouse="false" bkimage="file='YTing/Menu/login_hot.png' dest='1,4,17,20'"/>
+  <Style name="setopt" width="16" height="16"  mouse="false" bkimage="file='YTing/Menu/set_hot.png' dest='1,4,17,20'"/>
+  <Style name="help" width="16" height="16"  mouse="false" bkimage="file='YTing/Menu/help_hot.png' dest='1,4,17,20'"/>
+    <Style name="about" width="16" height="16"  mouse="false" bkimage="file='YTing/Menu/about_hot.png' dest='1,4,17,20'"/>
+  <Style name="exit" width="16" height="16"  mouse="false" bkimage="file='YTing/Menu/exit_hot.png' dest='1,4,17,20'"/>
+  <Style name="ie" width="16" height="16"  mouse="false" bkimage="file='YTing/Menu/ie.png' dest='1,4,17,20'"/>
+  <Style name="skin" width="16" height="16"  mouse="false" bkimage="file='YTing/changeskin.png' source='0,0,25,19' dest='1,4,17,20'"/>
+  <Menu>
+  	<MenuElement name="login" text="登录">
+  		<Button name="loginico" style="login"/>
+  	</MenuElement>
+  	<MenuElement name="logout" text="注销" />
+  	<MenuElement name="Sep" style="linestyle">
+    		<Label style="line"/>
+      </MenuElement>
+      <MenuElement name="mode" text="界面模式">
+      	<HorizontalLayout>
+        		<Button />
+        		<Button style="arr"/>
+      	</HorizontalLayout>
+      	<MenuElement name="normal_mode" text="普通模式">
+      		<CheckBox name="normode" style="mode_menu" selected="true"/>
+      	</MenuElement>
+      	<MenuElement name="mini_mode" text="迷你模式">
+      		<CheckBox name="minimode" style="mode_menu" selected="false"/>
+      	</MenuElement>
+      </MenuElement>
+      <MenuElement name="changeskin" text="更换皮肤">
+      	<Button name="skinico" style="skin"/>
+      </MenuElement>
+      <MenuElement name="keeptop" text="总在最前">
+      	<CheckBox name="topcheck" style="topcheck_menu"/>
+      </MenuElement>
+      <MenuElement name="Sep" style="linestyle">
+    		<Label style="line"/>
+      </MenuElement>
+      <MenuElement name="showlrc" text="显示歌词"/>
+      <MenuElement name="locklrc" text="锁定歌词"/>
+      <MenuElement name="Sep" style="linestyle">
+    		<Label style="line"/>
+      </MenuElement>
+      <MenuElement name="equalizer" text="音效中心"/>
+      <MenuElement name="setoption" text="选项设置">
+      	<Button name="setico" style="setopt"/>
+      </MenuElement>
+      <MenuElement name="help" text="帮助">
+      	<HorizontalLayout>
+        		<HorizontalLayout >
+        		</HorizontalLayout>
+        		<Button style="arr"/>
+      	</HorizontalLayout>
+      	<MenuElement name="update" text="软件升级">
+      		<Button name="ieico" style="ie"/>
+      	</MenuElement>
+      	<MenuElement name="helper" text="帮助">
+      		<Button name="helperico" style="help"/>
+      	</MenuElement>
+      	<MenuElement name="about" text="关于我们">
+      		<Button name="aboutico" style="about"/>
+      	</MenuElement>
+      	<MenuElement text="意见反馈" name="feedback"/>
+      </MenuElement>
+      <MenuElement name="Sep" style="linestyle">
+    		<Label style="line"/>
+      </MenuElement>
+      <MenuElement name="exit" text="退出">
+      	<Button name="exitico" style="exit"/>
+      </MenuElement>
+  </Menu>
+</Window>

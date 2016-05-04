@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="json">
+      <UniqueIdentifier>{840e8ba7-78d2-4af1-bb3f-630e220bf9c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json\include">
+      <UniqueIdentifier>{96f526dd-bc62-4cc6-9209-315607eb57c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json\lib_json">
+      <UniqueIdentifier>{23f3e6e8-12d4-4117-a387-0e401ac2632f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="small.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="Test.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="json\lib_json\json_internalarray.inl">
+      <Filter>json\lib_json</Filter>
+    </None>
+    <None Include="json\lib_json\json_internalmap.inl">
+      <Filter>json\lib_json</Filter>
+    </None>
+    <None Include="json\lib_json\json_valueiterator.inl">
+      <Filter>json\lib_json</Filter>
+    </None>
+    <None Include="json\lib_json\sconscript">
+      <Filter>json\lib_json</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="RichEditTest.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UIFriends.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UIListCommonDefine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="chat_dialog.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FaceSelDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FaceCtrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FaceList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="json\DataParser.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\include\autolink.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="json\include\config.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="json\include\features.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="json\include\forwards.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="json\include\json.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="json\include\reader.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="json\include\value.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="json\include\writer.h">
+      <Filter>json\include</Filter>
+    </ClInclude>
+    <ClInclude Include="json\lib_json\json_batchallocator.h">
+      <Filter>json\lib_json</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="RichEditTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UIFriends.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UIListCommonDefine.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="chat_dialog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FaceSelDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FaceCtrl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FaceList.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="json\DataParser.cpp">
+      <Filter>json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\lib_json\json_reader.cpp">
+      <Filter>json\lib_json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\lib_json\json_value.cpp">
+      <Filter>json\lib_json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\lib_json\json_writer.cpp">
+      <Filter>json\lib_json</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Test.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

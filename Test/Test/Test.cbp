@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Test" />
+		<Option pch_mode="2" />
+		<Option compiler="icc" />
+		<Build>
+			<Target title="U_Debug Win32">
+				<Option output="Test" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="icc" />
+			</Target>
+			<Target title="UnicodeDebug Win32">
+				<Option output="Test" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="icc" />
+				<Compiler>
+					<Add option="/DWIN32" />
+					<Add option="/D_DEBUG" />
+					<Add option="/D_WINDOWS" />
+					<Add directory="$(DXDIR)/Include" />
+					<Add directory="$(FnLib)" />
+					<Add directory="$(FnLib)/OpenGL" />
+					<Add directory="$(IncludePath)" />
+					<Add directory="$(LUA_DEV)/include" />
+					<Add directory="../../DuiLib/" />
+				</Compiler>
+				<Linker>
+					<Add option="/debug" />
+					<Add directory="$(DXDIR)/Lib/x86" />
+					<Add directory="$(FnLib)/FnLib/lib" />
+					<Add directory="../../lib/" />
+					<Add directory="$(LUA_DEV)/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release_Static Win32">
+				<Option output="Test" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="icc" />
+				<Compiler>
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_WINDOWS" />
+					<Add option="/DUSE_STATIC_LIB" />
+				</Compiler>
+				<Linker>
+					<Add option="/debug" />
+				</Linker>
+			</Target>
+			<Target title="Release Win32">
+				<Option output="Test" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="icc" />
+				<Compiler>
+					<Add option="/DWIN32" />
+					<Add option="/DNDEBUG" />
+					<Add option="/D_WINDOWS" />
+					<Add directory="$(DXDIR)/Include" />
+					<Add directory="$(FnLib)" />
+					<Add directory="$(FnLib)/OpenGL" />
+					<Add directory="$(IncludePath)" />
+					<Add directory="$(LUA_DEV)/include" />
+					<Add directory="../../DuiLib/" />
+				</Compiler>
+				<Linker>
+					<Add option="/debug" />
+					<Add library="lua5.1.lib" />
+					<Add directory="$(DXDIR)/Lib/x86" />
+					<Add directory="$(FnLib)/FnLib/lib" />
+					<Add directory="../../lib/" />
+					<Add directory="$(LUA_DEV)/lib" />
+				</Linker>
+			</Target>
+			<Target title="Debug_Static Win32">
+				<Option output="Test" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="icc" />
+				<Compiler>
+					<Add option="/DWIN32" />
+					<Add option="/D_DEBUG" />
+					<Add option="/D_WINDOWS" />
+					<Add option="/DUSE_STATIC_LIB" />
+					<Add directory="../../DuiLib/" />
+				</Compiler>
+				<Linker>
+					<Add option="/debug" />
+					<Add directory="$(DXDIR)/Lib/x86" />
+					<Add directory="$(FnLib)/FnLib/lib" />
+					<Add directory="../../lib/" />
+				</Linker>
+			</Target>
+			<Target title="Debug Win32">
+				<Option output="Test" prefix_auto="1" extension_auto="1" />
+				<Option type="0" />
+				<Option compiler="icc" />
+				<Compiler>
+					<Add option="/DWIN32" />
+					<Add option="/D_DEBUG" />
+					<Add option="/D_WINDOWS" />
+					<Add directory="$(DXDIR)/Include" />
+					<Add directory="$(FnLib)" />
+					<Add directory="$(FnLib)/OpenGL" />
+					<Add directory="$(IncludePath)" />
+					<Add directory="$(LUA_DEV)/include" />
+					<Add directory="../../DuiLib/" />
+				</Compiler>
+				<Linker>
+					<Add option="/debug" />
+					<Add library="lua51.lib" />
+					<Add directory="$(DXDIR)/Lib/x86" />
+					<Add directory="$(FnLib)/FnLib/lib" />
+					<Add directory="../../lib/" />
+					<Add directory="$(LUA_DEV)/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Unit filename="ReadMe.txt">
+			<Option target="U_Debug Win32" />
+			<Option target="Debug_Static Win32" />
+			<Option target="Debug Win32" />
+			<Option target="Release_Static Win32" />
+			<Option target="Release Win32" />
+			<Option target="UnicodeDebug Win32" />
+			<Option target="UDebug Win32" />
+		</Unit>
+		<Unit filename="Resource.h">
+			<Option target="U_Debug Win32" />
+			<Option target="Debug_Static Win32" />
+			<Option target="Debug Win32" />
+			<Option target="Release_Static Win32" />
+			<Option target="Release Win32" />
+			<Option target="UnicodeDebug Win32" />
+			<Option target="UDebug Win32" />
+		</Unit>
+		<Unit filename="Test.cpp">
+			<Option target="U_Debug Win32" />
+			<Option target="Debug_Static Win32" />
+			<Option target="Debug Win32" />
+			<Option target="Release_Static Win32" />
+			<Option target="Release Win32" />
+			<Option target="UnicodeDebug Win32" />
+			<Option target="UDebug Win32" />
+		</Unit>
+		<Unit filename="Test.h">
+			<Option target="U_Debug Win32" />
+			<Option target="Debug_Static Win32" />
+			<Option target="Debug Win32" />
+			<Option target="Release_Static Win32" />
+			<Option target="Release Win32" />
+			<Option target="UnicodeDebug Win32" />
+			<Option target="UDebug Win32" />
+		</Unit>
+		<Unit filename="Test.ico">
+			<Option target="U_Debug Win32" />
+			<Option target="Debug_Static Win32" />
+			<Option target="Debug Win32" />
+			<Option target="Release_Static Win32" />
+			<Option target="Release Win32" />
+			<Option target="UnicodeDebug Win32" />
+			<Option target="UDebug Win32" />
+		</Unit>
+		<Unit filename="Test.rc">
+			<Option target="U_Debug Win32" />
+			<Option target="Debug_Static Win32" />
+			<Option target="Debug Win32" />
+			<Option target="Release_Static Win32" />
+			<Option target="Release Win32" />
+			<Option target="UnicodeDebug Win32" />
+			<Option target="UDebug Win32" />
+		</Unit>
+		<Unit filename="small.ico">
+			<Option target="U_Debug Win32" />
+			<Option target="Debug_Static Win32" />
+			<Option target="Debug Win32" />
+			<Option target="Release_Static Win32" />
+			<Option target="Release Win32" />
+			<Option target="UnicodeDebug Win32" />
+			<Option target="UDebug Win32" />
+		</Unit>
+		<Unit filename="stdafx.cpp">
+			<Option target="U_Debug Win32" />
+			<Option target="Debug_Static Win32" />
+			<Option target="Debug Win32" />
+			<Option target="Release_Static Win32" />
+			<Option target="Release Win32" />
+			<Option target="UnicodeDebug Win32" />
+			<Option target="UDebug Win32" />
+		</Unit>
+		<Unit filename="stdafx.h">
+			<Option target="U_Debug Win32" />
+			<Option target="Debug_Static Win32" />
+			<Option target="Debug Win32" />
+			<Option target="Release_Static Win32" />
+			<Option target="Release Win32" />
+			<Option target="UnicodeDebug Win32" />
+			<Option target="UDebug Win32" />
+		</Unit>
+		<Unit filename="targetver.h">
+			<Option target="U_Debug Win32" />
+			<Option target="Debug_Static Win32" />
+			<Option target="Debug Win32" />
+			<Option target="Release_Static Win32" />
+			<Option target="Release Win32" />
+			<Option target="UnicodeDebug Win32" />
+			<Option target="UDebug Win32" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

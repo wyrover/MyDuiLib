@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window>
+    <HorizontalLayout name="playlistpanel" sepwidth="3" sepimm="true" width="103" minwidth="60" maxwidth="250" inset="0,0,3,0" >
+      <VerticalLayout inset="0,2,0,0">
+        <List name="play_list" header="hidden" inset="3,3,3,3" itemaltbk="false" menu="true" itemendellipsis="true"
+        	multiselect="false" tag="-1" itemselectedbkcolor="#2A000000" itemhotbkcolor="#2A000000">
+  
+        </List>
+        <FadeButton name="new_list" text="新建列表" tooltip="新建列表" padding="10,0,10,0" 
+                    width="76" height="24" textcolor="#00FFFBF0" hottextcolor="0xFF00FFAA"
+                    normalimage="file='YTing/main/btn-list-add.png' source='0,0,11,13' dest='0,5,11,18'"
+                    hotimage="file='YTing/main/btn-list-add.png' source='0,13,11,26' dest='0,5,11,18'"
+                    pushedimage="file='YTing/main/btn-list-add.png' source='0,26,11,39' dest='0,5,11,18'"/>
+      </VerticalLayout>
+      <VerticalLayout width="2" bkimage="YTing/line_v.png" mouse="false"/>
+    </HorizontalLayout>
+</Window>

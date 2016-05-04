@@ -1,0 +1,54 @@
+local Lplus = require "Lplus"
+
+local MainFrame = require "main_frame"
+
+local App = Lplus.Class("App")
+do
+	local def = App.define 
+	def.field(MainFrame).mainFrame = nil
+	def.final("=>",App).Instance = function()
+		return theApp
+	end
+
+	def.method("string").ParseCmdLine = function(self,szCmdLine)
+		print("解析命令行：", szCmdLine)
+	end
+
+	def.method("=>","string").GetSkinPath = function (self)
+		return DuiLib.PaintManagerUI.GetInstancePath() .. "skin"
+	end
+
+	def.method("=>","string").GetSkinZipFile = function(self)
+		return "ListRes.zip"
+	end	
+
+	def.method("userdata").PreInitRun = function(self,hInst)
+		local PaintManagerUI = DuiLib.PaintManagerUI
+		PaintManagerUI.SetInstance(hInst)
+		PaintManagerUI.SetResourcePath(self:GetSkinPath())
+		local zipFile = self:GetSkinZipFile()
+		if zipFile:len() >0 then
+    		PaintManagerUI.SetResourceZip2(zipFile)
+    	end
+	end
+
+	def.method("userdata","string").Run = function(self,hInst,szCmdLine)
+		print("Run App")
+		self:ParseCmdLine(szCmdLine)
+		self:PreInitRun(hInst)
+
+		local mainFrame = MainFrame.new(nil)
+		mainFrame:CreateWindow("TestDemo",nil)
+		assert(mainFrame:IsValid())
+		self.mainFrame = mainFrame
+		PaintManagerUI.MessageLoop()
+	end
+	def.method().Exit = function(self)
+		self.mainFrame:OnQuitApp()
+		self.mainFrame = nil
+	end
+end
+App.Commit()
+
+theApp = App()
+return App

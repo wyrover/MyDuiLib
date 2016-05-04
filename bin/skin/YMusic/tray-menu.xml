@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Window size="200,222"  caption="0,0,0,222" roundcorner="4,4" showdirty="false">
+    <Font name="宋体" size="11" bold="false" italic="false" />
+    <Font name="宋体" size="12" bold="false" italic="false" default="true" />
+   <Default name="Control" value="bkcolor=&quot;#FFDDDDDD&quot; height=&quot;1&quot;"/>
+   <Default name="Menu" value="bordersize=&quot;0&quot; borderround=&quot;0,0&quot; bordercolor=&quot;#FFCCCCCC&quot; inset=&quot;2,2,2,2&quot; itemtextpadding=&quot;30,0,0,0&quot; bkimage=&quot;file='YTing/Menu/bg.png' corner='5,5,5,5'&quot; itemselectedimage=&quot;file='YTing/Menu/hover.png' corner='5,5,5,5'&quot; itemhotimage=&quot;file='YTing/Menu/hover.png' corner='5,5,5,5'&quot; itemselectedbkcolor=&quot;#FFEE6746&quot; itemhotbkcolor=&quot;#00000000&quot; itemdisabledbkcolor=&quot;#00000000&quot; itemselectedtextcolor=&quot;#FFFFFFFF&quot;" />
+  <Default name="MenuElement" value="height=&quot;24&quot;"/>
+  <Default name="Option" value="name=&quot;checkbox&quot; width=&quot;16&quot; height=&quot;16&quot; notfilterselected=&quot;true&quot; selectedimage=&quot;file='YTing/Menu/selected.png' dest='1,4,17,20'&quot;" />
+
+  <Style name="linestyle" height="1" padding="30,0,0,0" enabled="false"/>
+  <Style name="line" height="1" bordersize="1" bkcolor="#FFDDDDDD" />
+  <Style name="arr" width="24" bkimage="file=&apos;YTing/Menu/arrow.png&apos; source=&apos;0,0,24,24&apos;" />
+ 
+  <Style name="topcheck_menu"  textpadding="0,0,0,0"  width="16"  height="16"  selected="false"  mouse="false"
+         normalimage="file='YTing/Menu/nottop_hot.png' dest='1,4,17,20'"
+         selectedimage="file='YTing/Menu/top_hot.png' dest='1,4,17,20'"/>
+    <Style name="login" width="16" height="16"  mouse="false" bkimage="file='YTing/Menu/login_hot.png' dest='1,4,17,20'"/>
+  <Style name="setopt" width="16" height="16"  mouse="false" bkimage="file='YTing/Menu/set_hot.png' dest='1,4,17,20'"/>
+  <Style name="help" width="16" height="16"  mouse="false" bkimage="file='YTing/Menu/help_hot.png' dest='1,4,17,20'"/>
+    <Style name="about" width="16" height="16"  mouse="false" bkimage="file='YTing/Menu/about_hot.png' dest='1,4,17,20'"/>
+  <Style name="exit" width="16" height="16"  mouse="false" bkimage="file='YTing/Menu/exit_hot.png' dest='1,4,17,20'"/>
+ <Style name="ie" width="16" height="16"  mouse="false" bkimage="file='YTing/Menu/ie.png' dest='1,4,17,20'"/>
+ <Menu>
+    <MenuElement name="playorpause" text="播放/暂停   Ctrl+AltF5"/>  
+    <MenuElement name="Sep" style="linestyle">
+    	<Label style="line"/>
+    </MenuElement>	
+    <MenuElement name="pre" text="上一首     Ctrl+Alt+←" />
+    <MenuElement name="next" text="下一首     Ctrl+Alt+→" />
+    <MenuElement name="Sep" style="linestyle">
+    	<Label style="line"/>
+    </MenuElement>
+    <MenuElement name="soundcontrol" text="音量控制">
+      <HorizontalLayout>
+        <Button />
+        <Button  style="arr"/>
+      </HorizontalLayout>
+       <MenuElement name="up_sound" text="增大音量       Ctrl+Alt+↑" />
+       <MenuElement name="down_sound" text="减小音量       Ctrl+Alt+↓" />
+       <MenuElement name="nosound" text="静音      " />
+    </MenuElement>
+    <MenuElement name="playcontrol" text="播放控制">
+      <HorizontalLayout>
+        <Button />
+        <Button  style="arr"/>
+      </HorizontalLayout>
+      <MenuElement text="顺序播放" name="listPlay" tag="0">
+      	<Option  />
+    </MenuElement>
+    <MenuElement text="列表循环" name="listLoop" tag="1">
+      	<Option />
+    </MenuElement>
+    <!--
+    <MenuElement text="单曲播放" name="singlePlay" tag="2">
+      	<Option />
+    </MenuElement>
+    -->
+    <MenuElement text="单曲循环" name="singleLoop" tag="2">
+      	<Option />
+    </MenuElement>   
+    <MenuElement text="随机播放" name="randomPlay" tag="3">
+      	<Option />
+    </MenuElement>
+   </MenuElement>
+    <MenuElement name="Sep" style="linestyle">
+    	<Label style="line"/>
+    </MenuElement>
+
+    <MenuElement name="keeptop" text="总在最前">
+      	<CheckBox name="topcheck" style="topcheck_menu"/>
+      </MenuElement>
+    <MenuElement name="Sep" style="linestyle">
+    	<Label style="line"/>
+    </MenuElement>
+    
+    <MenuElement name="setoption" text="选项设置">
+      	<Button name="setico" style="setopt"/>
+      </MenuElement>
+      <MenuElement name="help" text="帮助">
+      	<HorizontalLayout>
+        		<HorizontalLayout >
+        		</HorizontalLayout>
+        		<Button style="arr"/>
+      	</HorizontalLayout>
+      	<MenuElement name="update" text="软件升级">
+      		<Button name="ieico" style="ie"/>
+      	</MenuElement>
+      	<MenuElement name="helper" text="帮助">
+      		<Button name="helperico" style="help"/>
+      	</MenuElement>
+      	<MenuElement name="about" text="关于我们">
+      		<Button name="aboutico" style="about"/>
+      	</MenuElement>
+      	<MenuElement text="意见反馈" name="feedback"/>
+      </MenuElement>
+    
+    <MenuElement name="Sep" style="linestyle">
+    	<Label style="line"/>
+    </MenuElement>
+    
+    <MenuElement text="显示歌词" name="showlrc" tag="0"/>
+    <MenuElement text="锁定歌词" name="locklrc">
+    	<CheckBox name="lockico"   style="lockico_menu" />
+    </MenuElement>
+    <MenuElement name="Sep" style="linestyle">
+    	<Label style="line"/>
+    </MenuElement>
+    <MenuElement text="去我的主页" name="myhome"/>
+        <MenuElement name="login" text="登录">
+  		<Button name="loginico" style="login"/>
+  	</MenuElement>
+  	<MenuElement name="logout" text="注销" />
+  	<MenuElement name="Sep" style="linestyle">
+    		<Label style="line"/>
+      </MenuElement>
+      <MenuElement name="exit" text="退出">
+      	<Button name="exitico" style="exit"/>
+      </MenuElement>
+  </Menu>
+</Window>

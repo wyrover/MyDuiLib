@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="340,220"  caption="0,0,0,29"  roundcorner="4,4" showdirty="false" defaultfontcolor="#FF333333" bktrans="false">
+
+    <Include source="config.xml" />
+    <Default name="Label" value="font=&quot;0&;&quot;"/>
+   <Style name="share" font="0" width="50" height="25"  
+   			 normalimage="file='YTing/btn.png'" 
+                    hotimage="file='YTing/btn_click.png'" 
+                    pushedimage="file='YTing/btn.png'" 
+                    disabledimage="file='YTing/btn_disable.png' source='0,0,28,30'" />
+   <Style name="title" font="1" align="vcenter,singleline" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA"/>
+  
+  <HorizontalLayout colorhsl="true" bkimage="file=&apos;YTing/bg_007.jpg&apos; corner=&apos;5,5,5,5&apos;">
+    <VerticalLayout bordersize="0"  inset="1,1,1,1" bkimage="file='YTing/border.png' corner='5,5,5,5' hole='true'">
+      <VerticalLayout>
+        <HorizontalLayout height="29">
+				<Label name="caption" text="分享音乐" font="1" padding="10,0,0,0" align="left" textcolor="#ffffff" mouse="false"/>
+				<Control mouse="false"/>
+				<FadeButton name="closebtn"
+				 	padding="0,5,0,0"	
+				 	tooltip="关闭"
+				 	width="17"
+				 	height="17"
+				 	normalimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,0,17,17&apos; "
+				 	hotimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,17,17,34&apos; "
+         			 	pushedimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,34,17,51&apos; "/>
+	  </HorizontalLayout>
+        <AnimationTabLayout name="table" 
+        			animation_direction="vertical" borderround="2,2"  
+        			bkimage="file='YTing/popwindow-bg.png' corner='5,5,5,5' hole='false'" inset="18,20,18,18">
+          <HorizontalLayout>
+            <VerticalLayout>
+              <HorizontalLayout height="16">
+                <Label name="title" text="寂寞的星期五-My Little Airport" font="1" endellipsis="true" />
+                <Label name="textlen" width="30" text="140"/>
+              </HorizontalLayout>
+              <Control height="10" />
+              <RichEdit name="input"  limit="140" autovscroll="true" vscrollbar="true" font="0" inset="5,5,5,5" bkimage="file='YTing/input.png' corner='5,5,5,5'">
+                
+              </RichEdit>
+              <Control height="15" />
+              <HorizontalLayout height="25" >
+                <HorizontalLayout inset="0,4,0,5">
+                  <Label text="同时分享到"  width="60"/>
+                  <Control width="5"/>
+                  <FadeCheckBox name="qq"  tooltip="分享到qq空间" width="16"
+                                normalimage="file='YTing/share/qq.png' source='0,0,16,16'"
+                                hotimage="file='YTing/share/qq.png' source='0,0,16,16'"
+                                selectedimage="file='YTing/share/qq.png' source='0,16,16,32'"
+                                selectedhotimage="file='YTing/share/qq.png' source='0,16,16,32'"/>
+                   <Control width="5"/>
+                  <FadeCheckBox name="sina"  tooltip="分享到新浪微搏" width="16"
+                                normalimage="file='YTing/share/sina.png' source='0,0,16,16'"
+                                hotimage="file='YTing/share/sina.png' source='0,0,16,16'"
+                                selectedimage="file='YTing/share/sina.png' source='0,16,16,32'" 
+                                selectedhotimage="file='YTing/share/sina.png' source='0,16,16,32'"/>
+                     <Control width="5"/>
+                    <!--Button name="sharesetting" text="分享设置" width="60"/-->
+                </HorizontalLayout>
+       	   
+                <HorizontalLayout />
+                   <FadeButton name="sharebtn" text="分享" style="share"/>
+                
+              </HorizontalLayout>
+            </VerticalLayout>
+          </HorizontalLayout>
+          <HorizontalLayout>
+            
+          </HorizontalLayout>
+        </AnimationTabLayout>
+      </VerticalLayout>
+    </VerticalLayout>
+  </HorizontalLayout>
+</Window>

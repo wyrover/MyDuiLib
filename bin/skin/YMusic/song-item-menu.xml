@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="90,222"   roundcorner="4,4" showdirty="false">
+
+  <Font name="微软雅黑" size="12" bold="false" italic="false" default="true"/> 
+  <Default name="Control" value="bkcolor=&quot;#FFDDDDDD&quot; height=&quot;1&quot;"/>
+   <Default name="Menu" value="bordersize=&quot;0&quot; borderround=&quot;0,0&quot; bordercolor=&quot;#FFCCCCCC&quot; inset=&quot;2,2,2,2&quot; itemtextpadding=&quot;30,0,0,0&quot; bkimage=&quot;file='YTing/Menu/bg.png' corner='5,5,5,5'&quot; itemselectedimage=&quot;file='YTing/Menu/hover.png' corner='5,5,5,5'&quot; itemhotimage=&quot;file='YTing/Menu/hover.png' corner='5,5,5,5'&quot; itemselectedbkcolor=&quot;#FFEE6746&quot; itemhotbkcolor=&quot;#00000000&quot; itemdisabledbkcolor=&quot;#00000000&quot; itemselectedtextcolor=&quot;#FFFFFFFF&quot;" />
+  <Default name="MenuElement" value="height=&quot;24&quot;"/>
+  <Style name="linestyle" height="1" padding="30,0,0,0" enabled="false"/>
+  <Style name="line" height="1" bordersize="1" bkcolor="#FFDDDDDD" />
+  <Style name="arr" width="24" bkimage="file=&apos;YTing/Menu/arrow.png&apos; source=&apos;0,0,24,24&apos;" />
+<Style name="collect" align="left" width="16"  height="16"
+	normalimage="file='YTing/Main/collect-normal.png' dest='1,4,17,20'"
+         selectedimage="file='YTing/Main/collect-selected.png' dest='1,4,17,20'" 
+         disabledimage="file='YTing/Main/collect-normal.png' dest='1,4,17,20'"/>
+ <Style name="share"  align="left" width="16"  height="16"
+         normalimage="file='YTing/Main/share-selected.png' dest='1,4,17,20'" 
+         disabledimage="file='YTing/Main/share-normal.png' dest='1,4,17,20'" />       
+ <Style name="download" width="16" height="16"  mouse="false" 
+ 		normalimage="file='YTing/Menu/download.png' source='14,0,28,13' dest='2,5,15,18'" 
+ 		disabledimage="file='YTing/Menu/download.png' source='0,0,14,13' dest='2,5,15,18'"/>
+ <Style name="play" width="13" height="13"  mouse="false" 
+ 		normalimage="file='YTing/Menu/play.png' source='13,0,26,13' dest='2,5,15,18'"
+ 		disabledimage="file='YTing/Menu/play.png' source='0,0,13,13' dest='2,5,15,18'"/>
+  <Style name="remove" width="13" height="13"  mouse="false" 
+  		normalimage="file='YTing/Menu/remove.png' source='13,0,26,13' dest='1,5,14,18'"
+  		disabledimage="file='YTing/Menu/remove.png' source='0,0,13,13' dest='1,5,14,18'"/>
+ 
+  <Menu>
+    <MenuElement text="播放" name="play">
+    	<Button name="playico" style="play"/>
+    </MenuElement>
+    <MenuElement text="分享" name="share">
+    	<Button name="shareico" style="share"/>
+    </MenuElement>
+    <MenuElement text="收藏" name="collect">
+      <CheckBox name="collect_checkbox" style="collect"/>
+    </MenuElement>
+    <MenuElement text="下载" name="download">
+    	<Button name="downloadico" style="download"/>
+    </MenuElement>
+    <MenuElement name="Sep" style="linestyle">
+    	<Label style="line"/>
+    </MenuElement>
+    <MenuElement text="删除" name="remove">
+    	<Button name="removeico" style="remove"/>
+    </MenuElement>
+  </Menu>
+</Window>

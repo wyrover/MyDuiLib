@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FontConfigure>
+  <Font name="微软雅黑" size="12" bold="false" italic="false" default="true"/><!-- 0 -->
+  <Font name="微软雅黑" size="14" bold="true" italic="false"/><!-- 1 -->
+  <Font name="微软雅黑" size="14" bold="true" italic="true"/><!-- 2 -->
+  <Font name="微软雅黑" size="14" bold="false" italic="false"/><!-- 3 -->
+  <Font name="微软雅黑" size="16" bold="true" italic="false"/><!-- 4 -->
+  <Font name="微软雅黑" size="16" bold="true" italic="true"/><!-- 5 -->
+  <Font name="微软雅黑" size="16" bold="false" italic="true"/><!-- 6 -->
+  <Font name="微软雅黑" size="18" bold="true" italic="false"/><!-- 7 -->
+  <Font name="微软雅黑" size="18" bold="true" italic="true"/><!-- 8 -->
+</FontConfigure>

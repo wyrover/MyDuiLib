@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="392,30" roundcorner="4,4" showdirty="false" bktrans="false">
+  <Include source="style005.xml" />
+  <VerticalLayout name="BK" colorhsl="true" bkimage="file=&apos;YTing/bg_007.jpg&apos; corner=&apos;5,5,5,5&apos;">
+    <HorizontalLayout bordersize="0"  childpadding="2" inset="2,5,5,2" bkimage="file='YTing/border.png' corner='5,5,5,5' hole='true'">
+            <Button  name="logo" style="logo"/>
+            <FadeButton  name="pre" style="pre"/>
+             <FadeButton name="play" style="play" />
+             <FadeButton name="pause" style="pause" visible="false"/>
+            <FadeButton name="next"  style="next"/>			
+            <Control width="3" height="19" padding="2,0,0,0" bkimage="YTing/LrcToolBar/dl_splitline.png" mouse="false" />
+            <FadeButton name="zoominfont" style="zoominfont"/>
+            <FadeButton name="zoomoutfont"  style="zoomoutfont"/>
+            <FadeCheckBox name="karaok" style="karaok" />
+            <FadeButton name="theme" style="theme" />
+            <FadeButton name="config"  style="config" />
+            <Control width="3" height="27" padding="2,0,0,0" bkimage="YTing/LrcToolBar/dl_splitline.png" mouse="false" />
+            <FadeButton name="search"  style="search"  />
+            <Control width="3" height="27" padding="2,0,0,0" bkimage="YTing/LrcToolBar/dl_splitline.png" mouse="false" />
+            <FadeButton name="lock" style="lock"  />
+            <Button name="panel" style="panel"  />
+            <Button name="close" style="close" />
+    </HorizontalLayout>
+  </VerticalLayout>  
+
+</Window>

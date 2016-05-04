@@ -1,0 +1,25 @@
+
+local a = ControlUI.New()
+print(ControlUI)
+print(ControlUI.GetClassName())
+a:SetName("你好 ControlUI")
+print(a,"fffffffffffffffff")
+print(a:IsClass("你好"))
+local b = ControlUI.New()
+b:SetName("2222")
+print(a == b)
+a:Delete()
+print(a:isnil())
+local a = b
+print(a)
+print(a:GetInterface("Control"))
+a:SetName("aaaaa啊")
+print(a:GetName())
+print(ButtonUI)
+local btn = ButtonUI.New()
+print("fffffffffffffffffffffffffffffffffff")
+print(PaintManagerUI.GetInstancePath())
+local h,s,l = 0,0,0
+h,s,l = PaintManagerUI.GetHSL(h,s,l);
+print(h,s,l)
+print(PaintManagerUI.GetInstance())

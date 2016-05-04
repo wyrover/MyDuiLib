@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window>
+<Include source="style003.xml"/>
+  <Control width="10" />
+  <FadeButton name="prev" style="prev"/>
+  <Control width="10" />
+  <FadeButton name="play" style="play"/>
+  <FadeButton name="pause" style="pause"/>
+  <Control width="10" />
+  <FadeButton name="next" style="next"/>
+  <Control width="10" />
+  <HorizontalLayout width="120">
+    <FadeCheckBox name="volume" style="volume"/>
+    <TabLayout name="volumetable" width="90">
+      <HorizontalLayout childpadding="10" inset="10,0,0,0">
+        <TabLayout name="playModeTabLayout" width="30" selectedid="0">
+          <FadeButton name="listMode" style="listMode"/>
+           <FadeButton name="listLoopMode" style="listLoopMode"/>
+           <!--FadeButton name="singleMode" style="singleMode"/-->
+          <FadeButton name="singleLoopMode" style="singleLoopMode"/>                  
+          <FadeButton name="randomMode" style="randomMode"/>
+        </TabLayout>
+        <FadeCheckBox name="lrc" style="lrc"/>
+      </HorizontalLayout>
+      <HorizontalLayout>
+        <Slider name="volume_slider" style="volume_slider"/>
+      </HorizontalLayout>
+    </TabLayout>
+  </HorizontalLayout>
+  <Control />
+  <FadeButton name="similarsong" style="similarsong"/>
+  <Control width="10" />
+</Window>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window >
+   <VerticalLayout  inset="15,10,5,5">
+   	<HorizontalLayout height="20">
+             <Label text="下列格式默认使用虾听打开" width="150" height="20" textcolor="#FFFFFFFF" disabledtextcolor="#FFA7A6AA" />
+             <Control bkimage="file='YTing/line-point.png'" height="1" padding="0,10,0,0"/>
+        </HorizontalLayout>
+        <VerticalLayout>
+        	 <HorizontalLayout height="30" inset="10,1,1,1">
+         	  <CheckBox name="mp3" text="*.mp3" selected="false"/>
+         	  <CheckBox name="wma" text="*.wma" selected="false" />
+         	  <CheckBox name="wav" text="*.wav" selected="false" />
+         	 </HorizontalLayout>
+         	 <HorizontalLayout height="30" inset="10,1,1,1">
+         	  <CheckBox name="ape" text="*.ape" selected="false"/>
+         	  <CheckBox name="m4a" text="*.m4a" selected="false" />
+         	  <CheckBox name="acc" text="*.acc" selected="false"/>
+         	  </HorizontalLayout>
+         	<HorizontalLayout height="30" inset="10,1,1,1">
+         	  <CheckBox name="ogg" text="*.ogg" selected="false" />
+         	  <CheckBox name="ace" text="*.ace" selected="false" />
+         	  <Control name="sep" />
+            </HorizontalLayout>
+        </VerticalLayout>
+    </VerticalLayout>
+</Window>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StyleConfigure>
+<Style name="logo"  width="21" height="21"        
+         hotimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;8,0,15,21&apos; corner=&apos;3,0,3,0&apos;"
+         pushedimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;16,0,23,21&apos; corner=&apos;3,0,3,0&apos;" />
+  <Style name="pre"  tooltip="上一首（Ctrl+Alt+Left）" width="19" height="19"
+         padding="2,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"
+         normalimage="file=&apos;YTing/LrcToolBar/lyric-btn-prev.png&apos; source=&apos;0,0,19,19&apos;"
+         hotimage="file=&apos;YTing/LrcToolBar/lyric-btn-prev.png&apos; source=&apos;0,19,19,38&apos;"
+         pushedimage="file=&apos;YTing/LrcToolBar/lyric-btn-prev.png&apos; source=&apos;0,38,19,57&apos;" />
+  <Style name="play" tooltip="播放（Ctrl+Alt+F5）" width="19" height="19" tag="0"
+                      normalimage="file='YTing/LrcToolBar/lyric-btn-play.png' source='0,0,19,19'"
+                      hotimage="file='YTing/LrcToolBar/lyric-btn-play.png' source='0,19,19,38'"
+                      pushedimage="file='YTing/LrcToolBar/lyric-btn-play.png' source='0,38,19,57'" />
+  <Style name="pause" tooltip="暂停（Ctrl+Alt+F5）" width="19" height="19" tag="0"
+                      normalimage="file='YTing/LrcToolBar/lyric-btn-pause.png' source='0,0,19,19'"
+                      hotimage="file='YTing/LrcToolBar/lyric-btn-pause.png' source='0,19,19,38'"
+                      pushedimage="file='YTing/LrcToolBar/lyric-btn-pause.png' source='0,38,19,57'" />
+  <Style name="next" tooltip="下一首（Ctrl+Alt+Right）" width="19" height="19"
+         padding="2,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"
+         normalimage="file='YTing/LrcToolBar/lyric-btn-next.png' source='0,0,19,19'"
+         hotimage="file='YTing/LrcToolBar/lyric-btn-next.png' source='0,19,19,38'"
+         pushedimage="file='YTing/LrcToolBar/lyric-btn-next.png' source='0,38,19,57'" />
+  <Style name="zoominfont" tooltip="放大歌词" width="21" height="21" 
+            			padding="2,0,0,0" bkimage="YTing/LrcToolBar/dl_zoomin.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" 
+            			hotimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;8,0,15,21&apos; corner=&apos;3,0,3,0&apos;" 
+            			pushedimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;16,0,23,21&apos; corner=&apos;3,0,3,0&apos;" />
+  <Style name="zoomoutfont" tooltip="缩小歌词" width="21" height="21" 
+            			padding="2,0,0,0" bkimage="YTing/LrcToolBar/dl_zoomout.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" 
+            			hotimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;8,0,15,21&apos; corner=&apos;3,0,3,0&apos;" 
+            			pushedimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;16,0,23,21&apos; corner=&apos;3,0,3,0&apos;" />
+  <Style name="karaok" tooltip="打开卡拉OK效果" width="21" height="21" padding="2,0,0,0" 
+            			bkimage="YTing/LrcToolBar/dl_karaok.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" 
+            			hotimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;8,0,15,21&apos; corner=&apos;3,0,3,0&apos;" 
+            			pushedimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;16,0,23,21&apos; corner=&apos;3,0,3,0&apos;" 
+            			selectedimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;8,0,15,21&apos; corner=&apos;3,0,3,0&apos;" />
+  <Style name="theme" tooltip="设置桌面歌词颜色" width="21" height="21" padding="2,0,0,0"
+         bkimage="YTing/LrcToolBar/dl_themes.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"
+         hotimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;8,0,15,21&apos; corner=&apos;3,0,3,0&apos;"
+         pushedimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;16,0,23,21&apos; corner=&apos;3,0,3,0&apos;"/>
+  <Style name="config" tooltip="桌面歌词设置" width="21" height="21" padding="2,0,0,0"
+         bkimage="YTing/LrcToolBar/dl_config.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"
+         hotimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;8,0,15,21&apos; corner=&apos;3,0,3,0&apos;"
+         pushedimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;16,0,23,21&apos; corner=&apos;3,0,3,0&apos;" />
+  <Style name="search" tooltip="搜索歌词" width="68" height="21" padding="2,0,0,0"
+         bkimage="YTing/LrcToolBar/dl_search.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"
+         hotimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;8,0,15,21&apos; corner=&apos;3,0,3,0&apos;"
+         pushedimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;16,0,23,21&apos; corner=&apos;3,0,3,0&apos;"/>
+  <Style name="lock" tooltip="锁定桌面歌词" width="21" height="21" padding="2,0,0,0"
+         bkimage="YTing/LrcToolBar/dl_lock.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"
+         hotimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;8,0,15,21&apos; corner=&apos;3,0,3,0&apos;"
+         pushedimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;16,0,23,21&apos; corner=&apos;3,0,3,0&apos;" />
+  <Style name="panel" tooltip="切换到歌词面板" width="21" height="21" padding="2,0,0,0"
+         bkimage="file=&apos;YTing/LrcToolBar/dl_switch.png&apos;" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"
+         hotimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;8,0,15,21&apos; corner=&apos;3,0,3,0&apos;"
+         pushedimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;16,0,23,21&apos; corner=&apos;3,0,3,0&apos;" />
+  <Style name="close" tooltip="关闭桌面歌词" width="21" height="21" padding="2,0,0,0"
+         bkimage="YTing/LrcToolBar/dl_close.png" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center"
+         hotimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;8,0,15,21&apos; corner=&apos;3,0,3,0&apos;"
+         pushedimage="file=&apos;YTing/LrcToolBar/dl_btn_bk.png&apos; source=&apos;16,0,23,21&apos; corner=&apos;3,0,3,0&apos;" />
+</StyleConfigure>

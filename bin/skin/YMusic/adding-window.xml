@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="318,165" caption="0,0,0,165">
+	<VerticalLayout name="BK" bkimage="file='YTing/info_bg.bmp'">
+		<Label name="title" float="true" pos="29,10,285,40" width="256" height="30" text="正在导入歌曲，请稍后..."/>
+		<Text name="info" float="true" pos="29,48,285,123" width="256" height="75"/>
+		<Button name="closebtn" float="true" pos="225,126,285,156" width="60" height="30" text="取消" tooltip="取消"/>
+	</VerticalLayout>
+</Window>

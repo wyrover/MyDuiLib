@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window>
+<VerticalLayout>
+  	<HorizontalLayout height="95" mouse="false">
+             <Control />
+             <Control width="109" bkimage="YTing/FavoriteLoginBkg.png" />
+             <Control />
+      </HorizontalLayout>
+     <VerticalLayout height="60">
+         <Label name="favoritelabel1" text="收藏列表会自动上传到服务器" padding="0,5,0,10" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA" align="center" />
+         <Label name="favoritelabel2" text="满足你在不同电脑上的使用" padding="0,0,0,10" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA" align="center" />
+     </VerticalLayout>
+     <HorizontalLayout height="10"/>
+     <HorizontalLayout name="favoriteloginlayout" inset="0,5,0,0">
+           <Control mouse="false" />
+           <Button name="favoriteloginbtn" text="立即登录" width="100" height="29" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;YTing/playlistloginbtn.png&apos; source=&apos;0,0,7,29&apos; corner=&apos;3,0,3,0&apos;" hotimage="file=&apos;YTing/playlistloginbtn.png&apos; source=&apos;8,0,15,29&apos; corner=&apos;3,0,3,0&apos;" pushedimage="file=&apos;YTing/playlistloginbtn.png&apos; source=&apos;16,0,23,29&apos; corner=&apos;3,0,3,0&apos;" />
+           <Control mouse="false" />
+      </HorizontalLayout>
+  </VerticalLayout>
+</Window>

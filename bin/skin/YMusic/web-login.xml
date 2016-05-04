@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="600,500" caption="0,0,0,29" roundcorner="5,5" unitybg="true" defaultfontcolor="#FF333333" showdirty="false">
+
+  <Include source="104" />
+	
+	<HorizontalLayout name="BK" colorhsl="true" bkimage="file=&apos;YTing/bg_007.jpg&apos; corner=&apos;5,5,5,5&apos;">
+		<VerticalLayout name="root"  bordersize="1"  inset="1,1,1,2" bkimage="file='YTing/border.png' corner='5,5,5,5' hole='true'">
+			
+			<!---caption-->
+			<HorizontalLayout name="title" height="29">
+				
+				<Label name="caption"  padding="10,0,0,0" text="第三方登录" textcolor="#ffffff" mouse="false"/>
+				<Control mouse="false" />
+				<Button name="close"
+				   padding="0,5,0,5"
+				   tooltip="关闭"
+				   width="17"
+				   height="17"
+				   normalimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,0,17,17&apos; "
+				   pushedimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,17,17,34&apos; "
+				   hotimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,34,17,51&apos; "/>
+
+			</HorizontalLayout>
+
+			<!--HtmlView-->
+			<HorizontalLayout>
+				<WebBrowser name="ie" autonavi="true"/>
+			</HorizontalLayout>
+			
+			
+		</VerticalLayout>
+	</HorizontalLayout>
+</Window>

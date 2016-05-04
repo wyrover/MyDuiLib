@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="340,230" caption="0,0,0,30" roundcorner=" 5,5" unitybg="true" defaultfontcolor="#FF333333" showdirty="false">
+ <Include source="config.xml"/>
+ <Default name="CheckBox" value="height=&quot;16&quot; align=&quot;left&quot; textpadding=&quot;16,0,0,0&quot; padding=&quot;0,5,0,0&quot; normalimage=&quot;file='YTing/checkbox.png' source='0,0,13,13' dest='0,2,13,15'&quot; selectedimage=&quot;file='YTing/checkbox.png' source='23,0,36,13' dest='0,2,13,15'&quot; selectedhotimage=&quot;file='YTing/checkbox.png' source='23,0,36,13' dest='0,2,13,15'&quot; textcolor=&quot;#00000000&quot; disabledtextcolor=&quot;#FFA7A6AA&quot;"/>
+  
+  <HorizontalLayout name="BK" colorhsl="true" bkimage="file=&apos;YTing/bg_007.jpg&apos; corner=&apos;5,5,5,5&apos;">
+	<VerticalLayout bordersize="0"  inset="1,1,1,1" bkimage="file='border.png' corner='5,5,5,5' hole='true'">
+		
+		<!--caption-->
+		<HorizontalLayout height="29" name="title">
+			<Label name="caption"  padding="10,0,0,0" text="用户登录" font="1" align="left" textcolor="#FFFFFF" mouse="false"/>
+			<Control mouse="false" />
+			<FadeButton name="close"
+			   padding="0,5,0,5"
+			   tooltip="关闭"
+			   width="17"
+			   height="17"
+			   normalimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,0,17,17&apos; "
+			   pushedimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,17,17,34&apos; "
+			   hotimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,34,17,51&apos; "/>	
+		</HorizontalLayout>
+	
+			<VerticalLayout bkimage="file='YTing/popwindow-bg.png' corner='5,5,5,5'" borderround="2,2" >
+				<HorizontalLayout height="20">
+				</HorizontalLayout>
+
+				<!--edit-->
+				<HorizontalLayout height="25" inset="20,0,20,0">
+					<Edit name="email"  text="389465209@qq.com" prompt="你的Email地址"  password="false"  bkcolor="#00000000" textpadding="2,2,2,2" normalimage="file='YTing/form-input-normal.png' corner='20,10,20,10' mask='#FFFF00FF'" hotimage="file='YTing/form-input-normal.png' corner='20,10,20,10' mask='0FFFF00FF'" focusedimage="file='YTing/form-input-normal.png' corner='20,10,20,10' mask='0FFFF00FF'"/>
+				</HorizontalLayout>
+
+				<HorizontalLayout height="10">
+				</HorizontalLayout>
+
+				<HorizontalLayout height="25" inset="20,0,20,0">
+					<Edit name="password"  text="199010" prompt="密码"  password="true"  bkcolor="#00000000" textpadding="2,2,2,2" normalimage="file='YTing/form-input-normal.png' corner='20,10,20,10'" hotimage="file='YTing/form-input-normal.png' corner='20,10,20,10' mask='0FFFF00FF'" focusedimage="file='YTing/form-input-normal.png' corner='20,10,20,10' mask='0FFFF00FF'"/>
+				</HorizontalLayout>
+
+				<!--button-->
+				<HorizontalLayout height="10" >
+				</HorizontalLayout>
+
+				<HorizontalLayout height="25" padding="20">
+					<FadeButton name="login"
+							width="60"
+							height="25"
+							text="登录"
+							textcolor="#666666"
+							align="center"
+							normalimage="file='YTing/btn.png'" 
+                    				hotimage="file='YTing/btn_click.png'" 
+                    				pushedimage="file='YTing/btn.png'" 
+                    				disabledimage="file='YTing/btn_disable.png' source='0,0,28,30'" />
+
+					<Control width="10"/>
+					<CheckBox  text="自动登录" textcolor="#666666" name="KeepLogin" width="70"/>
+					<Control width="3"/>
+					<Control width="1" height="25" bkcolor="#FFCCCCCC"/>
+					<Control width="10"/>
+					<Button name="ForgetCode"
+						  showhtml="true"
+						  text="{u}忘记密码？{/u}"
+						  textcolor="#666666"
+						  width="60"
+						  height="25"
+						  textpadding="0,4,0,2"/>
+					<Control width="5"/>
+					<Control width="1" height="25" bkcolor="#FFCCCCCC"/>
+					<Control width="8"/>
+					<Button name="register"
+						  showhtml="true"
+						  text="{u}注册{/u}"
+						  textcolor="#FF6600"
+						  width="30"
+						  height="25"
+						  textpadding="0,4,0,2"/>
+					<Control />
+				</HorizontalLayout>
+
+				<HorizontalLayout height="20" >
+				</HorizontalLayout>
+				<Control padding="20,0,0,0" width="300" height="1" bkcolor="#FFCCCCCC"/>
+				<HorizontalLayout height="15" >
+				</HorizontalLayout>
+
+				<HorizontalLayout height="25" padding="20,0,0,0">
+					<Text text="使用其他账号登录" padding="0,5,0,0" font="0" textcolor="#666666"/>
+					<Control width="10" />
+					<FadeButton name="sina"
+							width="90"
+							height="25"
+							normalimage="file=&apos;YTing/login-weibo.png&apos; source=&apos;0,0,90,25&apos;"
+							pushedimage="file=&apos;YTing/login-weibo.png&apos; source=&apos;0,25,90,50&apos;"
+							hotimage="file=&apos;YTing/login-weibo.png&apos; source=&apos;0,50,90,75&apos;"/>
+					<Control width="10" />
+					<FadeButton name="QQ"
+							width="90"
+							height="25"
+							normalimage="file=&apos;YTing/login-qq.png&apos; source=&apos;0,0,90,25&apos;"
+							pushedimage="file=&apos;YTing/login-qq.png&apos; source=&apos;0,25,90,50&apos;"
+							hotimage="file=&apos;YTing/login-qq.png&apos; source=&apos;0,50,90,75&apos;"/>
+					<Control />
+				</HorizontalLayout>
+
+			</VerticalLayout>
+
+	</VerticalLayout>
+ </HorizontalLayout>
+</Window>

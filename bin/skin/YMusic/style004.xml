@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StyleConfigure>
+<Style name="goback" visible="true" tooltip="上一页"
+         width="15" height="15"
+				 normalimage="file=&apos;YTing/Main/lyric_back.png&apos; source=&apos;0,0,15,15&apos;"
+				 hotimage="file=&apos;YTing/Main/lyric_back.png&apos; source=&apos;0,15,15,30&apos;"
+				 pushedimage="file=&apos;YTing/Main/lyric_back.png&apos; source=&apos;0,30,15,45&apos;" />
+  <Style name="godesk" visible="true" tooltip="切到桌面歌词"
+				 width="15" height="15"
+				 normalimage="file=&apos;YTing/Main/lyric_todesk.png&apos; source=&apos;0,0,15,15&apos;"
+				 hotimage="file=&apos;YTing/Main/lyric_todesk.png&apos; source=&apos;0,15,15,30&apos;"
+				 pushedimage="file=&apos;YTing/Main/lyric_todesk.png&apos; source=&apos;0,30,15,45&apos;" />
+  <Style name="gonext" visible="true" tooltip="下一页"
+         width="15" height="15"
+				 pushedimage="file=&apos;YTing/Main/lyric_next.png&apos; source=&apos;0,0,15,15&apos;"
+				 hotimage="file=&apos;YTing/Main/lyric_next.png&apos; source=&apos;0,15,15,30&apos;"
+				 normalimage="file=&apos;YTing/Main/lyric_next.png&apos; source=&apos;0,30,15,45&apos;" />
+  <Style name="searchlrc" text="{u}搜索歌词{/u}" showhtml="true" 
+         textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA"
+		   	 visible="true" float="true" pos="130,260,185,280" relativepos="50,50,0,0"  />
+</StyleConfigure>

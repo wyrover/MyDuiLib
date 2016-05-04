@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StyleConfigure>
+	<Style name="logbtn" text="立即登录" endellipsis="true" align="left" width="50"
+            textcolor="#00FFFBF0" hottextcolor="0xFF00FFAA" tag="0"/>
+       <Style name="username" text="" endellipsis="true" align="left"
+            textcolor="#00FFFBF0" hottextcolor="0xFF00FFAA" tag="1"/>
+        <Style name="expandbtn" width="21" height="21" tooltip="展开音乐库" padding="0,4,0,0"
+        	   normalimage="file=&apos;YTing/tabright.png&apos; source=&apos;0,0,21,21&apos;"
+        	   hotimage="file=&apos;YTing/tabright.png&apos; source=&apos;21,0,42,21&apos;"
+        	   pushedimage="file=&apos;YTing/tabright.png&apos; source=&apos;42,0,63,21&apos;"
+        	   selectedimage="file=&apos;YTing/tableft.png&apos; source=&apos;0,0,21,21&apos;"
+        	   selectedhotimage="file=&apos;YTing/tableft.png&apos; source=&apos;21,0,42,21&apos;"
+        	   selectedpushedimage="file=&apos;YTing/tableft.png&apos; source=&apos;42,0,63,21&apos;"/>
+       <Style name="menubtn" width="25" height="26" tooltip="主菜单"
+            normalimage="file=&apos;YTing/sys-mini.png&apos; source=&apos;0,0,30,26&apos;"
+            hotimage="file=&apos;YTing/sys-mini.png&apos; source=&apos;30,0,60,26&apos;"
+            pushedimage="file=&apos;YTing/sys-mini.png&apos; source=&apos;60,0,90,26&apos;"/>
+       <Style name="minbtn" width="25" height="26" tooltip="最小化"
+            normalimage="file=&apos;YTing/sys-min.png&apos; source=&apos;0,0,30,26&apos;"
+            hotimage="file=&apos;YTing/sys-min.png&apos; source=&apos;30,0,60,26&apos;"
+            pushedimage="file=&apos;YTing/sys-min.png&apos; source=&apos;60,0,90,26&apos;"/>
+       <Style name="closebtn" width="25" height="26" tooltip="关闭"
+            normalimage="file=&apos;YTing/sys-close.png&apos; source=&apos;0,0,25,26&apos;"
+            hotimage="file=&apos;YTing/sys-close.png&apos; source=&apos;25,0,50,26&apos;"
+            pushedimage="file=&apos;YTing/sys-close.png&apos; source=&apos;50,0,75,26&apos;"/>
+</StyleConfigure>

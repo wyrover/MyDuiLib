@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window>
+     <Default name="CheckBox" value="height=&quot;16&quot; width=&quot;65&quot; align=&quot;left&quot; textpadding=&quot;16,0,0,0&quot; padding=&quot;0,5,0,0&quot; normalimage=&quot;file='YTing/checkbox.png' source='0,0,13,13' dest='0,2,13,15'&quot; selectedimage=&quot;file='YTing/checkbox.png' source='23,0,36,13' dest='0,2,13,15'&quot; selectedhotimage=&quot;file='YTing/checkbox.png' source='23,0,36,13' dest='0,2,13,15'&quot; textcolor=&quot;#00000000&quot; disabledtextcolor=&quot;#FFA7A6AA&quot;"/>
+ 
+    <HorizontalLayout>
+        <HorizontalLayout name="donwing_layout1" width="150">
+            <Label name="downing_titlelab" text="刘德华 - 今天.mp3" textpadding="5,0,0,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" endellipsis="true" />
+        </HorizontalLayout>
+        <HorizontalLayout name="donwing_layout2" inset="0,15,0,15">
+            <Progress name="downing_progctl" height="10" bkimage="file=&apos;YTing\ScrollBar\progress_common.png&apos; source=&apos;0,0,7,10&apos; corner=&apos;3,0,3,0&apos;" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" foreimage="file=&apos;YTing\ScrollBar\progress_common.png&apos; source=&apos;8,0,15,10&apos; corner=&apos;3,0,3,0&apos;" min="0" max="100" value="0" hor="true" />
+        </HorizontalLayout>
+        <HorizontalLayout name="donwing_layout3" width="80">
+            <Label name="downing_sizelab" text="0 MB" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        </HorizontalLayout>
+        <HorizontalLayout name="donwing_layout4" width="80">
+            <Label name="downing_ratelab" text="0 kb/s" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        </HorizontalLayout>
+        <HorizontalLayout name="donwing_layout5" width="60" inset="0,12,0,12" childpadding="4">
+            <Button name="downing_downstartbtn" visible="false" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;YTing/icon_uidownload_start.png&apos; source=&apos;0,0,16,16&apos;" hotimage="file=&apos;YTing/icon_uidownload_start.png&apos; source=&apos;17,0,33,16&apos;" pushedimage="file=&apos;YTing/icon_uidownload_start.png&apos; source=&apos;34,0,50,16&apos;" tooltip="开始下载"/>
+            <Button name="downing_downpausebtn" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;YTing/icon_uidownload_pause.png&apos; source=&apos;0,0,16,16&apos;" hotimage="file=&apos;YTing/icon_uidownload_pause.png&apos; source=&apos;17,0,33,16&apos;" pushedimage="file=&apos;YTing/icon_uidownload_pause.png&apos; source=&apos;34,0,50,16&apos;" tooltip="暂停下载"/>
+            <Button name="downing_downdeletbtn" width="16" height="16" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" normalimage="file=&apos;YTing/icon_uidownload_delete.png&apos; source=&apos;0,0,16,16&apos;" hotimage="file=&apos;YTing/icon_uidownload_delete.png&apos; source=&apos;17,0,33,16&apos;" pushedimage="file=&apos;YTing/icon_uidownload_delete.png&apos; source=&apos;34,0,50,16&apos;" tooltip="删除任务"/>
+        </HorizontalLayout>
+    </HorizontalLayout>
+</Window>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Window>
+  <Include source="font-config.xml"/>
+  <Include source="scrollbar.xml"/>
+  <Default name="Slider" value="bordersize=&quot;0&quot; height=&quot;15&quot; bkimage=&quot;file='YTing/Main/progress-line.png' source='0,0,9,15' corner='4,0,4,0' mask='#FFFF00FF'&quot; foreimage=&quot;file='YTing/Main/progress-line.png' source='4,15,6,30'  mask='#FFFF00FF'&quot; thumbsize=&quot;11,15&quot; thumbimage=&quot;file='YTing/Main/progress-btn.png'  source='0,0,11,15' corner='4,0,4,0'&quot; thumbhotimage=&quot;file='YTing/Main/progress-btn.png'  source='0,15,11,30' corner='4,0,4,0'&quot; thumbpushedimage=&quot;file='YTing/Main/progress-btn.png' source='0,30,11,45' corner='4,0,4,0'&quot;"/>
+  <Default name="Progress" value="bordersize=&quot;0&quot; height=&quot;15&quot; bkimage=&quot;file='YTing/Main/progress-line.png' source='0,0,9,15' corner='4,0,4,0' mask='#FFFF00FF'&quot; foreimage=&quot;file='YTing/Main/progress-line.png' source='0,30,9,45' corner='4,0,4,0' mask='#FFFF00FF'&quot;"/>
+  
+</Window>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="340,220" caption="0,0,0,220">
+<Include source="font-config.xml"/>
+  <Style name="msgtitle" text="提示" font="1" width="60" height="30" 
+  	textpadding="2,4,2,0" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA" align="vcenter,singleline" />
+  <Style name="msgclose" padding="0,6,0,0" width="17" height="17" textcolor="#FF000000" 
+  	   disabledtextcolor="#FFA7A6AA" align="center" tooltip="关闭"
+         normalimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,0,17,17&apos;"
+         hotimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,17,17,34&apos;"
+         pushedimage="file=&apos;YTing/system-close.png&apos; source=&apos;0,34,17,51&apos;" />
+  <Style name="msgyes"  text="确定" float="true" pos="0,0,50,25" tooltip="确定" width="50" height="25"
+         normalimage="file='YTing/btn.png'" 
+                    				hotimage="file='YTing/btn_click.png'" 
+                    				pushedimage="file='YTing/btn.png'" 
+                    				disabledimage="file='YTing/btn_disable.png' source='0,0,28,30'"/>
+  <Style name="msgcancel" text="取消" float="true" pos="70,0,120,25"  tooltip="取消"  width="50" height="25"
+         normalimage="file='YTing/btn.png'" 
+                    				hotimage="file='YTing/btn_click.png'" 
+                    				pushedimage="file='YTing/btn.png'" 
+                    				disabledimage="file='YTing/btn_disable.png' source='0,0,28,30'"/>
+  <Style name="msgcontent" text="msg..."  font="1" padding="0,0,0,0"  textpadding="10,10,2,0" 
+  		textcolor="#00000000" disabledtextcolor="#FFA7A6AA" align="wrap" showhtml="true"/>
+  <Default name="CheckBox" value="height=&quot;16&quot; width=&quot;65&quot; align=&quot;left&quot; textpadding=&quot;16,0,0,0&quot; padding=&quot;0,5,0,0&quot; normalimage=&quot;file='YTing/checkbox.png' source='0,0,13,13' dest='0,2,13,15'&quot; selectedimage=&quot;file='YTing/checkbox.png' source='23,0,36,13' dest='0,2,13,15'&quot; selectedhotimage=&quot;file='YTing/checkbox.png' source='23,0,36,13' dest='0,2,13,15'&quot; textcolor=&quot;#00000000&quot; disabledtextcolor=&quot;#FFA7A6AA&quot;"/>
+   <HorizontalLayout name="BK" width="340" height="220" bkimage="file=&apos;YTing/bg_007.jpg&apos; corner=&apos;5,5,5,5&apos;">
+     <VerticalLayout bordersize="0" width="340" height="220"   inset="1,1,1,1" bkimage="file='YTing/border.png' corner='5,5,5,5' hole='true'">
+            <HorizontalLayout width="340" height="30" inset="2,0,4,0">
+                <Text name="title" style="msgtitle" />
+                <Control mouse="false"/>
+                <FadeButton name="closebtn" style="msgclose"/>
+                <Control mouse="false" width="5"/>
+            </HorizontalLayout>
+            <!--HorizontalLayout name="sep" height="1" bordersize="1" bordercolor="#00FFFBF0" bkcolor="#00FFFBF0" textcolor="#00FFFBF0" disabledtextcolor="#FFA7A6AA"/-->
+            <VerticalLayout bkimage="file=&apos;YTing/info_bg.bmp&apos;">
+               <HorizontalLayout height="20" />
+               <HorizontalLayout>
+               	<Control width="20" mouse="false"/>
+               	<TabLayout name="icon" width="50" height="55">
+            	   <HorizontalLayout bkimage="YTing/MsgBox/info.png"/>
+            	   <HorizontalLayout bkimage="YTing/MsgBox/ok.png"/>
+            	   <HorizontalLayout bkimage="YTing/MsgBox/warn.png"/>
+               	</TabLayout>
+               	<Text name="msg" style="msgcontent"/>
+               </HorizontalLayout>
+               <HorizontalLayout height="60">
+               	<HorizontalLayout width="190" >
+               		<Control width="20" mouse="false"/>              
+                   	<CheckBox name="checkbox" text="不再提示" />
+               	</HorizontalLayout>              
+               	<HorizontalLayout name="bottom_right" width="150">
+            	    <FadeButton name="yes" style="msgyes"/>
+           		    <FadeButton name="cancel" style="msgcancel"/>
+         	 	</HorizontalLayout>
+                </HorizontalLayout>
+            </VerticalLayout>
+        </VerticalLayout>
+    </HorizontalLayout>
+</Window>

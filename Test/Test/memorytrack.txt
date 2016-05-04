@@ -1,0 +1,10 @@
+
+-----------------------
+Memory Usage Statistics
+-----------------------
+
+Alloced 32072,Dealloc 32072 Bytes
+Leaker 0 Bytes
+-----------------------
+Memory Leaker Detail
+-----------------------

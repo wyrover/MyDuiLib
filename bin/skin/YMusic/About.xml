@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window >
+   <VerticalLayout inset="15,10,5,5" >
+   	<HorizontalLayout height="100">
+       <Control />
+       <Control name="wust_ico" bkimage="YTing/wust.png" width="360" />
+       <Control />
+   	</HorizontalLayout>  
+      <HorizontalLayout  height="100">
+         <Control name="tray_ico" bkimage="YTing/YMusic.png" width="100"/>
+         <Control width="10" />
+         <Label showhtml="true" text="{f 5}{c #0000008A}逸听音乐，好听的音乐播放器{/c}{/f}" font="5"/> 
+      </HorizontalLayout>    
+   	<HorizontalLayout>
+   		<Label name="lb" showhtml="true" text="{f 5}{c #0000008A}libyyu@qq.com{/c}{/f}"  font="5" align="center"/>
+   	</HorizontalLayout>
+   	<HorizontalLayout>
+   		<Label name="lc" showhtml="true" text="{f 5}{c #0000008A}★★★蓝逸轩★★★{/c}{/f}" font="5" align="center"/>
+   	</HorizontalLayout>
+   </VerticalLayout>
+</Window>
