@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<Window size="400,400" caption="0,0,0,40" sizebox="4,4,4,4" showdirty="false" showshadow="true" shadowimage="shadow_bkg.png" shadowcorner="7,7,7,7">
-    <VerticalLayout width="400" height="400" bkimage="file=&apos;main_search_bkg.png&apos; corner=&apos;5,5,5,5&apos;">
-        <Control float="true" pos="61,30,0,0" width="265" height="258" bkimage="skin.png" />
-    </VerticalLayout>
-</Window>
