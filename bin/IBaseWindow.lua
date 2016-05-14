@@ -1,4 +1,5 @@
 local Lplus = require "Lplus"
+local bit = require "bit"
 
 local IBaseWindow = Lplus.Class("IBaseWindow")
 
@@ -18,7 +19,7 @@ def.virtual("=>","number").WindowStyle = function(self)
 	return DuiLib.WNDSTYLE_FRAME
 end
 def.virtual("=>","number").WindowStyleEx = function(self)
-	return DuiLib.Bit.Bor(DuiLib.EX_WINDOWEDGE,DuiLib.EX_OVERLAPPEDWINDOW)
+	return bit.bor(DuiLib.EX_WINDOWEDGE,DuiLib.EX_OVERLAPPEDWINDOW)
 end
 def.virtual("=>","table").WindowInitPos = function(self)
 	return nil
@@ -35,7 +36,7 @@ def.method("=>","boolean").IsValid = function(self)
 end
 def.virtual("dynamic","dynamic","=>","boolean").OnCreate = function(self,wParam,lParam)
 	local win = self.m_hWin
-	win:ModifyStyle(DuiLib.CAPTION,DuiLib.Bit.Bor(DuiLib.CLIPSIBLINGS,DuiLib.CLIPCHILDREN))
+	win:ModifyStyle(DuiLib.CAPTION,bit.bor(DuiLib.CLIPSIBLINGS,DuiLib.CLIPCHILDREN))
 	if not win:RegisterSkin(self:SkinFile()) then
 		DuiLib.MsgBox(nil,"Error")
 		return false

@@ -512,9 +512,9 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 	DuiLib::DuiEngine::Initialize(ConsoleOutput);
 	//RunCpp(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 
-	//RunLua(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+	RunLua(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 
-	RunRichEditTest(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+	//RunRichEditTest(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 
 	DuiLib::DuiEngine::Unitialize();
 

@@ -613,6 +613,7 @@
     <ClCompile Include="Layout\UITabLayout.cpp" />
     <ClCompile Include="Layout\UITileLayout.cpp" />
     <ClCompile Include="Layout\UIVerticalLayout.cpp" />
+    <ClCompile Include="LuaInterface\bit.c" />
     <ClCompile Include="LuaInterface\LuaControl\LuaCActiveXUI.cpp" />
     <ClCompile Include="LuaInterface\LuaControl\LuaCAlbumButtonUI.cpp" />
     <ClCompile Include="LuaInterface\LuaControl\LuaCAnimationTabLayoutUI.cpp" />

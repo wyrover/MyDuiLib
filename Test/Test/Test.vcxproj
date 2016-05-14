@@ -126,7 +126,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../../DuiLib/DuiLib/include;../../LuaDuiLib</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../DuiLib/DuiLib;../../DuiLib/DuiLib/LuaInterface</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

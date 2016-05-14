@@ -435,6 +435,9 @@
     <ClCompile Include="LuaInterface\LuaRegister.cpp">
       <Filter>LuaInterface</Filter>
     </ClCompile>
+    <ClCompile Include="LuaInterface\bit.c">
+      <Filter>LuaInterface</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Common\AssertX.h">

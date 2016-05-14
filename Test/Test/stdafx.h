@@ -28,10 +28,7 @@
 #define  _CONSOLE
 #define _VSOUTPUT
 
-#define _USE_LUA_DUILIB 1
-
-#ifndef _USE_LUA_DUILIB
-#include "UIlib.h"
+#include "LuaEntry.h"
 using namespace DuiLib;
  #ifdef _DEBUG
  #   ifdef _UNICODE
@@ -41,28 +38,11 @@ using namespace DuiLib;
  #   endif
  #else
  #   ifdef _UNICODE
- #       pragma comment(lib, "..\\Lib\\DuiLib_u.lib")
+ #       pragma comment(lib, "DuiLib_u.lib")
  #   else
- #       pragma comment(lib, "..\\Lib\\DuiLib.lib")
+ #       pragma comment(lib, "DuiLib.lib")
  #   endif
  #endif
-#else
-#include "LuaDuiLib\LuaDuiLib.h"
-using namespace DuiLib;
-#ifdef _DEBUG
-#   ifdef _UNICODE
-#       pragma comment(lib, "LuaDuiLib_ud.lib")
-#   else
-#       pragma comment(lib, "LuaDuiLib_d.lib")
-#   endif
-#else
-#   ifdef _UNICODE
-#       pragma comment(lib, "..\\Lib\\DuiLib_u.lib")
-#   else
-#       pragma comment(lib, "..\\Lib\\DuiLib.lib")
-#   endif
-#endif
-#endif
 // ------------------------------------------------------------
 // ---------------------- new and delete ----------------------
 // ------------------------------------------------------------
