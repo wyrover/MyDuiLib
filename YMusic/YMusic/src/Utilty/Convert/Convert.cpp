@@ -1733,7 +1733,7 @@ namespace em_utility
 		CString szValue(lpszValue);
 		for (int i=0;i<sizeof(szInValid)/sizeof(szInValid[0]);++i)
 		{
-			szValue.Replace(szInValid[i],_T(''));
+			szValue.Replace(szInValid[i],_T(' '));
 		}
 		return szValue;
 	}

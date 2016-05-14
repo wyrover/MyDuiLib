@@ -1,38 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{c4338ae4-a47d-46cb-b49c-379d329fab0c}</UniqueIdentifier>
-      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
-    </Filter>
-    <Filter Include="Source Files\Utils">
-      <UniqueIdentifier>{05324c4c-b100-492a-86a8-942c6b3c3a12}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Core">
-      <UniqueIdentifier>{f30e4898-492e-48cc-aff9-0415f966b2a0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Layout">
-      <UniqueIdentifier>{286e3397-d055-4532-8492-c4f92d073e10}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Control">
-      <UniqueIdentifier>{4f34750e-f1e9-4025-83fa-38679695de2e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{0c9e460e-74dd-4124-b4b5-2f666dacabd1}</UniqueIdentifier>
-      <Extensions>h;hpp;hxx;hm;inl</Extensions>
-    </Filter>
-    <Filter Include="Header Files\Utils">
-      <UniqueIdentifier>{a6510ba6-0084-48af-b214-3d5371760b53}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Core">
-      <UniqueIdentifier>{7dcfb006-b1ac-461d-8242-097371c52f02}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Layout">
-      <UniqueIdentifier>{e8db00cc-0591-4e71-8922-9109041104f3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Control">
-      <UniqueIdentifier>{a46503ce-8bce-4dc9-b528-86335efda8c5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{bb8bbf65-2ac9-4b39-85bb-198701027155}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
@@ -58,535 +26,39 @@
     <Filter Include="Extend\Logger">
       <UniqueIdentifier>{b2c6ffa2-6d1d-41b1-8329-1b8c02157998}</UniqueIdentifier>
     </Filter>
-    <Filter Include="NetWork">
-      <UniqueIdentifier>{9e149cc8-bc24-4d32-932e-80e7e18429b0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="NetWork\HTTP">
-      <UniqueIdentifier>{d0168c7d-6b19-4fff-b10b-73f29cfd51fd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="NetWork\SOCK">
-      <UniqueIdentifier>{7e510bfb-7bf0-4262-a619-d2734d62ce3c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Extend\ImgOle">
-      <UniqueIdentifier>{c27978a1-3dec-4a63-8748-dfebce555b6f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Extend\Lock">
       <UniqueIdentifier>{e67cc1d2-7c57-4695-b676-fce1eeed6ef2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Extend\WinIO">
       <UniqueIdentifier>{eaf825a1-483d-45f5-9a41-1ef969c821f8}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="StdAfx.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Utils\stb_image.c">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Utils\UIDelegate.cpp">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Utils\Utils.cpp">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Utils\XUnzip.cpp">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\UIBase.cpp">
-      <Filter>Source Files\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\UIContainer.cpp">
-      <Filter>Source Files\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\UIControl.cpp">
-      <Filter>Source Files\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\UIDlgBuilder.cpp">
-      <Filter>Source Files\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\UIManager.cpp">
-      <Filter>Source Files\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\UIMarkup.cpp">
-      <Filter>Source Files\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\UIRender.cpp">
-      <Filter>Source Files\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Layout\UIChildLayout.cpp">
-      <Filter>Source Files\Layout</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Layout\UIHorizontalLayout.cpp">
-      <Filter>Source Files\Layout</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Layout\UITabLayout.cpp">
-      <Filter>Source Files\Layout</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Layout\UITileLayout.cpp">
-      <Filter>Source Files\Layout</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Layout\UIVerticalLayout.cpp">
-      <Filter>Source Files\Layout</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIActiveX.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIButton.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UICheckBox.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UICombo.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIComboBox.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIDateTime.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIEdit.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UILabel.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIList.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIOption.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIProgress.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIRichEdit.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIScrollBar.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UISlider.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIText.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UITreeView.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIWebBrowser.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIAnimation.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIFadeAnimation.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIFadeButton.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIFadeCheckBox.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIFadeOption.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Layout\UIAnimationTabLayout.cpp">
-      <Filter>Source Files\Layout</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIHotKey.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIAnimControl.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UISeqAnimation.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UISeqButton.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIAlbumButton.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIGifAnim.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Utils\UIReflection.cpp">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIRadio.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIAniHelper.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Control\UIFlash.cpp">
-      <Filter>Source Files\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Extend\WkeWebkit\UIWkeWebkit.cpp">
-      <Filter>Extend\WkeWebkit</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Extend\Sound\SoundEngine.cpp">
-      <Filter>Extend\Sound</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Extend\Sound\SoundSystem.cpp">
-      <Filter>Extend\Sound</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Common\UICrack.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Common\Utility.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Extend\Menu\UIMenu.cpp">
-      <Filter>Extend\Menu</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Common\AssertX.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Common\Exception.cpp">
-      <Filter>Common</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\UITimer.cpp">
-      <Filter>Source Files\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\UITrayIcon.cpp">
-      <Filter>Source Files\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Extend\ImgOle\GifImage.cpp">
-      <Filter>Extend\ImgOle</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Utils\FileDialog.cpp">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Utils\PathUtil.cpp">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Utils\RichEditUtil.cpp">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Utils\IDuiWindow.cpp">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Utils\Window.cpp">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Extend\Log\DuiLogger.cpp">
-      <Filter>Extend\Logger</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Utils\ILock.cpp">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Extend\Lock\DuiLock.cpp">
-      <Filter>Extend\Lock</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Utils\IOBase.cpp">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Extend\WinIO\WinIO.cpp">
-      <Filter>Extend\WinIO</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Utils\DuiSystem.cpp">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Core\UIMemLooker.cpp">
-      <Filter>Source Files\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="src\DuiEngine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DllMain.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\UIlib.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Utils\UIUserControl.cpp">
-      <Filter>Source Files\Utils</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="StdAfx.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\downloadmgr.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\FlashEventHandler.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\UIDelegate.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\Utils.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\WebBrowserEventHandler.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\UIBase.h">
-      <Filter>Header Files\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\UIContainer.h">
-      <Filter>Header Files\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\UIControl.h">
-      <Filter>Header Files\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\UIDefine.h">
-      <Filter>Header Files\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\UIDlgBuilder.h">
-      <Filter>Header Files\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\UIManager.h">
-      <Filter>Header Files\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\UIMarkup.h">
-      <Filter>Header Files\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\UIRender.h">
-      <Filter>Header Files\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Layout\UIChildLayout.h">
-      <Filter>Header Files\Layout</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Layout\UIHorizontalLayout.h">
-      <Filter>Header Files\Layout</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Layout\UITabLayout.h">
-      <Filter>Header Files\Layout</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Layout\UITileLayout.h">
-      <Filter>Header Files\Layout</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Layout\UIVerticalLayout.h">
-      <Filter>Header Files\Layout</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIActiveX.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIButton.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UICheckBox.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UICombo.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIComboBox.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIDateTime.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIEdit.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UILabel.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIList.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIOption.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIProgress.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIRichEdit.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIScrollBar.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UISlider.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIText.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UITreeView.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIWebBrowser.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIAnimation.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIFadeAnimation.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIFadeButton.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIFadeCheckBox.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIFadeOption.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Layout\UIAnimationTabLayout.h">
-      <Filter>Header Files\Layout</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIHotKey.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIAnimControl.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UISeqAnimation.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UISeqButton.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIAlbumButton.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIGifAnim.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\UIReflection.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIRadio.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIAniHelper.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Control\UIFlash.h">
-      <Filter>Header Files\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Extend\WkeWebkit\UIWkeWebkit.h">
-      <Filter>Extend\WkeWebkit</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Extend\WkeWebkit\wke.h">
-      <Filter>Extend\WkeWebkit</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Extend\Sound\SoundEngine.h">
-      <Filter>Extend\Sound</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Extend\Sound\SoundSystem.h">
-      <Filter>Extend\Sound</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Common\observer_impl_base.hpp">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Common\UICrack.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Common\Utility.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Extend\Menu\UIMenu.h">
-      <Filter>Extend\Menu</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Common\AssertX.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Common\Exception.h">
-      <Filter>Common</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\UITimer.h">
-      <Filter>Header Files\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\UITrayIcon.h">
-      <Filter>Header Files\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Extend\ImgOle\IImageOle.h">
-      <Filter>Extend\ImgOle</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Extend\ImgOle\GifImage.h">
-      <Filter>Extend\ImgOle</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\FileDialog.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\PathUtil.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\RichEditUtil.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\IDuiWindow.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\Window.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\ILogger.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\IOStream.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\Singleton.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Extend\Log\DuiLogger.h">
-      <Filter>Extend\Logger</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\ILock.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Extend\Lock\DuiLock.h">
-      <Filter>Extend\Lock</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\IOBase.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Extend\WinIO\WinIO.h">
-      <Filter>Extend\WinIO</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\DuiSystem.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Core\UIMemLooker.h">
-      <Filter>Header Files\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\SharedPtr.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="include\CommonInclude.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ControlInclude.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\DuiEngine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\DuiType.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ExtendInclude.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\IDuiObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\NetInclude.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\UIlib.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Utils\UIUserControl.h">
-      <Filter>Header Files\Utils</Filter>
-    </ClInclude>
+    <Filter Include="Extend\ImgOle">
+      <UniqueIdentifier>{c27978a1-3dec-4a63-8748-dfebce555b6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{6b9869c1-999c-47d7-b352-8c991a8ce889}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Control">
+      <UniqueIdentifier>{094158e7-b87c-4bd0-ab23-d5c93b84db8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layout">
+      <UniqueIdentifier>{2bfd5333-4271-46a6-9db9-582f95791238}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{537d2c33-206f-4946-a91c-a0a6d4b8f73e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LuaInterface">
+      <UniqueIdentifier>{2cff87b4-eba7-4838-ac23-ff718c916fbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LuaInterface\Control">
+      <UniqueIdentifier>{ccd8ba16-07e7-4643-bf47-7127231823f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LuaInterface\LuaCore">
+      <UniqueIdentifier>{f9441b71-e52b-4224-9a70-1962fa001f8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LuaInterface\LuaUtils">
+      <UniqueIdentifier>{83432c68-4bb3-47f8-ad48-49d93a279062}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
@@ -595,5 +67,784 @@
     <ResourceCompile Include="DuiLib.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\AssertX.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Exception.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\UICrack.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Utility.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Extend\ImgOle\GifImage.cpp">
+      <Filter>Extend\ImgOle</Filter>
+    </ClCompile>
+    <ClCompile Include="Extend\Lock\DuiLock.cpp">
+      <Filter>Extend\Lock</Filter>
+    </ClCompile>
+    <ClCompile Include="Extend\Log\DuiLogger.cpp">
+      <Filter>Extend\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="Extend\Menu\UIMenu.cpp">
+      <Filter>Extend\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Extend\Sound\SoundEngine.cpp">
+      <Filter>Extend\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Extend\Sound\SoundSystem.cpp">
+      <Filter>Extend\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="Extend\WinIO\WinIO.cpp">
+      <Filter>Extend\WinIO</Filter>
+    </ClCompile>
+    <ClCompile Include="Extend\WkeWebkit\UIWkeWebkit.cpp">
+      <Filter>Extend\WkeWebkit</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\UIBase.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\UIContainer.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\UIControl.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\UIDlgBuilder.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\UIManager.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\UIMarkup.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\UIMemLooker.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\UIRender.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\UITimer.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\UITrayIcon.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIActiveX.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIAlbumButton.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIAniHelper.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIAnimation.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIAnimControl.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIButton.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UICheckBox.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UICombo.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIComboBox.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIDateTime.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIEdit.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIFadeAnimation.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIFadeButton.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIFadeCheckBox.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIFadeOption.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIFlash.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIGifAnim.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIHotKey.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UILabel.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIList.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIOption.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIProgress.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIRadio.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIRichEdit.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIRichEditNew.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIScrollBar.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UISeqAnimation.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UISeqButton.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UISlider.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIText.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UITreeView.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Control\UIWebBrowser.cpp">
+      <Filter>Control</Filter>
+    </ClCompile>
+    <ClCompile Include="Layout\UIAnimationTabLayout.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="Layout\UIChildLayout.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="Layout\UIHorizontalLayout.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="Layout\UITabLayout.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="Layout\UITileLayout.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="Layout\UIVerticalLayout.cpp">
+      <Filter>Layout</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\DuiSystem.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\FileDialog.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\IDuiWindow.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\ILock.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\IOBase.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\PathUtil.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\RichEditUtil.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\stb_image.c">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\UIDelegate.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\UIReflection.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\UIUserControl.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Utils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\Window.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils\XUnzip.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="DllMain.cpp" />
+    <ClCompile Include="DuiEngine.cpp" />
+    <ClCompile Include="UIlib.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCActiveXUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCAlbumButtonUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCAnimationTabLayoutUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCAnimControlUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCButtonUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCCheckBoxUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCChildLayoutUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCComboBoxUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCComboUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCContainerUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCControlUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCDateTimeUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCEditUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCFadeButtonUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCFadeCheckBoxUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCFadeOptionUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCFlashUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCGifAnimUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCHorizontalLayoutUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCHotKeyUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCLabelUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCListUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCOptionUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCProgressUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCRadioUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCScrollBarUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCSeqButtonUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCSliderUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCTabLayoutUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCTextUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCTileLayoutUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCTreeViewUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCVerticalLayoutUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCWebBrowserUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaControl\LuaCWkeWebkitUI.cpp">
+      <Filter>LuaInterface\Control</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaCore\LuaCDialogBuilder.cpp">
+      <Filter>LuaInterface\LuaCore</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaCore\LuaCMarkup.cpp">
+      <Filter>LuaInterface\LuaCore</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaCore\LuaCPaintManagerUI.cpp">
+      <Filter>LuaInterface\LuaCore</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaCore\LuaCRender.cpp">
+      <Filter>LuaInterface\LuaCore</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaCore\LuaCWindowWnd.cpp">
+      <Filter>LuaInterface\LuaCore</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaCore\LuaStruct.cpp">
+      <Filter>LuaInterface\LuaCore</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaUtils\LuaCWin.cpp">
+      <Filter>LuaInterface\LuaUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaUtils\LuaDebug.cpp">
+      <Filter>LuaInterface\LuaUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaUtils\LuaWindowExport.cpp">
+      <Filter>LuaInterface\LuaUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaCWindow.cpp">
+      <Filter>LuaInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaEntry.cpp">
+      <Filter>LuaInterface</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaRegister.cpp">
+      <Filter>LuaInterface</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Common\AssertX.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Exception.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\UICrack.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Utility.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Extend\ImgOle\GifImage.h">
+      <Filter>Extend\ImgOle</Filter>
+    </ClInclude>
+    <ClInclude Include="Extend\ImgOle\IImageOle.h">
+      <Filter>Extend\ImgOle</Filter>
+    </ClInclude>
+    <ClInclude Include="Extend\Lock\DuiLock.h">
+      <Filter>Extend\Lock</Filter>
+    </ClInclude>
+    <ClInclude Include="Extend\Log\DuiLogger.h">
+      <Filter>Extend\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="Extend\Menu\UIMenu.h">
+      <Filter>Extend\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Extend\Sound\SoundEngine.h">
+      <Filter>Extend\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Extend\Sound\SoundSystem.h">
+      <Filter>Extend\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="Extend\WinIO\WinIO.h">
+      <Filter>Extend\WinIO</Filter>
+    </ClInclude>
+    <ClInclude Include="Extend\WkeWebkit\UIWkeWebkit.h">
+      <Filter>Extend\WkeWebkit</Filter>
+    </ClInclude>
+    <ClInclude Include="Extend\WkeWebkit\wke.h">
+      <Filter>Extend\WkeWebkit</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\UIBase.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\UIContainer.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\UIControl.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\UIDefine.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\UIDlgBuilder.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\UIManager.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\UIMarkup.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\UIMemLooker.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\UIRender.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\UITimer.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\UITrayIcon.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIActiveX.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIAlbumButton.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIAniHelper.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIAnimation.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIAnimControl.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIButton.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UICheckBox.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UICombo.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIComboBox.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIDateTime.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIEdit.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIFadeAnimation.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIFadeButton.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIFadeCheckBox.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIFadeOption.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIFlash.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIGifAnim.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIHotKey.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UILabel.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIList.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIOption.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIProgress.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIRadio.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIRichEdit.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIRichEditNew.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIScrollBar.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UISeqAnimation.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UISeqButton.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UISlider.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIText.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UITreeView.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Control\UIWebBrowser.h">
+      <Filter>Control</Filter>
+    </ClInclude>
+    <ClInclude Include="Layout\UIAnimationTabLayout.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="Layout\UIChildLayout.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="Layout\UIHorizontalLayout.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="Layout\UITabLayout.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="Layout\UITileLayout.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="Layout\UIVerticalLayout.h">
+      <Filter>Layout</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\downloadmgr.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\DuiSystem.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\FileDialog.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\FlashEventHandler.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\IDuiWindow.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\ILock.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\ILogger.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\IOBase.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\IOStream.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\PathUtil.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\RichEditUtil.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\SharedPtr.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Singleton.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\UIDelegate.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\UIReflection.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\UIUserControl.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Utils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\WebBrowserEventHandler.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils\Window.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonInclude.h" />
+    <ClInclude Include="ControlInclude.h" />
+    <ClInclude Include="DuiEngine.h" />
+    <ClInclude Include="DuiType.h" />
+    <ClInclude Include="ExtendInclude.h" />
+    <ClInclude Include="IDuiObject.h" />
+    <ClInclude Include="UIlib.h" />
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCActiveXUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCAlbumButtonUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCAnimationTabLayoutUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCAnimControlUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCButtonUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCCheckBoxUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCChildLayoutUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCComboBoxUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCComboUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCContainerUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCControlUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCDateTimeUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCEditUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCFadeButtonUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCFadeCheckBoxUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCFadeOptionUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCFlashUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCGifAnimUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCHorizontalLayoutUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCHotKeyUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCLabelUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCListUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaControlInclude.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCOptionUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCProgressUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCRadioUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCScrollBarUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCSeqButtonUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCSliderUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCTabLayoutUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCTextUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCTileLayoutUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCTreeViewUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCVerticalLayoutUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCWebBrowserUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaControl\LuaCWkeWebkitUI.h">
+      <Filter>LuaInterface\Control</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaCore\LuaCDialogBuilder.h">
+      <Filter>LuaInterface\LuaCore</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaCore\LuaCMarkup.h">
+      <Filter>LuaInterface\LuaCore</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaCore\LuaCoreInclude.h">
+      <Filter>LuaInterface\LuaCore</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaCore\LuaCPaintManagerUI.h">
+      <Filter>LuaInterface\LuaCore</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaCore\LuaCRender.h">
+      <Filter>LuaInterface\LuaCore</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaCore\LuaCWindowWnd.h">
+      <Filter>LuaInterface\LuaCore</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaCore\LuaStruct.h">
+      <Filter>LuaInterface\LuaCore</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaUtils\LuaCWin.h">
+      <Filter>LuaInterface\LuaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaUtils\LuaDebug.h">
+      <Filter>LuaInterface\LuaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaUtils\LuaUtilsInclude.h">
+      <Filter>LuaInterface\LuaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaUtils\LuaWindowExport.h">
+      <Filter>LuaInterface\LuaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaCWindow.h">
+      <Filter>LuaInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaEntry.h">
+      <Filter>LuaInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaOp.h">
+      <Filter>LuaInterface</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaRegister.h">
+      <Filter>LuaInterface</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

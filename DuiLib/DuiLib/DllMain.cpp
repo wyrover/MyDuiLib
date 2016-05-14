@@ -47,7 +47,7 @@
 //
 
 
-#include "stdafx.h"
+#include "UIlib.h"
 
 
 HINSTANCE g_dllModule = NULL;

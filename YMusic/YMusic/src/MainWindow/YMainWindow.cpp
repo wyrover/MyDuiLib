@@ -2086,7 +2086,7 @@ void YMainWindow::ShowSongInfo(spSongInfoT song)
 				TCHAR validChar[] = _T("/\\:*?\"<>|");
 				for (int i=0;i<sizeof(validChar)/sizeof(validChar[0]);++i)
 				{
-					file_name.Replace(validChar[i],_T(''));
+					file_name.Replace(validChar[i],_T(' '));
 				}
 				CString szImage = imagePath + file_name;
 				em_utility::down_http_file::down_task new_task;

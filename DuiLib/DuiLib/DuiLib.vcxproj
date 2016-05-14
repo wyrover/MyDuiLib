@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug_Static|Win32">
       <Configuration>Debug_Static</Configuration>
@@ -41,49 +41,49 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease_Static|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v100</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug_Static|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v100</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Static|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v100</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v100</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -132,7 +132,7 @@
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <EmbedManifest>false</EmbedManifest>
-    <IncludePath>$(LUA_DEV)\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(IncludePath)</IncludePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">
@@ -149,7 +149,7 @@
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <EmbedManifest>false</EmbedManifest>
-    <IncludePath>$(LUA_DEV)\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(IncludePath)</IncludePath>
     <ReferencePath>$(ReferencePath)</ReferencePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Static|Win32'">
@@ -166,7 +166,7 @@
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <EmbedManifest>false</EmbedManifest>
-    <IncludePath>$(DXDIR)\Include;$(FnLib);$(FnLib)\OpenGL;$(IncludePath);$(LUA_DEV)\include;</IncludePath>
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug_Static|Win32'">
     <OutDir>.\Build\Debug_u\</OutDir>
@@ -204,25 +204,24 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;UILIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderOutputFile>.\Build\Release/DuiLib.pch</PrecompiledHeaderOutputFile>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalIncludeDirectories>
-      </AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\lua-5.1.5\src;.\;.\LuaInterface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0406</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>../../bin/DuiLib.dll</OutputFile>
+      <OutputFile>../../bin/$(ProjectName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>../../lib;$(LUA_DEV)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../lib;..\..\lib\x86\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <BaseAddress>0x11000000</BaseAddress>
-      <ImportLibrary>../../Lib/DuiLib.lib</ImportLibrary>
+      <ImportLibrary>../../lib/$(ProjectName).lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalDependencies>lua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>liblua.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -290,29 +289,28 @@
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>.\Build\Debug/DuiLib.pch</PrecompiledHeaderOutputFile>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>
-      </AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\lua-5.1.5\src;.\;.\LuaInterface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>../../bin/DuiLib_d.dll</OutputFile>
+      <OutputFile>../../bin/$(ProjectName)_d.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalLibraryDirectories>../../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../lib;..\..\lib\x86\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)_d.pdb</ProgramDatabaseFile>
       <BaseAddress>0x11000000</BaseAddress>
-      <ImportLibrary>../../lib/DuiLib_d.lib</ImportLibrary>
+      <ImportLibrary>../../lib/$(ProjectName)_d.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>liblua.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -363,8 +361,8 @@
       <OutputFile>.\Debug/DuiLib.bsc</OutputFile>
     </Bscmake>
     <Lib>
-      <AdditionalLibraryDirectories>../../Lib</AdditionalLibraryDirectories>
-      <OutputFile>../../Lib/duilib_d_s.lib</OutputFile>
+      <AdditionalLibraryDirectories>../../lib</AdditionalLibraryDirectories>
+      <OutputFile>../../lib/$(ProjectName)_d_s.lib</OutputFile>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
@@ -382,29 +380,28 @@
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
       <PrecompiledHeaderOutputFile>.\Build\Debug_u/DuiLib.pch</PrecompiledHeaderOutputFile>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>
-      </AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\lua-5.1.5\src;.\;.\LuaInterface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>../../bin/DuiLib_ud.dll</OutputFile>
+      <OutputFile>../../bin/$(ProjectName)_ud.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)_ud.pdb</ProgramDatabaseFile>
       <BaseAddress>0x11000000</BaseAddress>
-      <ImportLibrary>../../Lib/DuiLib_ud.lib</ImportLibrary>
+      <ImportLibrary>../../lib/$(ProjectName)_ud.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalLibraryDirectories>../../lib;$(LUA_DEV)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies);lua5.1.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../lib;..\..\lib\x86\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>liblua.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -476,24 +473,25 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;UILIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <StringPooling>true</StringPooling>
       <FunctionLevelLinking>true</FunctionLevelLinking>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderOutputFile>.\Build\Release_u/DuiLib.pch</PrecompiledHeaderOutputFile>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <AdditionalIncludeDirectories>
-      </AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\lua-5.1.5\src;.\;.\LuaInterface;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0406</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>../../bin/DuiLib_u.dll</OutputFile>
+      <OutputFile>../../bin/$(ProjectName)_u.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <BaseAddress>0x11000000</BaseAddress>
-      <ImportLibrary>../../Lib/DuiLib_u.lib</ImportLibrary>
+      <ImportLibrary>../../lib/$(ProjectName)_u.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalLibraryDirectories>../../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../lib;..\..\lib\x86\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName)_u.pdb</ProgramDatabaseFile>
+      <AdditionalDependencies>liblua.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -547,230 +545,279 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DllMain.cpp" />
-    <ClCompile Include="src\Common\AssertX.cpp" />
-    <ClCompile Include="src\Common\Exception.cpp" />
-    <ClCompile Include="src\Common\UICrack.cpp" />
-    <ClCompile Include="src\Common\Utility.cpp" />
-    <ClCompile Include="src\Control\UIAlbumButton.cpp" />
-    <ClCompile Include="src\Control\UIAniHelper.cpp" />
-    <ClCompile Include="src\Control\UIAnimation.cpp" />
-    <ClCompile Include="src\Control\UIAnimControl.cpp" />
-    <ClCompile Include="src\Control\UIFadeAnimation.cpp" />
-    <ClCompile Include="src\Control\UIFadeButton.cpp" />
-    <ClCompile Include="src\Control\UIFadeCheckBox.cpp" />
-    <ClCompile Include="src\Control\UIFadeOption.cpp" />
-    <ClCompile Include="src\Control\UIFlash.cpp" />
-    <ClCompile Include="src\Control\UIGifAnim.cpp" />
-    <ClCompile Include="src\Control\UIHotKey.cpp" />
-    <ClCompile Include="src\Control\UIRadio.cpp" />
-    <ClCompile Include="src\Control\UISeqAnimation.cpp" />
-    <ClCompile Include="src\Control\UISeqButton.cpp" />
-    <ClCompile Include="src\Core\UIMemLooker.cpp" />
-    <ClCompile Include="src\Core\UITimer.cpp" />
-    <ClCompile Include="src\Core\UITrayIcon.cpp" />
-    <ClCompile Include="src\DuiEngine.cpp" />
-    <ClCompile Include="src\Extend\ImgOle\GifImage.cpp" />
-    <ClCompile Include="src\Extend\Lock\DuiLock.cpp" />
-    <ClCompile Include="src\Extend\Log\DuiLogger.cpp" />
-    <ClCompile Include="src\Extend\Menu\UIMenu.cpp" />
-    <ClCompile Include="src\Extend\Sound\SoundEngine.cpp" />
-    <ClCompile Include="src\Extend\Sound\SoundSystem.cpp" />
-    <ClCompile Include="src\Extend\WinIO\WinIO.cpp" />
-    <ClCompile Include="src\Extend\WkeWebkit\UIWkeWebkit.cpp" />
-    <ClCompile Include="src\Layout\UIAnimationTabLayout.cpp" />
-    <ClCompile Include="src\UIlib.cpp" />
-    <ClCompile Include="src\Utils\DuiSystem.cpp" />
-    <ClCompile Include="src\Utils\IDuiWindow.cpp" />
-    <ClCompile Include="src\Utils\ILock.cpp" />
-    <ClCompile Include="src\Utils\IOBase.cpp" />
-    <ClCompile Include="src\Utils\UIUserControl.cpp" />
-    <ClCompile Include="src\Utils\Window.cpp" />
-    <ClCompile Include="StdAfx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_Static|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Build\Debug/DuiLib.pch</PrecompiledHeaderOutputFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Debug_Static|Win32'">.\Build\Debug/DuiLib.pch</PrecompiledHeaderOutputFile>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Build\Release/DuiLib.pch</PrecompiledHeaderOutputFile>
-      <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">.\Build\Release/DuiLib.pch</PrecompiledHeaderOutputFile>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug_Static|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease_Static|Win32'">Create</PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="src\Utils\FileDialog.cpp" />
-    <ClCompile Include="src\Utils\PathUtil.cpp" />
-    <ClCompile Include="src\Utils\RichEditUtil.cpp" />
-    <ClCompile Include="src\Utils\UIReflection.cpp" />
-    <ClCompile Include="src\Utils\stb_image.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_Static|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug_Static|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease_Static|Win32'">
-      </PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="src\Utils\UIDelegate.cpp" />
-    <ClCompile Include="src\Utils\Utils.cpp" />
-    <ClCompile Include="src\Utils\XUnzip.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug_Static|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeDebug_Static|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease|Win32'">
-      </PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='UnicodeRelease_Static|Win32'">
-      </PrecompiledHeader>
-    </ClCompile>
-    <ClCompile Include="src\Core\UIBase.cpp" />
-    <ClCompile Include="src\Core\UIContainer.cpp" />
-    <ClCompile Include="src\Core\UIControl.cpp" />
-    <ClCompile Include="src\Core\UIDlgBuilder.cpp" />
-    <ClCompile Include="src\Core\UIManager.cpp" />
-    <ClCompile Include="src\Core\UIMarkup.cpp" />
-    <ClCompile Include="src\Core\UIRender.cpp" />
-    <ClCompile Include="src\Layout\UIChildLayout.cpp" />
-    <ClCompile Include="src\Layout\UIHorizontalLayout.cpp" />
-    <ClCompile Include="src\Layout\UITabLayout.cpp" />
-    <ClCompile Include="src\Layout\UITileLayout.cpp" />
-    <ClCompile Include="src\Layout\UIVerticalLayout.cpp" />
-    <ClCompile Include="src\Control\UIActiveX.cpp" />
-    <ClCompile Include="src\Control\UIButton.cpp" />
-    <ClCompile Include="src\Control\UICheckBox.cpp" />
-    <ClCompile Include="src\Control\UICombo.cpp" />
-    <ClCompile Include="src\Control\UIComboBox.cpp" />
-    <ClCompile Include="src\Control\UIDateTime.cpp" />
-    <ClCompile Include="src\Control\UIEdit.cpp" />
-    <ClCompile Include="src\Control\UILabel.cpp" />
-    <ClCompile Include="src\Control\UIList.cpp" />
-    <ClCompile Include="src\Control\UIOption.cpp" />
-    <ClCompile Include="src\Control\UIProgress.cpp" />
-    <ClCompile Include="src\Control\UIRichEdit.cpp" />
-    <ClCompile Include="src\Control\UIScrollBar.cpp" />
-    <ClCompile Include="src\Control\UISlider.cpp" />
-    <ClCompile Include="src\Control\UIText.cpp" />
-    <ClCompile Include="src\Control\UITreeView.cpp" />
-    <ClCompile Include="src\Control\UIWebBrowser.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="include\CommonInclude.h" />
-    <ClInclude Include="include\Common\AssertX.h" />
-    <ClInclude Include="include\Common\Exception.h" />
-    <ClInclude Include="include\Common\observer_impl_base.hpp" />
-    <ClInclude Include="include\Common\UICrack.h" />
-    <ClInclude Include="include\Common\Utility.h" />
-    <ClInclude Include="include\ControlInclude.h" />
-    <ClInclude Include="include\Control\UIAlbumButton.h" />
-    <ClInclude Include="include\Control\UIAniHelper.h" />
-    <ClInclude Include="include\Control\UIAnimation.h" />
-    <ClInclude Include="include\Control\UIAnimControl.h" />
-    <ClInclude Include="include\Control\UIFadeAnimation.h" />
-    <ClInclude Include="include\Control\UIFadeButton.h" />
-    <ClInclude Include="include\Control\UIFadeCheckBox.h" />
-    <ClInclude Include="include\Control\UIFadeOption.h" />
-    <ClInclude Include="include\Control\UIFlash.h" />
-    <ClInclude Include="include\Control\UIGifAnim.h" />
-    <ClInclude Include="include\Control\UIHotKey.h" />
-    <ClInclude Include="include\Control\UIRadio.h" />
-    <ClInclude Include="include\Control\UISeqAnimation.h" />
-    <ClInclude Include="include\Control\UISeqButton.h" />
-    <ClInclude Include="include\Core\UIMemLooker.h" />
-    <ClInclude Include="include\Core\UITimer.h" />
-    <ClInclude Include="include\Core\UITrayIcon.h" />
-    <ClInclude Include="include\DuiEngine.h" />
-    <ClInclude Include="include\DuiType.h" />
-    <ClInclude Include="include\ExtendInclude.h" />
-    <ClInclude Include="include\Extend\ImgOle\GifImage.h" />
-    <ClInclude Include="include\Extend\ImgOle\IImageOle.h" />
-    <ClInclude Include="include\Extend\Lock\DuiLock.h" />
-    <ClInclude Include="include\Extend\Log\DuiLogger.h" />
-    <ClInclude Include="include\Extend\Menu\UIMenu.h" />
-    <ClInclude Include="include\Extend\Sound\SoundEngine.h" />
-    <ClInclude Include="include\Extend\Sound\SoundSystem.h" />
-    <ClInclude Include="include\Extend\WinIO\WinIO.h" />
-    <ClInclude Include="include\Extend\WkeWebkit\UIWkeWebkit.h" />
-    <ClInclude Include="include\Extend\WkeWebkit\wke.h" />
-    <ClInclude Include="include\IDuiObject.h" />
-    <ClInclude Include="include\Layout\UIAnimationTabLayout.h" />
-    <ClInclude Include="include\NetInclude.h" />
-    <ClInclude Include="include\UIlib.h" />
-    <ClInclude Include="include\Utils\DuiSystem.h" />
-    <ClInclude Include="include\Utils\IDuiWindow.h" />
-    <ClInclude Include="include\Utils\ILock.h" />
-    <ClInclude Include="include\Utils\ILogger.h" />
-    <ClInclude Include="include\Utils\IOBase.h" />
-    <ClInclude Include="include\Utils\IOStream.h" />
-    <ClInclude Include="include\Utils\SharedPtr.h" />
-    <ClInclude Include="include\Utils\Singleton.h" />
-    <ClInclude Include="include\Utils\UIUserControl.h" />
-    <ClInclude Include="include\Utils\Window.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="StdAfx.h" />
-    <ClInclude Include="include\Utils\downloadmgr.h" />
-    <ClInclude Include="include\Utils\FileDialog.h" />
-    <ClInclude Include="include\Utils\FlashEventHandler.h" />
-    <ClInclude Include="include\Utils\PathUtil.h" />
-    <ClInclude Include="include\Utils\RichEditUtil.h" />
-    <ClInclude Include="include\Utils\UIDelegate.h" />
-    <ClInclude Include="include\Utils\UIReflection.h" />
-    <ClInclude Include="include\Utils\Utils.h" />
-    <ClInclude Include="include\Utils\WebBrowserEventHandler.h" />
-    <ClInclude Include="include\Core\UIBase.h" />
-    <ClInclude Include="include\Core\UIContainer.h" />
-    <ClInclude Include="include\Core\UIControl.h" />
-    <ClInclude Include="include\Core\UIDefine.h" />
-    <ClInclude Include="include\Core\UIDlgBuilder.h" />
-    <ClInclude Include="include\Core\UIManager.h" />
-    <ClInclude Include="include\Core\UIMarkup.h" />
-    <ClInclude Include="include\Core\UIRender.h" />
-    <ClInclude Include="include\Layout\UIChildLayout.h" />
-    <ClInclude Include="include\Layout\UIHorizontalLayout.h" />
-    <ClInclude Include="include\Layout\UITabLayout.h" />
-    <ClInclude Include="include\Layout\UITileLayout.h" />
-    <ClInclude Include="include\Layout\UIVerticalLayout.h" />
-    <ClInclude Include="include\Control\UIActiveX.h" />
-    <ClInclude Include="include\Control\UIButton.h" />
-    <ClInclude Include="include\Control\UICheckBox.h" />
-    <ClInclude Include="include\Control\UICombo.h" />
-    <ClInclude Include="include\Control\UIComboBox.h" />
-    <ClInclude Include="include\Control\UIDateTime.h" />
-    <ClInclude Include="include\Control\UIEdit.h" />
-    <ClInclude Include="include\Control\UILabel.h" />
-    <ClInclude Include="include\Control\UIList.h" />
-    <ClInclude Include="include\Control\UIOption.h" />
-    <ClInclude Include="include\Control\UIProgress.h" />
-    <ClInclude Include="include\Control\UIRichEdit.h" />
-    <ClInclude Include="include\Control\UIScrollBar.h" />
-    <ClInclude Include="include\Control\UISlider.h" />
-    <ClInclude Include="include\Control\UIText.h" />
-    <ClInclude Include="include\Control\UITreeView.h" />
-    <ClInclude Include="include\Control\UIWebBrowser.h" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DuiLib.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Common\AssertX.cpp" />
+    <ClCompile Include="Common\Exception.cpp" />
+    <ClCompile Include="Common\UICrack.cpp" />
+    <ClCompile Include="Common\Utility.cpp" />
+    <ClCompile Include="Control\UIActiveX.cpp" />
+    <ClCompile Include="Control\UIAlbumButton.cpp" />
+    <ClCompile Include="Control\UIAniHelper.cpp" />
+    <ClCompile Include="Control\UIAnimation.cpp" />
+    <ClCompile Include="Control\UIAnimControl.cpp" />
+    <ClCompile Include="Control\UIButton.cpp" />
+    <ClCompile Include="Control\UICheckBox.cpp" />
+    <ClCompile Include="Control\UICombo.cpp" />
+    <ClCompile Include="Control\UIComboBox.cpp" />
+    <ClCompile Include="Control\UIDateTime.cpp" />
+    <ClCompile Include="Control\UIEdit.cpp" />
+    <ClCompile Include="Control\UIFadeAnimation.cpp" />
+    <ClCompile Include="Control\UIFadeButton.cpp" />
+    <ClCompile Include="Control\UIFadeCheckBox.cpp" />
+    <ClCompile Include="Control\UIFadeOption.cpp" />
+    <ClCompile Include="Control\UIFlash.cpp" />
+    <ClCompile Include="Control\UIGifAnim.cpp" />
+    <ClCompile Include="Control\UIHotKey.cpp" />
+    <ClCompile Include="Control\UILabel.cpp" />
+    <ClCompile Include="Control\UIList.cpp" />
+    <ClCompile Include="Control\UIOption.cpp" />
+    <ClCompile Include="Control\UIProgress.cpp" />
+    <ClCompile Include="Control\UIRadio.cpp" />
+    <ClCompile Include="Control\UIRichEdit.cpp" />
+    <ClCompile Include="Control\UIRichEditNew.cpp" />
+    <ClCompile Include="Control\UIScrollBar.cpp" />
+    <ClCompile Include="Control\UISeqAnimation.cpp" />
+    <ClCompile Include="Control\UISeqButton.cpp" />
+    <ClCompile Include="Control\UISlider.cpp" />
+    <ClCompile Include="Control\UIText.cpp" />
+    <ClCompile Include="Control\UITreeView.cpp" />
+    <ClCompile Include="Control\UIWebBrowser.cpp" />
+    <ClCompile Include="Core\UIBase.cpp" />
+    <ClCompile Include="Core\UIContainer.cpp" />
+    <ClCompile Include="Core\UIControl.cpp" />
+    <ClCompile Include="Core\UIDlgBuilder.cpp" />
+    <ClCompile Include="Core\UIManager.cpp" />
+    <ClCompile Include="Core\UIMarkup.cpp" />
+    <ClCompile Include="Core\UIMemLooker.cpp" />
+    <ClCompile Include="Core\UIRender.cpp" />
+    <ClCompile Include="Core\UITimer.cpp" />
+    <ClCompile Include="Core\UITrayIcon.cpp" />
+    <ClCompile Include="DllMain.cpp" />
+    <ClCompile Include="DuiEngine.cpp" />
+    <ClCompile Include="Extend\ImgOle\GifImage.cpp" />
+    <ClCompile Include="Extend\Lock\DuiLock.cpp" />
+    <ClCompile Include="Extend\Log\DuiLogger.cpp" />
+    <ClCompile Include="Extend\Menu\UIMenu.cpp" />
+    <ClCompile Include="Extend\Sound\SoundEngine.cpp" />
+    <ClCompile Include="Extend\Sound\SoundSystem.cpp" />
+    <ClCompile Include="Extend\WinIO\WinIO.cpp" />
+    <ClCompile Include="Extend\WkeWebkit\UIWkeWebkit.cpp" />
+    <ClCompile Include="Layout\UIAnimationTabLayout.cpp" />
+    <ClCompile Include="Layout\UIChildLayout.cpp" />
+    <ClCompile Include="Layout\UIHorizontalLayout.cpp" />
+    <ClCompile Include="Layout\UITabLayout.cpp" />
+    <ClCompile Include="Layout\UITileLayout.cpp" />
+    <ClCompile Include="Layout\UIVerticalLayout.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCActiveXUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCAlbumButtonUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCAnimationTabLayoutUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCAnimControlUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCButtonUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCCheckBoxUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCChildLayoutUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCComboBoxUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCComboUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCContainerUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCControlUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCDateTimeUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCEditUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCFadeButtonUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCFadeCheckBoxUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCFadeOptionUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCFlashUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCGifAnimUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCHorizontalLayoutUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCHotKeyUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCLabelUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCListUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCOptionUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCProgressUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCRadioUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCScrollBarUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCSeqButtonUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCSliderUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCTabLayoutUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCTextUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCTileLayoutUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCTreeViewUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCVerticalLayoutUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCWebBrowserUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaControl\LuaCWkeWebkitUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaCore\LuaCDialogBuilder.cpp" />
+    <ClCompile Include="LuaInterface\LuaCore\LuaCMarkup.cpp" />
+    <ClCompile Include="LuaInterface\LuaCore\LuaCPaintManagerUI.cpp" />
+    <ClCompile Include="LuaInterface\LuaCore\LuaCRender.cpp" />
+    <ClCompile Include="LuaInterface\LuaCore\LuaCWindowWnd.cpp" />
+    <ClCompile Include="LuaInterface\LuaCore\LuaStruct.cpp" />
+    <ClCompile Include="LuaInterface\LuaCWindow.cpp" />
+    <ClCompile Include="LuaInterface\LuaEntry.cpp" />
+    <ClCompile Include="LuaInterface\LuaRegister.cpp" />
+    <ClCompile Include="LuaInterface\LuaUtils\LuaCWin.cpp" />
+    <ClCompile Include="LuaInterface\LuaUtils\LuaDebug.cpp" />
+    <ClCompile Include="LuaInterface\LuaUtils\LuaWindowExport.cpp" />
+    <ClCompile Include="UIlib.cpp" />
+    <ClCompile Include="Utils\DuiSystem.cpp" />
+    <ClCompile Include="Utils\FileDialog.cpp" />
+    <ClCompile Include="Utils\IDuiWindow.cpp" />
+    <ClCompile Include="Utils\ILock.cpp" />
+    <ClCompile Include="Utils\IOBase.cpp" />
+    <ClCompile Include="Utils\PathUtil.cpp" />
+    <ClCompile Include="Utils\RichEditUtil.cpp" />
+    <ClCompile Include="Utils\stb_image.c" />
+    <ClCompile Include="Utils\UIDelegate.cpp" />
+    <ClCompile Include="Utils\UIReflection.cpp" />
+    <ClCompile Include="Utils\UIUserControl.cpp" />
+    <ClCompile Include="Utils\Utils.cpp" />
+    <ClCompile Include="Utils\Window.cpp" />
+    <ClCompile Include="Utils\XUnzip.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CommonInclude.h" />
+    <ClInclude Include="Common\AssertX.h" />
+    <ClInclude Include="Common\Exception.h" />
+    <ClInclude Include="Common\UICrack.h" />
+    <ClInclude Include="Common\Utility.h" />
+    <ClInclude Include="ControlInclude.h" />
+    <ClInclude Include="Control\UIActiveX.h" />
+    <ClInclude Include="Control\UIAlbumButton.h" />
+    <ClInclude Include="Control\UIAniHelper.h" />
+    <ClInclude Include="Control\UIAnimation.h" />
+    <ClInclude Include="Control\UIAnimControl.h" />
+    <ClInclude Include="Control\UIButton.h" />
+    <ClInclude Include="Control\UICheckBox.h" />
+    <ClInclude Include="Control\UICombo.h" />
+    <ClInclude Include="Control\UIComboBox.h" />
+    <ClInclude Include="Control\UIDateTime.h" />
+    <ClInclude Include="Control\UIEdit.h" />
+    <ClInclude Include="Control\UIFadeAnimation.h" />
+    <ClInclude Include="Control\UIFadeButton.h" />
+    <ClInclude Include="Control\UIFadeCheckBox.h" />
+    <ClInclude Include="Control\UIFadeOption.h" />
+    <ClInclude Include="Control\UIFlash.h" />
+    <ClInclude Include="Control\UIGifAnim.h" />
+    <ClInclude Include="Control\UIHotKey.h" />
+    <ClInclude Include="Control\UILabel.h" />
+    <ClInclude Include="Control\UIList.h" />
+    <ClInclude Include="Control\UIOption.h" />
+    <ClInclude Include="Control\UIProgress.h" />
+    <ClInclude Include="Control\UIRadio.h" />
+    <ClInclude Include="Control\UIRichEdit.h" />
+    <ClInclude Include="Control\UIRichEditNew.h" />
+    <ClInclude Include="Control\UIScrollBar.h" />
+    <ClInclude Include="Control\UISeqAnimation.h" />
+    <ClInclude Include="Control\UISeqButton.h" />
+    <ClInclude Include="Control\UISlider.h" />
+    <ClInclude Include="Control\UIText.h" />
+    <ClInclude Include="Control\UITreeView.h" />
+    <ClInclude Include="Control\UIWebBrowser.h" />
+    <ClInclude Include="Core\UIBase.h" />
+    <ClInclude Include="Core\UIContainer.h" />
+    <ClInclude Include="Core\UIControl.h" />
+    <ClInclude Include="Core\UIDefine.h" />
+    <ClInclude Include="Core\UIDlgBuilder.h" />
+    <ClInclude Include="Core\UIManager.h" />
+    <ClInclude Include="Core\UIMarkup.h" />
+    <ClInclude Include="Core\UIMemLooker.h" />
+    <ClInclude Include="Core\UIRender.h" />
+    <ClInclude Include="Core\UITimer.h" />
+    <ClInclude Include="Core\UITrayIcon.h" />
+    <ClInclude Include="DuiEngine.h" />
+    <ClInclude Include="DuiType.h" />
+    <ClInclude Include="ExtendInclude.h" />
+    <ClInclude Include="Extend\ImgOle\GifImage.h" />
+    <ClInclude Include="Extend\ImgOle\IImageOle.h" />
+    <ClInclude Include="Extend\Lock\DuiLock.h" />
+    <ClInclude Include="Extend\Log\DuiLogger.h" />
+    <ClInclude Include="Extend\Menu\UIMenu.h" />
+    <ClInclude Include="Extend\Sound\SoundEngine.h" />
+    <ClInclude Include="Extend\Sound\SoundSystem.h" />
+    <ClInclude Include="Extend\WinIO\WinIO.h" />
+    <ClInclude Include="Extend\WkeWebkit\UIWkeWebkit.h" />
+    <ClInclude Include="Extend\WkeWebkit\wke.h" />
+    <ClInclude Include="IDuiObject.h" />
+    <ClInclude Include="Layout\UIAnimationTabLayout.h" />
+    <ClInclude Include="Layout\UIChildLayout.h" />
+    <ClInclude Include="Layout\UIHorizontalLayout.h" />
+    <ClInclude Include="Layout\UITabLayout.h" />
+    <ClInclude Include="Layout\UITileLayout.h" />
+    <ClInclude Include="Layout\UIVerticalLayout.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCActiveXUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCAlbumButtonUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCAnimationTabLayoutUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCAnimControlUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCButtonUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCCheckBoxUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCChildLayoutUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCComboBoxUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCComboUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCContainerUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCControlUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCDateTimeUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCEditUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCFadeButtonUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCFadeCheckBoxUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCFadeOptionUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCFlashUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCGifAnimUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCHorizontalLayoutUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCHotKeyUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCLabelUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCListUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaControlInclude.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCOptionUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCProgressUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCRadioUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCScrollBarUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCSeqButtonUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCSliderUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCTabLayoutUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCTextUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCTileLayoutUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCTreeViewUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCVerticalLayoutUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCWebBrowserUI.h" />
+    <ClInclude Include="LuaInterface\LuaControl\LuaCWkeWebkitUI.h" />
+    <ClInclude Include="LuaInterface\LuaCore\LuaCDialogBuilder.h" />
+    <ClInclude Include="LuaInterface\LuaCore\LuaCMarkup.h" />
+    <ClInclude Include="LuaInterface\LuaCore\LuaCoreInclude.h" />
+    <ClInclude Include="LuaInterface\LuaCore\LuaCPaintManagerUI.h" />
+    <ClInclude Include="LuaInterface\LuaCore\LuaCRender.h" />
+    <ClInclude Include="LuaInterface\LuaCore\LuaCWindowWnd.h" />
+    <ClInclude Include="LuaInterface\LuaCore\LuaStruct.h" />
+    <ClInclude Include="LuaInterface\LuaCWindow.h" />
+    <ClInclude Include="LuaInterface\LuaEntry.h" />
+    <ClInclude Include="LuaInterface\LuaOp.h" />
+    <ClInclude Include="LuaInterface\LuaRegister.h" />
+    <ClInclude Include="LuaInterface\LuaUtils\LuaCWin.h" />
+    <ClInclude Include="LuaInterface\LuaUtils\LuaDebug.h" />
+    <ClInclude Include="LuaInterface\LuaUtils\LuaUtilsInclude.h" />
+    <ClInclude Include="LuaInterface\LuaUtils\LuaWindowExport.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="UIlib.h" />
+    <ClInclude Include="Utils\downloadmgr.h" />
+    <ClInclude Include="Utils\DuiSystem.h" />
+    <ClInclude Include="Utils\FileDialog.h" />
+    <ClInclude Include="Utils\FlashEventHandler.h" />
+    <ClInclude Include="Utils\IDuiWindow.h" />
+    <ClInclude Include="Utils\ILock.h" />
+    <ClInclude Include="Utils\ILogger.h" />
+    <ClInclude Include="Utils\IOBase.h" />
+    <ClInclude Include="Utils\IOStream.h" />
+    <ClInclude Include="Utils\PathUtil.h" />
+    <ClInclude Include="Utils\RichEditUtil.h" />
+    <ClInclude Include="Utils\SharedPtr.h" />
+    <ClInclude Include="Utils\Singleton.h" />
+    <ClInclude Include="Utils\UIDelegate.h" />
+    <ClInclude Include="Utils\UIReflection.h" />
+    <ClInclude Include="Utils\UIUserControl.h" />
+    <ClInclude Include="Utils\Utils.h" />
+    <ClInclude Include="Utils\WebBrowserEventHandler.h" />
+    <ClInclude Include="Utils\Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
