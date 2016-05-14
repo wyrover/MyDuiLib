@@ -1,6 +1,7 @@
 
 #include "LuaEntry.h"
 #include "LuaRegister.h"
+#include <algorithm>
 
 namespace DuiLib
 {
@@ -76,40 +77,110 @@ namespace DuiLib
 	}
 	int LuaStatic::warn(lua_State* l)
 	{
-		return 0;
+		return print(l);
 	}
-	int LuaStatic::load(lua_State* l)
+	int LuaStatic::loader(lua_State* l)
 	{
-		//const char* fileName = lua_tostring(l, 1);
-		//1: replace '.' with '/'
-		//2: + '.lua'
-		//3:
-		//4: readbytes
-		//char* buff;
-		//size_t size;
-		//luaL_loadbuffer(l, buff, size, strcat("@", fileName));
+		// Get script to load
+		std::string moduleName = lua_tostring(l, 1);
+		std::string modulePath = luaPath;
+		std::replace(modulePath.begin(), modulePath.end(), ('\\'), ('/'));
+		std::replace(moduleName.begin(), moduleName.end(), ('.'), ('/'));
+
+		if (modulePath.size() > 0 && modulePath[modulePath.size() - 1] != '/')
+			modulePath += '/';
+
+		if (moduleName.size() >4 && moduleName.substr(moduleName.size() - 4, 4) == ".lua")
+			moduleName = moduleName.substr(0, moduleName.size() - 4);
+
+
+		std::string fileName = modulePath + moduleName + ".lua";
+		
+		//lua_pushcfunction(l, LuaStatic::traceback);
+		int oldTop = lua_gettop(l);
+
+		WinIO ioFile;
+		if (0 == ioFile.open(fileName.c_str(), true))
+		{
+			int nSize = ioFile.get_size();
+			char* buffer = new char[nSize + 1];
+			memset(buffer, 0, nSize + 1);
+			unsigned int nRead = 0;
+			ioFile.read(buffer, nSize, &nRead);
+			std::string chunk = "@";
+			chunk += fileName;
+			if (0 != luaL_loadbuffer(l, buffer, nRead, chunk.c_str()))
+			{
+				const char* err = lua_tostring(l, -1);
+				lua_settop(l, oldTop);
+				//Show Error
+				lua_pop(l, 1);
+			}
+
+			delete []buffer;
+			ioFile.close();
+		}
+		else
+		{
+			lua_pop(l, 1);
+			return 0;
+		}
+
 		return 1;
 	}
-
-	int LuaStatic::err_traceback(lua_State* l)
+	int LuaStatic::loadfile(lua_State* l)
 	{
-		if(!lua_isstring(l,1))
-			return 1;
-		lua_getfield(l, LUA_GLOBALSINDEX, "debug");
-		if(!lua_istable(l,-1))
+		return loader(l);
+	}
+	int LuaStatic::dofile(lua_State* l)
+	{
+		// Get script to load
+		std::string moduleName = lua_tostring(l, 1);
+		std::string modulePath = luaPath;
+		std::replace(modulePath.begin(), modulePath.end(), ('\\'), ('/'));
+		std::replace(moduleName.begin(), moduleName.end(), ('.'), ('/'));	
+
+		if (modulePath.size() > 0 && modulePath[modulePath.size() - 1] != '/')
+			modulePath += '/';
+
+		if (moduleName.size() > 4 && moduleName.substr(moduleName.size() - 4, 4) == ".lua")
+			moduleName = moduleName.substr(0, moduleName.size() - 4);
+		
+
+		std::string fileName = modulePath + moduleName + ".lua";
+
+		int n = lua_gettop(l);
+
+		WinIO ioFile;
+		if (0 != ioFile.open(fileName.c_str(), true))
 		{
-			lua_pop(l,1);
-			return 1;
+			return lua_gettop(l) - n;
 		}
+
+		int nSize = ioFile.get_size();
+		char* buffer = new char[nSize + 1];
+		memset(buffer, 0, nSize + 1);
+		unsigned int nRead = 0;
+		ioFile.read(buffer, nSize, &nRead);
+		std::string chunk = "@";
+		chunk += fileName;
+		if (0 == luaL_loadbuffer(l, buffer, nRead, chunk.c_str()))
+		{
+			lua_call(l, 0, LUA_MULTRET);
+		}
+		delete []buffer;
+		ioFile.close();
+
+		return lua_gettop(l) - n;
+	}
+
+	int LuaStatic::traceback(lua_State* l)
+	{
+		lua_getglobal(l, "debug");
 		lua_getfield(l, -1, "traceback");
-		if(!lua_isfunction(l,-1))
-		{
-			lua_pop(l,1);
-			return 1;
-		}
-		lua_pushvalue(l,1);
-		lua_pushinteger(l,2);
-		lua_call(l,2,1);
+		lua_pushvalue(l, 1);
+		lua_pushnumber(l, 2);
+		lua_call(l, 2, 1);
 		return 1;
 	}
 
@@ -442,40 +513,34 @@ namespace DuiLib
 		lua_atpanic(l, LuaStatic::panic);
 		luaL_openlibs(l);
 
-		lua_getglobal(l, "_G");
+		//lua_pushcfunction(l, LuaStatic::pcall);
+		//lua_setfield(l, LUA_GLOBALSINDEX, "pcall");
+		lua_pushcfunction(l, LuaStatic::print);
+		lua_setfield(l, LUA_GLOBALSINDEX, "print");
+		lua_pushcfunction(l, LuaStatic::warn);
+		lua_setfield(l, LUA_GLOBALSINDEX, "warn");
+		//lua_pushcfunction(l, LuaStatic::loadfile);
+		//lua_setfield(l, LUA_GLOBALSINDEX, "loadfile");
+		//lua_pushcfunction(l, LuaStatic::dofile);
+		//lua_setfield(l, LUA_GLOBALSINDEX, "dofile");
+		//
+		//lua_pushcfunction(l, LuaStatic::loader);
+		//int loaderFunc = lua_gettop(l);
 
-		static const LuaReg funcs[] =
-		{
-			{ "warn", LuaStatic::warn },
-			{ "print", LuaStatic::print },
-			{ "pcall", LuaStatic::pcall },
-		};
+		//lua_getfield(l, LUA_GLOBALSINDEX, "package");
+		//lua_getfield(l, -1, "loaders");
+		//int loaderTable = lua_gettop(l);
 
-		LuaStatic::LuaSetFuncsInTable(l, funcs, sizeof(funcs) / sizeof(funcs[0]));
-		lua_pushcfunction(l,LuaStatic::err_traceback);
-		LuaStatic::errorFuncRef = luaL_ref(l,LUA_REGISTRYINDEX);
-		//if (luaL_loadbuffer(l, mtindex,sizeof(mtindex), "mtindex") != 0 || lua_pcall(l, 0, -1, 0) != 0)
+		//// Shift table elements right
+		//for (int e = luaL_getn(l, loaderTable) + 1; e > 1; e--)
 		//{
-			//log here
-		//	return;
+		//	lua_rawgeti(l, loaderTable, e - 1);
+		//	lua_rawseti(l, loaderTable, e);
 		//}
-		/*
-		lua_pushcfunction(l, LuaStatic::load);
-		int loaderFunc = lua_gettop(l);
+		//lua_pushvalue(l, loaderFunc);
+		//lua_rawseti(l, loaderTable, 1);
+		//lua_settop(l, 0);
 
-		lua_getfield(l, LUA_GLOBALSINDEX, "package");
-		lua_getfield(l, -1, "loaders");
-		int loaderTable = lua_gettop(l);
-
-		for (int e = lua_objlen(l, loaderTable) + 1; e > 1; e--)
-		{
-			lua_rawgeti(l, loaderTable, e - 1);
-			lua_rawseti(l, loaderTable, e);
-		}
-		lua_pushvalue(l, loaderFunc);
-		lua_rawseti(l, loaderTable, 1);
-		lua_settop(l, 0);
-		*/
 
 		LuaStatic::InitObjsWeakTable(l);
 		lua_pop(l, 1);
@@ -487,36 +552,9 @@ namespace DuiLib
 		LuaRegister::Register(l);
 	}
 
-	void Lua::AddPackagePath(const char* path)
+	void Lua::SetLuaPath(const char* path)
 	{
-		if (NULL != LuaState::L)
-		{
-			std::string new_path = "package.path = package.path .. \"";
-			if (!path || strlen(path) == 0)
-			{
-				return;
-			}
-
-			if (path[0] != ';')
-			{
-				new_path += ";";
-			}
-
-			new_path.append(path);
-
-			if (path[strlen(path) - 1] != '/')
-			{
-				new_path.append("/");
-			}
-
-			new_path.append("?.lua\" ");
-
-			if (luaL_dostring(LuaState::L, new_path.c_str()))
-			{
-				char* err = (char*)lua_tostring(LuaState::L, -1);
-				::lua_pop(LuaState::L, 1);
-			}
-		}
+		LuaStatic::luaPath = path;
 	}
 	bool Lua::LoadFile(const char* file)
 	{

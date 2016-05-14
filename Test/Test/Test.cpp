@@ -435,10 +435,12 @@ private:
 
 int RunLua(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
+	CPaintManagerUI::SetInstance(hInstance);
+	CDuiString sInstPath = CPaintManagerUI::GetInstancePath();
 	Lua::ConsoleToggle(true);
 	Lua::CoInitialize();
-	Lua::AddPackagePath("./");
-	Lua::LoadFile("main.lua");
+	Lua::SetLuaPath(sInstPath);
+	Lua::RequireModule("main");
 
 	Lua::GetGlobal("main");
 	LuaStackOpt::PushObject(hInstance, "HINSTANCE");

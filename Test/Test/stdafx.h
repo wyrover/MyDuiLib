@@ -43,6 +43,10 @@ using namespace DuiLib;
  #       pragma comment(lib, "DuiLib.lib")
  #   endif
  #endif
+
+//#ifdef _DEBUG
+//#pragma comment( linker, "/subsystem:console /entry:wWinMainCRTStartup" )
+//#endif
 // ------------------------------------------------------------
 // ---------------------- new and delete ----------------------
 // ------------------------------------------------------------

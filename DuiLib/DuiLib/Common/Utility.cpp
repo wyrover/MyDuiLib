@@ -48,6 +48,8 @@ namespace DuiLib
 	void Console::Write(const TCHAR* format,...)
 	{
 #if defined (_DEBUG) && defined(_CONSOLE)
+		if (!DuiEngine::ConsoleLog())
+			return;
 		if (!m_bConsoleInit)
 			_RedirectIOToConsole();
 
@@ -77,6 +79,8 @@ namespace DuiLib
 	void Console::Write(const char* format,...)
 	{
 #if defined (_DEBUG) && defined(_CONSOLE)
+		if (!DuiEngine::ConsoleLog())
+			return;
 		if (!m_bConsoleInit)
 			_RedirectIOToConsole();
 
@@ -85,7 +89,7 @@ namespace DuiLib
 		va_start(args, format);
 		vsprintf_s(szBuffer, lengthof(szBuffer) - 2, format, args);
 		va_end(args);
-		cout<<szBuffer;
+		cout << szBuffer;
 #endif//_DEBUG
 	}
 #endif // _UNICODE
@@ -94,6 +98,8 @@ namespace DuiLib
 	void VSOutput::Write(const TCHAR* format,...)
 	{
 #if defined (_DEBUG) && defined(_VSOUTPUT)
+		if (!DuiEngine::VsOutputLog())
+			return;
 		TCHAR szBuffer[2048] = { 0 };
 		va_list args;
 		va_start(args, format);
@@ -106,6 +112,9 @@ namespace DuiLib
 	void VSOutput::Write(const char* format,...)
 	{
 #if defined (_DEBUG) && defined(_VSOUTPUT)
+		if (!DuiEngine::VsOutputLog())
+			return;
+
 		char szBuffer[2048] = { 0 };
 		va_list args;
 		va_start(args, format);

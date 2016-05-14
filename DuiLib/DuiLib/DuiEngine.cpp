@@ -36,6 +36,7 @@ GetCurMemoryFile().GetData());
 
 		DuiLogger::Instance()->logMessage(szDuiLib);
 
+		DuiLib::Console::Write(szDuiLib);
 
 		return TRUE;
 	}
@@ -48,6 +49,16 @@ GetCurMemoryFile().GetData());
 		}
 		::OleUninitialize();
 		return TRUE;
+	}
+
+	BOOL DuiEngine::ConsoleLog()
+	{
+		return (DuiEngine::dwMask & ConsoleOutput) != 0;
+	}
+
+	BOOL DuiEngine::VsOutputLog()
+	{
+		return (DuiEngine::dwMask & VsOutput) != 0;
 	}
 
 	LPCTSTR DuiEngine::GetCurMode()

@@ -66,8 +66,10 @@ namespace DuiLib
 		static int print(lua_State* l);
 		static int pcall(lua_State* l);
 		static int warn(lua_State* l);
-		static int load(lua_State* l);
-		static int err_traceback(lua_State* l);
+		static int loader(lua_State* l);
+		static int loadfile(lua_State* l);
+		static int dofile(lua_State* l);
+		static int traceback(lua_State* l);
 	public: 
 		static void* GetUserData(lua_State* l,void* ptr);
 
@@ -119,7 +121,7 @@ namespace DuiLib
 		static void StaticReg(lua_State* l);
 		static void Register(lua_State* l);
 	public:
-		static void AddPackagePath(const char* path);
+		static void SetLuaPath(const char* path);
 		static bool LoadFile(const char* file);
 		static bool RunString(const char* str);
 

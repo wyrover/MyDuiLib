@@ -10,6 +10,8 @@ namespace DuiLib
 	public:
 		static BOOL Initialize(DWORD nFlag = 0);
 		static BOOL Unitialize();
+		static BOOL ConsoleLog();
+		static BOOL VsOutputLog();
 	protected:
 		static LPCTSTR GetCurMode();
 		static CDuiString GetCurMemoryFile();
