@@ -10,6 +10,10 @@ public:
 	CRichEditWnd();
 	~CRichEditWnd();
 public:
+	UINT GetClassStyle() const
+	{
+		return UI_CLASSSTYLE_FRAME | CS_DBLCLKS;
+	}
 	LPCTSTR GetWindowClassName() const;
 	CControlUI* CreateControl(LPCTSTR pstrClass);
 	virtual void OnFinalMessage(HWND hWnd);

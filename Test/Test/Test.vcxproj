@@ -274,6 +274,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release_Static|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Test.cpp" />
+    <ClCompile Include="TestApp.cpp" />
     <ClCompile Include="UIFriends.cpp" />
     <ClCompile Include="UIListCommonDefine.cpp" />
   </ItemGroup>

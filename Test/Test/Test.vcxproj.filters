@@ -149,6 +149,9 @@
     <ClCompile Include="json\lib_json\json_writer.cpp">
       <Filter>json\lib_json</Filter>
     </ClCompile>
+    <ClCompile Include="TestApp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Test.rc">

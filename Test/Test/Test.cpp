@@ -496,7 +496,7 @@ int RunRichEditTest(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 	spRichEditWnd pFrame(new CRichEditWnd);
 	//CRichEditWnd* pFrame = new CRichEditWnd();
 	if (pFrame == NULL) return 0;
-	pFrame->Create(NULL, _T("RichDemo"), UI_WNDSTYLE_FRAME, WS_EX_STATICEDGE | WS_EX_APPWINDOW, 0, 0, 600, 320);
+	pFrame->Create(NULL, _T("RichDemo"), UI_WNDSTYLE_FRAME | WS_CLIPCHILDREN, WS_EX_WINDOWEDGE, 0, 0, 600, 320);
 	pFrame->CenterWindow();
 	::ShowWindow(*pFrame, SW_SHOW);
 
@@ -509,14 +509,18 @@ int RunRichEditTest(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 	return 0;
 }
 
+extern int RunTestApp(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR /*lpCmdLine*/, int nCmdShow);
+
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 	DuiLib::DuiEngine::Initialize(ConsoleOutput);
 	//RunCpp(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 
-	RunLua(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+	//RunLua(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 
-	//RunRichEditTest(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+	RunRichEditTest(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+
+	//RunTestApp(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 
 	DuiLib::DuiEngine::Unitialize();
 
