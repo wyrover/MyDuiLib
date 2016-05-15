@@ -107,6 +107,7 @@ namespace DuiLib
 			memset(buffer, 0, nSize + 1);
 			unsigned int nRead = 0;
 			ioFile.read(buffer, nSize, &nRead);
+			ioFile.close();
 			std::string chunk = "@";
 			chunk += fileName;
 			if (0 != luaL_loadbuffer(l, buffer, nRead, chunk.c_str()))
@@ -118,7 +119,6 @@ namespace DuiLib
 			}
 
 			delete []buffer;
-			ioFile.close();
 		}
 		else
 		{
@@ -162,6 +162,7 @@ namespace DuiLib
 		memset(buffer, 0, nSize + 1);
 		unsigned int nRead = 0;
 		ioFile.read(buffer, nSize, &nRead);
+		ioFile.close();
 		std::string chunk = "@";
 		chunk += fileName;
 		if (0 == luaL_loadbuffer(l, buffer, nRead, chunk.c_str()))
@@ -169,7 +170,6 @@ namespace DuiLib
 			lua_call(l, 0, LUA_MULTRET);
 		}
 		delete []buffer;
-		ioFile.close();
 
 		return lua_gettop(l) - n;
 	}
@@ -519,27 +519,27 @@ namespace DuiLib
 		lua_setfield(l, LUA_GLOBALSINDEX, "print");
 		lua_pushcfunction(l, LuaStatic::warn);
 		lua_setfield(l, LUA_GLOBALSINDEX, "warn");
-		//lua_pushcfunction(l, LuaStatic::loadfile);
-		//lua_setfield(l, LUA_GLOBALSINDEX, "loadfile");
-		//lua_pushcfunction(l, LuaStatic::dofile);
-		//lua_setfield(l, LUA_GLOBALSINDEX, "dofile");
-		//
-		//lua_pushcfunction(l, LuaStatic::loader);
-		//int loaderFunc = lua_gettop(l);
+		lua_pushcfunction(l, LuaStatic::loadfile);
+		lua_setfield(l, LUA_GLOBALSINDEX, "loadfile");
+		lua_pushcfunction(l, LuaStatic::dofile);
+		lua_setfield(l, LUA_GLOBALSINDEX, "dofile");
+		
+		lua_pushcfunction(l, LuaStatic::loader);
+		int loaderFunc = lua_gettop(l);
 
-		//lua_getfield(l, LUA_GLOBALSINDEX, "package");
-		//lua_getfield(l, -1, "loaders");
-		//int loaderTable = lua_gettop(l);
+		lua_getfield(l, LUA_GLOBALSINDEX, "package");
+		lua_getfield(l, -1, "loaders");
+		int loaderTable = lua_gettop(l);
 
-		//// Shift table elements right
-		//for (int e = luaL_getn(l, loaderTable) + 1; e > 1; e--)
-		//{
-		//	lua_rawgeti(l, loaderTable, e - 1);
-		//	lua_rawseti(l, loaderTable, e);
-		//}
-		//lua_pushvalue(l, loaderFunc);
-		//lua_rawseti(l, loaderTable, 1);
-		//lua_settop(l, 0);
+		// Shift table elements right
+		for (int e = luaL_getn(l, loaderTable) + 1; e > 1; e--)
+		{
+			lua_rawgeti(l, loaderTable, e - 1);
+			lua_rawseti(l, loaderTable, e);
+		}
+		lua_pushvalue(l, loaderFunc);
+		lua_rawseti(l, loaderTable, 1);
+		lua_settop(l, 0);
 
 
 		LuaStatic::InitObjsWeakTable(l);
