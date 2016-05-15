@@ -524,6 +524,20 @@ namespace DuiLib
 		lua_pushcfunction(l, LuaStatic::dofile);
 		lua_setfield(l, LUA_GLOBALSINDEX, "dofile");
 		
+		
+		/*lua_getglobal(l, "_G");
+
+		static const LuaReg funcs[] =
+		{
+			{ "warn", LuaStatic::warn },
+			{ "print", LuaStatic::print },
+			{ "pcall", LuaStatic::pcall },
+			{ "loadfile", LuaStatic::loadfile },
+			{ "dofile", LuaStatic::dofile },
+		};
+
+		LuaStatic::LuaSetFuncsInTable(l, funcs, sizeof(funcs) / sizeof(funcs[0]));
+		*/
 		lua_pushcfunction(l, LuaStatic::loader);
 		int loaderFunc = lua_gettop(l);
 
@@ -540,6 +554,10 @@ namespace DuiLib
 		lua_pushvalue(l, loaderFunc);
 		lua_rawseti(l, loaderTable, 1);
 		lua_settop(l, 0);
+
+		
+		lua_pushcfunction(l, LuaStatic::traceback);
+		LuaStatic::errorFuncRef = luaL_ref(l, LUA_REGISTRYINDEX);
 
 
 		LuaStatic::InitObjsWeakTable(l);

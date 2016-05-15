@@ -114,6 +114,16 @@ namespace DuiLib
 			return mp_io->write(p_buffer,n_bytes_2_write,p_bytes_written);
     	return -1;
     }
+	int IOHelper::readAll(void** p_buffer, unsigned int* p_bytes_read)
+	{
+		if (mp_io)
+		{
+			return mp_io->readAll(p_buffer, p_bytes_read);
+		}
+		*p_buffer = NULL;
+		*p_bytes_read = 0;
+		return -1;
+	}
     
     int IOHelper::seek(int n_distance, unsigned int n_move_mode)
     {

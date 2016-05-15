@@ -198,7 +198,10 @@ namespace DuiLib
 		if (strPath2[0] == _T('/'))
 			strPath2 = strPath2.Mid(1, nLen2 - 1);
 
-		return strPath1 + _T("/") + strPath2;
+		if (nLen1 > 0)
+			return strPath1 + _T("/") + strPath2;
+		else
+			return strPath2;
 	}
 	// 获取指定路径的根目录信息
 	CDuiString PathUtil::GetPathRoot(LPCTSTR lpszPath)

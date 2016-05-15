@@ -19,7 +19,8 @@ namespace DuiLib
 		//return : 0 for success, -1 for failed
 	    virtual int read(void* p_buffer, unsigned int n_bytes_2_read, unsigned int* p_bytes_read);
 	    virtual int write(const void* p_buffer, unsigned int n_bytes_2_write, unsigned int* p_bytes_written);
-	    // seek
+		virtual int readAll(void** p_buffer, unsigned int* p_bytes_read);
+		// seek
 	    virtual int seek(int n_distance, unsigned int n_move_mode);		
 	    // creation / destruction
 	    virtual int create(const char* p_name);		

@@ -110,6 +110,16 @@ namespace DuiLib
 			return IOBase::NORMAL_SUCCESS;
     }
     
+	int WinIO::readAll(void** p_buffer, unsigned int* p_bytes_read)
+	{
+		int nSize = get_size();
+		unsigned char* p_buf = new unsigned char[nSize + 1];
+		memset(p_buf, 0, nSize + 1);
+		int nRet = read(p_buf, nSize, p_bytes_read);
+		*p_buffer = p_buf;
+		return nRet;
+	}
+
     int WinIO::seek(int n_distance, unsigned int n_move_mode)
     {
     	::SetFilePointer(mh_file, n_distance, NULL, n_move_mode);
