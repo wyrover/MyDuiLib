@@ -77,7 +77,7 @@ namespace DuiLib
 		{
 			char buf[MAX_PATH] = { 0 };
 			sprintf_s(buf, "%d", v);
-			o.assign(buf);
+			o = std::string(buf);
 		}
 		
 		template<>
@@ -85,7 +85,7 @@ namespace DuiLib
 		{
 			char buf[MAX_PATH] = { 0 };
 			sprintf_s(buf, "%d", v);
-			o.assign(buf);
+			o = std::string(buf);
 		}
 		
 		template<>
@@ -93,7 +93,7 @@ namespace DuiLib
 		{
 			char buf[MAX_PATH] = { 0 };
 			sprintf_s(buf, "%f", v);
-			o.assign(buf);
+			o = std::string(buf);
 		}
 		
 		template<>
@@ -105,20 +105,20 @@ namespace DuiLib
 		template<>
 		static void toType(char* v,std::string& o)
 		{
-			o.assign(v);
+			o = std::string(v);
 		}
 		
 		template<>
 		static void toType(const char* v,std::string& o)
 		{
-			o.assign(v);
+			o = std::string(v);
 		}
 		template<>
 		static void toType(void* v,std::string& o)
 		{
 			char buf[MAX_PATH] = { 0 };
 			sprintf_s(buf, "%p", v);
-			o.assign(buf);
+			o = std::string(buf);
 		}
 
 		template<>
@@ -202,13 +202,13 @@ namespace DuiLib
 		template<>
 		static void toType(wchar_t* v, std::wstring& o)
 		{
-			o.assign(v);
+			o = std::wstring(v);
 		}
 
 		template<>
 		static void toType(const wchar_t* v, std::wstring& o)
 		{
-			o.assign(v);
+			o = std::wstring(v);
 		}
 		template<>
 		static void toType(void* v, std::wstring& o)

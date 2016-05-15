@@ -124,7 +124,7 @@ CControlUI* IDuiWindow::CreateRoot()
 		}
 	}
 
-	ASSERT(pRoot);
+	ASSERT(pRoot && _T("加载资源文件失败"));
 	if (pRoot == NULL)
 	{
 		MessageBox(NULL, _T("加载资源文件失败"), _T("Duilib"), MB_OK | MB_ICONERROR);

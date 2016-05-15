@@ -1,6 +1,3 @@
-sFullPath
-sFullPath
-sFullPath
 #include "stdafx.h"
 #include <windows.h>
 #include <shellapi.h>
@@ -43,8 +40,8 @@ const TCHAR* const kSendPICButtonControlName = _T("BTN_SENDPIC");
 const int kEmotionRefreshTimerId = 1001;
 const int kEmotionRefreshInterval = 150;
 
-const dui_byte IMG_BEGIN = 0x20;
-const dui_byte IMG_END = 0x25;
+const dui_byte IMG_BEGIN = '<';// 0x20;
+const dui_byte IMG_END = '>';// 0x25;
 
 CFontInfo::CFontInfo(void)
 {
@@ -168,7 +165,7 @@ public:
 				}
 
 				t.bImage = true;
-				t.sText = s_in.Mid(beg, pos-beg);
+				t.sText = s_in.Mid(beg+1, pos-beg-1);
 				t_out.push_back(t);
 
 				pos++;
@@ -386,7 +383,7 @@ void ChatDialog::InitWindow()
 	DuiLib::RichEdit_RegisterDragDrop(m_pRichEditInput, m_hWnd);
 
 	m_lpFaceList = new CFaceList;
-	CDuiString strPath = _T("..\\Face\\FaceConfig.xml");
+	CDuiString strPath = PathUtil::CombinePath(PathUtil::GetAppPath(),_T("richedit_test\\face\\FaceConfig.xml"));// "..\\Face\\FaceConfig.xml");
 	m_lpFaceList->LoadConfigFile(strPath);
 
 	CButtonUI* pLogo = static_cast<CButtonUI*>(GetPaintMgr()->FindControl(kLogoButtonControlName));

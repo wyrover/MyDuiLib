@@ -49,7 +49,7 @@ namespace DuiLib
 		{
 			LockHelper lock(m_pcs);
 			{
-				const char* msg = ("Double allocation with same address - this probably means you have a mismatched allocation / deallocation style.");
+				TCHAR* msg = _T("Double allocation with same address - this probably means you have a mismatched allocation / deallocation style.");
 				DuiAssertX(mAllocations.find(ptr) == mAllocations.end(), msg);
 
 				//if (file && func)
@@ -69,7 +69,7 @@ namespace DuiLib
 		LockHelper lock(m_pcs);
 		{
 			AllocationMap::iterator i = mAllocations.find(ptr);
-			const char* msg = ("Unable to locate allocation unit - this probably means you have a mismatched allocation / deallocation style.");
+			const TCHAR* msg = _T("Unable to locate allocation unit - this probably means you have a mismatched allocation / deallocation style.");
 			//DuiAssertX(i != mAllocations.end(), msg);
 			if (i != mAllocations.end())
 			{

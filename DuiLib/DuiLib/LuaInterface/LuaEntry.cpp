@@ -395,7 +395,13 @@ namespace DuiLib
 
 	void LuaStatic::WritePoint2Lua(lua_State* l, POINT pt)
 	{
-
+		lua_newtable(l);
+		lua_pushstring(l, "x");
+		lua_pushnumber(l , pt.x);
+		lua_rawset(l, -3);
+		lua_pushstring(l, "y");
+		lua_pushnumber(l, pt.y);
+		lua_rawset(l, -3);
 	}
 	POINT LuaStatic::ReadPointFromLua(lua_State* l, int index)
 	{
@@ -405,7 +411,13 @@ namespace DuiLib
 
 	void LuaStatic::WriteSize2Lua(lua_State* l, SIZE pt)
 	{
-
+		lua_newtable(l);
+		lua_pushstring(l, "cx");
+		lua_pushnumber(l, pt.cx);
+		lua_rawset(l, -3);
+		lua_pushstring(l, "cy");
+		lua_pushnumber(l, pt.cy);
+		lua_rawset(l, -3);
 	}
 	SIZE LuaStatic::ReadSizeFromLua(lua_State* l, int index)
 	{
@@ -415,7 +427,19 @@ namespace DuiLib
 
 	void LuaStatic::WriteRect2Lua(lua_State* l, RECT pt)
 	{
-
+		lua_newtable(l);
+		lua_pushstring(l, "left");
+		lua_pushnumber(l, pt.left);
+		lua_rawset(l, -3);
+		lua_pushstring(l, "top");
+		lua_pushnumber(l, pt.top);
+		lua_rawset(l, -3);
+		lua_pushstring(l, "right");
+		lua_pushnumber(l, pt.right);
+		lua_rawset(l, -3);
+		lua_pushstring(l, "bottom");
+		lua_pushnumber(l, pt.bottom);
+		lua_rawset(l, -3);
 	}
 	RECT LuaStatic::ReadRectFromLua(lua_State* l, int index)
 	{
@@ -425,7 +449,7 @@ namespace DuiLib
 
 	void LuaStatic::WriteRGBA2Lua(lua_State* l, DWORD col)
 	{
-
+		
 	}
 	DWORD LuaStatic::ReadRGBAFromLua(lua_State* l, int index)
 	{

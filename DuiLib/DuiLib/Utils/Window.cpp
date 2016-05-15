@@ -683,7 +683,12 @@ namespace DuiLib
 
 	bool CWin::RegisterSkin(STRINGorID xml, LPCTSTR type /* = NULL */, IDialogBuilderCallback* pCallback /* = NULL */, CControlUI* pParent /* = NULL */)
 	{
-		DuiLogInfo(_T("RegisterSkin xml:%s,type:%s"), (LPCTSTR)xml.m_lpstr, type == NULL ? _T("0") : type);
+		DuiLogInfo(_T("RegisterSkin xml:%s,type:%s,zip:%s,res-type:%d"), 
+			(LPCTSTR)xml.m_lpstr, 
+			type == NULL ? _T("0") : type,
+			GetZIPFileName(),
+			GetResourceType());
+
 		assert(IsWindow());
 		assert(IsMainThread());
 
@@ -693,11 +698,11 @@ namespace DuiLib
 		_paintManager->Init(m_hWnd);
 		
 		CControlUI* pRoot = this->CreateRoot(xml,type,pCallback,pParent);
-		if (!pRoot)
-			DuiLogError(_T("RegisterSkin xml:%s,type:%s"), (LPCTSTR)xml.m_lpstr, (type == NULL ? _T("0") : type));
+		
 		CDuiString sError = CDuiString::FormatString(_T("Failed to parse XML:%s"), (LPCTSTR)xml.m_lpstr);
+		DuiAssertX(pRoot, sError);
 		ASSERT(pRoot && "Failed to parse XML");
-		//DuiAssertX(pRoot, serror);
+		
 		if (pRoot)
 		{
 			_bValid = TRUE;

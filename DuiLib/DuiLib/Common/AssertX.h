@@ -8,6 +8,12 @@
 namespace DuiLib
 {
 
+#ifdef _UNICODE
+	typedef wchar_t  local_char_type;
+#else
+	typedef char  local_char_type;
+#endif
+
 	// Assert function return values
 	enum ErrRet
 	{
@@ -18,7 +24,7 @@ namespace DuiLib
 	};
 
 	//- Global functions ----------------------------------------------------------
-	UILIB_API ErrRet NotifyAssert(const char* condition, const char* fileName, int lineNumber, const char* formats, ...);
+	UILIB_API ErrRet NotifyAssert(const local_char_type* condition, const local_char_type* fileName, int lineNumber, const local_char_type* formats, ...);
 
 
 #if defined(_DEBUG) || defined(DEBUG)
@@ -27,7 +33,7 @@ namespace DuiLib
 		static bool _ignoreAssert = false; \
 		if (!_ignoreAssert && !(x)) \
 		{ \
-			ErrRet _err_result = NotifyAssert(#x, __FILE__, __LINE__, formats, ##__VA_ARGS__); \
+			ErrRet _err_result = NotifyAssert(#x, __FILET__, __LINE__, formats, ##__VA_ARGS__); \
 			if (_err_result == ERRRET_IGNORE) \
 			{ \
 				_ignoreAssert = true; \
@@ -44,7 +50,11 @@ namespace DuiLib
 			CDuiString comment = CDuiString::FormatString(formats, ##__VA_ARGS__); \
 			CDuiString msg; \
 			if(!comment.IsEmpty()){ msg = CDuiString("Assert comment:") + comment + CDuiString("\n"); } \
-			fprintf (stderr, "%s", msg.c_str()); \
+#ifndef _UNICODE
+			fprintf (stderr, _T("%s"), msg); \
+#else
+			fwprintf(stderr, _T("%s"), msg); \
+#endif
 			assert(x); \
 			exit(-1);\
 		}}
@@ -55,7 +65,7 @@ namespace DuiLib
 #endif
 
 #if defined(_DEBUG) || defined(DEBUG)
-#	define DuiAssert(x)		DuiAssertX(x, "")
+#	define DuiAssert(x)		DuiAssertX(x, _T(""))
 #else
 #	define DuiAssert(x)
 #endif

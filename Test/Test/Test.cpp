@@ -513,7 +513,7 @@ extern int RunTestApp(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR /*
 
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-	DuiLib::DuiEngine::Initialize(ConsoleOutput);
+	DuiLib::DuiEngine::Initialize();
 	//RunCpp(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 
 	//RunLua(hInstance, hPrevInstance, lpCmdLine, nCmdShow);

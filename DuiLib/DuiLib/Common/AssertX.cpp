@@ -6,33 +6,31 @@
 
 namespace DuiLib
 {
-	ErrRet DisplayError(const char* errorTitle,
-		const char* errorText,
-		const char* errorDescription,
-		const char* fileName,
+	ErrRet DisplayError(const local_char_type* errorTitle,
+		const local_char_type* errorText,
+		const local_char_type* errorDescription,
+		const local_char_type* fileName,
 		int lineNumber)
 	{
 #if defined(_WIN32) || defined(__WIN32__) || defined(WIN32) || defined(_WIN64) || defined(WIN64) || defined(__WIN64__)
 		const int MODULE_NAME_SIZE = 255;
-		char moduleName[MODULE_NAME_SIZE];
+		local_char_type moduleName[MODULE_NAME_SIZE] = { 0 };
 
 		// attempt to get the module name
-		if (!GetModuleFileNameA(NULL, moduleName, MODULE_NAME_SIZE))
+		if (!GetModuleFileName(NULL, moduleName, MODULE_NAME_SIZE))
 		{
-			char *msg = "<unknown application>";
-//			_tcscpy_s(moduleName, _tcsclen(msg), msg);
-			strcpy_s(moduleName,strlen(msg),msg);
+			local_char_type *msg = _T("<unknown application>");
+			_tcscpy_s(moduleName, _tcsclen(msg), msg);
 		}
 
 		// build a collosal string containing the entire asster message
 		const	int		MAX_BUFFER_SIZE = 1024;
-		char	buffer[MAX_BUFFER_SIZE];
+		local_char_type	buffer[MAX_BUFFER_SIZE] = { 0 };
 
-		int Size = _snprintf_s(buffer,
-			MAX_BUFFER_SIZE,
-			"%s\n\nProgram : %s\nFile : %s\nLine : %d\nError: %s\nComment: %s\n"
-			"Abort to exit (or debug), Retry to continue,\n"
-			"Ignore to disregard all occurances of this error\n",
+		int Size = _stprintf(buffer,
+			_T("%s\n\nProgram : %s\nFile : %s\nLine : %d\nError: %s\nComment: %s\n \
+			Abort to exit (or debug), Retry to continue,\n \
+			Ignore to disregard all occurances of this error\n"),
 			errorTitle,
 			moduleName,
 			fileName,
@@ -44,7 +42,8 @@ namespace DuiLib
 		// place a copy of the message into the clipboard
 		if (OpenClipboard(NULL))
 		{
-			size_t bufferLength = strlen(buffer);
+			
+			size_t bufferLength = _tcsclen(buffer);
 			HGLOBAL hMem = GlobalAlloc(GHND|GMEM_DDESHARE, bufferLength+1);
 
 			if (hMem)
@@ -66,11 +65,10 @@ namespace DuiLib
 		{
 			hWndParent = GetLastActivePopup(hWndParent);
 		}
-		CDuiString sbuf;
-		sbuf.AssignString(buffer);
+
 		// put up a message box with the error
 		int iRet = MessageBox ( hWndParent,
-			sbuf.GetData(),
+			buffer,
 			_T( "ERROR NOTIFICATION..." ),
 			MB_TASKMODAL|MB_SETFOREGROUND|MB_ABORTRETRYIGNORE|MB_ICONERROR);
 
@@ -110,23 +108,26 @@ namespace DuiLib
 #endif
 	}
 
-	ErrRet NotifyAssert(const char* condition, const char* fileName, int lineNumber, const char* formats, ...)
+	ErrRet NotifyAssert(const local_char_type* condition, const local_char_type* fileName, int lineNumber, const local_char_type* formats, ...)
 	{
-		char szBuffer[4096];
+		local_char_type szBuffer[4096];
 
 		va_list args;
 		va_start(args, formats);
-//		wvsprintf(szBuffer, formats, args);
-		wvsprintfA(szBuffer, formats, args);
+#ifdef _UNICODE
+		vswprintf(szBuffer, formats, args);
+#else
+		vsprintf(szBuffer, formats, args);
+#endif
 		va_end(args);
 
 		std::string filenameStr = fileName;
 
 		// pass the data on to the message box
-		ErrRet result = DisplayError("Assert Failed!",
+		ErrRet result = DisplayError(_T("Assert Failed!"),
 			condition,
 			szBuffer,
-			filenameStr.c_str(),
+			fileName,
 			lineNumber);
 		return result;
 	}
