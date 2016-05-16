@@ -686,8 +686,8 @@ namespace DuiLib
 		DuiLogInfo(_T("RegisterSkin xml:%s,type:%s,zip:%s,res-type:%d"), 
 			(LPCTSTR)xml.m_lpstr, 
 			type == NULL ? _T("0") : type,
-			GetZIPFileName(),
-			GetResourceType());
+			GetZIPFileName().GetData(),
+			(int)GetResourceType());
 
 		assert(IsWindow());
 		assert(IsMainThread());

@@ -215,11 +215,11 @@
       <Culture>0x0406</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>../../bin/$(ProjectName).dll</OutputFile>
+      <OutputFile>../../bin/$(TargetName).dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../lib;..\..\lib\x86\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <BaseAddress>0x11000000</BaseAddress>
-      <ImportLibrary>../../lib/$(ProjectName).lib</ImportLibrary>
+      <ImportLibrary>../../lib/$(TargetName).lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalDependencies>liblua.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
@@ -302,13 +302,13 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>../../bin/$(ProjectName)_d.dll</OutputFile>
+      <OutputFile>../../bin/$(TargetName)_d.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <AdditionalLibraryDirectories>../../lib;..\..\lib\x86\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName)_d.pdb</ProgramDatabaseFile>
       <BaseAddress>0x11000000</BaseAddress>
-      <ImportLibrary>../../lib/$(ProjectName)_d.lib</ImportLibrary>
+      <ImportLibrary>../../lib/$(TargetName)_d.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalDependencies>liblua.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
@@ -393,12 +393,12 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>../../bin/$(ProjectName)_ud.dll</OutputFile>
+      <OutputFile>../../bin/$(TargetName)_ud.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(TargetName)_ud.pdb</ProgramDatabaseFile>
       <BaseAddress>0x11000000</BaseAddress>
-      <ImportLibrary>../../lib/$(ProjectName)_ud.lib</ImportLibrary>
+      <ImportLibrary>../../lib/$(TargetName)_ud.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalLibraryDirectories>../../lib;..\..\lib\x86\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>liblua.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -484,10 +484,10 @@
       <Culture>0x0406</Culture>
     </ResourceCompile>
     <Link>
-      <OutputFile>../../bin/$(ProjectName)_u.dll</OutputFile>
+      <OutputFile>../../bin/$(TargetName)_u.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <BaseAddress>0x11000000</BaseAddress>
-      <ImportLibrary>../../lib/$(ProjectName)_u.lib</ImportLibrary>
+      <ImportLibrary>../../lib/$(TargetName)_u.lib</ImportLibrary>
       <TargetMachine>MachineX86</TargetMachine>
       <AdditionalLibraryDirectories>../../lib;..\..\lib\x86\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>$(OutDir)$(TargetName)_u.pdb</ProgramDatabaseFile>

@@ -51,7 +51,11 @@ enum UILIB_RESOURCETYPE
 
 #ifdef _DEBUG
 #ifndef DUITRACE
+#ifdef _VSOUTPUT
+#define DUITRACE VSOutput::Write
+#else
 #define DUITRACE DUI__Trace
+#endif
 #endif
 #define DUITRACEMSG DUI__TraceMsg
 #else

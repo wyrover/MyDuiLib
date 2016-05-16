@@ -9,14 +9,6 @@ using namespace std;
 #include <shlwapi.h>
 #pragma comment(lib, "shlwapi.lib")
 
-#ifndef _CONSOLE
-#define _CONSOLE
-#endif//_CONSOLE
-
-#ifndef _VSOUTPUT
-#define _VSOUTPUT
-#endif//_VSOUTPUT
-
 #endif
 
 namespace DuiLib
@@ -25,7 +17,7 @@ namespace DuiLib
 
 	void Console::_RedirectIOToConsole()
 	{
-#if defined (_DEBUG) && defined(_CONSOLE)
+#if defined (_DEBUG)
 		if(m_bConsoleInit)
 			return ;
 		// 分配一个控制台，以便于输出一些有用的信息
@@ -47,7 +39,7 @@ namespace DuiLib
 #ifdef _UNICODE
 	void Console::Write(const TCHAR* format,...)
 	{
-#if defined (_DEBUG) && defined(_CONSOLE)
+#if defined (_DEBUG)
 		if (!DuiEngine::ConsoleLog())
 			return;
 		if (!m_bConsoleInit)
@@ -58,6 +50,7 @@ namespace DuiLib
 		va_start(args, format);
 		vswprintf(szBuffer, lengthof(szBuffer) - 2, format, args);
 		va_end(args);
+		_tcscat(szBuffer, _T("\n"));
 		
 #if defined(_WIN32) || defined(__WIN32__) || defined(WIN32) || defined(_WIN64) || defined(WIN64) || defined(__WIN64__)
 		int size = WideCharToMultiByte(::GetACP(), 0, szBuffer, -1, NULL, 0, NULL, NULL);
@@ -71,14 +64,13 @@ namespace DuiLib
 #	else
 		wcstombs(const_cast<char*>(mbstr.c_str()), const_cast<wchar_t*>(m_pstr), (size+1)*4);
 #	endif
-
 		cout<<mbstr.c_str();
 #endif//_DEBUG
 	}
 #else
 	void Console::Write(const char* format,...)
 	{
-#if defined (_DEBUG) && defined(_CONSOLE)
+#if defined (_DEBUG)
 		if (!DuiEngine::ConsoleLog())
 			return;
 		if (!m_bConsoleInit)
@@ -89,6 +81,7 @@ namespace DuiLib
 		va_start(args, format);
 		vsprintf_s(szBuffer, lengthof(szBuffer) - 2, format, args);
 		va_end(args);
+		_tcscat(szBuffer, _T("\n"));
 		cout << szBuffer;
 #endif//_DEBUG
 	}
@@ -97,7 +90,7 @@ namespace DuiLib
 #ifdef _UNICODE
 	void VSOutput::Write(const TCHAR* format,...)
 	{
-#if defined (_DEBUG) && defined(_VSOUTPUT)
+#if defined (_DEBUG)
 		if (!DuiEngine::VsOutputLog())
 			return;
 		TCHAR szBuffer[2048] = { 0 };
@@ -105,13 +98,14 @@ namespace DuiLib
 		va_start(args, format);
 		vswprintf(szBuffer, lengthof(szBuffer) - 2, format, args);
 		va_end(args);
+		_tcscat(szBuffer, _T("\n"));
 		OutputDebugString(szBuffer);
 #endif
 	}
 #else
 	void VSOutput::Write(const char* format,...)
 	{
-#if defined (_DEBUG) && defined(_VSOUTPUT)
+#if defined (_DEBUG)
 		if (!DuiEngine::VsOutputLog())
 			return;
 
@@ -120,7 +114,7 @@ namespace DuiLib
 		va_start(args, format);
 		vsprintf_s(szBuffer, lengthof(szBuffer) - 2, format, args);
 		va_end(args);
-
+		_tcscat(szBuffer, _T("\n"));
 		OutputDebugString(szBuffer);
 #endif // DEBUG
 	}

@@ -17,14 +17,14 @@ namespace DuiLib
 			return;
 
 		GetDuiClassMaps()[_duiClassName] = _createDuiInstanceFun;
-		DUITRACE(_T("RegisterDuiClass:预注册UI组建%s\r\n"), _duiClassName);
+		DUITRACE(_T("RegisterDuiClass:预注册UI组建%s"), _duiClassName);
 	}
 	void* DuiObjectMap::createInstance(LPCTSTR _duiClassName)
 	{
 		if (GetDuiClassMaps().size() > 0 && GetDuiClassMaps().find(_duiClassName) == GetDuiClassMaps().end())
 		{
 			std::map<CDuiString, DuiInstanceFun>& mDuiClassMaps = GetDuiClassMaps();
-			LPCTSTR str = _T("没有找到类对象：%s ,该对象类不是由DuiLib库注册的,请在外部调用CreateControl\r\n");
+			LPCTSTR str = _T("没有找到类对象：%s ,该对象类不是由DuiLib库注册的,请在外部调用CreateControl");
 			DUITRACE(str, _duiClassName);
 			DuiLogWarning(str, _duiClassName);
 			return NULL;

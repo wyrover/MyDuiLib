@@ -19,7 +19,7 @@ void UILIB_API DUI__Trace(LPCTSTR pstrFormat, ...)
     va_list args;
     va_start(args, pstrFormat);
     ::wvnsprintf(szBuffer, lengthof(szBuffer) - 2, pstrFormat, args);
-//    _tcscat(szBuffer, _T("\n"));
+    _tcscat(szBuffer, _T("\n"));
     va_end(args);
     ::OutputDebugString(szBuffer);
 #endif

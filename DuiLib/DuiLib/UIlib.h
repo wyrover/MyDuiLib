@@ -63,6 +63,14 @@
 #define _WIN32_WINNT  0x0500 //0x0603 (tooltip will being problem)//
 #endif
 
+#ifndef _CONSOLE
+#define _CONSOLE   1
+#endif//_CONSOLE
+
+#ifndef _VSOUTPUT
+#define _VSOUTPUT  1
+#endif//_VSOUTPUT
+
 
 #if defined(UILIB_EXPORTS)
 #if defined(_MSC_VER)

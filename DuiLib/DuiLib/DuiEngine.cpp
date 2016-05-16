@@ -24,10 +24,10 @@ namespace DuiLib
 ------------------DuiLib----------------------\r\n\
 Version: %s\r\n\
 Comment: %s\r\n\
-\r RunMode: %s\r\n\
-\r Application: %s\r\n\
-\r MemoryTracer: %s\r\n\
-\r\n-----------------------------------LogBegin\r\n"),
+RunMode: %s\r\n\
+Application: %s\r\n\
+MemoryTracer: %s\r\n\
+\r\n-----------------------------------LogBegin------------------------------"),
 DuiSystem::Instance()->GetVersion(),
 DuiSystem::Instance()->GetComment(),
 GetCurMode(), 

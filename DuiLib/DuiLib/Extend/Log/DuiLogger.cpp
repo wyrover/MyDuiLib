@@ -103,7 +103,7 @@ namespace DuiLib
 		{
 			LockHelper lock(_pLock);
 			{
-				char_type szLogEnd[200] = _T("\r\n-----------------------------------LogEnd");
+				char_type szLogEnd[200] = _T("\r\n-----------------------------------LogEnd--------------------------------");
 				this->write(szLogEnd);
 
 				IOHelper IO(_pIO);

@@ -164,8 +164,7 @@ public:
 					t_out.push_back(t);
 				}
 
-				t.bImage = true;
-				t.sText = s_in.Mid(beg+1, pos-beg-1);
+				t.bImage = true;				t.sText = s_in.Mid(beg+1, pos-beg-1);
 				t_out.push_back(t);
 
 				pos++;
