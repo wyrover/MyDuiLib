@@ -7,15 +7,66 @@
 #include "lua.hpp"
 #include "LuaOp.h"
 #include "UIlib.h"
+
 #define LUAUILIB_API  UILIB_API
 
 namespace DuiLib
 {
+	class NameWarpForLua
+	{
+	public:
+		NameWarpForLua(char* s) {
+			name = s;
+		}
+		NameWarpForLua(const char* s) {
+			name = s;
+		}
 
+		const NameWarpForLua& operator=(char* s) {
+			name = s;
+			return *this;
+		}
+
+		const NameWarpForLua& operator=(const char* s) {
+			name = s;
+			return *this;
+		}
+
+		operator const char*() const {
+			return name.c_str();
+		}
+		
+
+		std::string name;
+	};
 }
 
 namespace DuiLib
 {
+#define  __string__(x)   #x
+
+#define REQUIRE_H(name) \
+	__string__(Lua_##name##.h)
+
+#define LUA_CLASS(name) \
+	class Lua_##name
+
+#define LUA_METHOD_DECL(func) \
+	static int func(lua_State* l);
+
+#define LUA_METHOD_IMPL(name,func) \
+	int Lua_##name::func(lua_State* l)
+
+#define LUA_CLASS_REG_DECL() \
+	static void Reg(lua_State* l);
+
+#define LUA_CLASS_REG_IMPL(name) \
+	void Lua_##name::Reg(lua_State* l)
+
+#define LUA_CLASS_REG(name) \
+	Lua_##name::Reg(l);
+
+
 	inline std::string ControlClass2MetatableName(IDuiObject* pControl)
 	{
 		CDuiString sName(pControl->GetClass());
@@ -28,15 +79,6 @@ namespace DuiLib
 	}
 		
 #define METATABLE_NAME(pCtrl)    ControlClass2MetatableName(pCtrl)
-
-#define DECL_LUA_FUNC(func) \
-	static int func(lua_State* l);
-
-#define IMPL_LUA_FUNC(clsname,func) \
-	int clsname::func(lua_State* l)
-
-#define REG_MODULE(clsname) \
-	clsname::Register(l);
 
 	typedef int(*LuaCFunction)(lua_State* l);
 
@@ -137,16 +179,6 @@ namespace DuiLib
 		static bool CallLuaFuncInTableBegin(int nRefLua, const char* func);
 
 		static bool CallLuaPlusObjectBegin(int nLuaMsgRef,int nLuaObjRef, const char* func);
-	public:
-		static bool CanConsoleOutput() { return _bConsole; }
-		static bool CanVsOutput() { return _bVsOutput; }
-		static void ConsoleToggle(bool bConsole) { _bConsole = bConsole; }
-		static void VsOutputToggle(bool bVsOutput) { _bVsOutput = bVsOutput; }
-	private:
-		//std
-		static bool					 _bConsole;
-		//vsoutput
-		static bool                  _bVsOutput;
 	};
 
 	class LUAUILIB_API LuaStackOpt

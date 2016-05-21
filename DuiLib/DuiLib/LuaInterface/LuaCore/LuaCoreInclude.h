@@ -2,12 +2,12 @@
 #define _LuaCoreInclude_h
 #pragma once
 
-#include "LuaStruct.h"
-#include "LuaCDialogBuilder.h"
-#include "LuaCMarkup.h"
-#include "LuaCPaintManagerUI.h"
-#include "LuaCRender.h"
-#include "LuaCWindowWnd.h"
+#include REQUIRE_H(Struct)
+#include REQUIRE_H(CDialogBuilder)
+#include REQUIRE_H(CMarkup)
+#include REQUIRE_H(CPaintManagerUI)
+#include REQUIRE_H(CRender)
+#include REQUIRE_H(CWindowWnd)
 
 namespace DuiLib
 {
@@ -16,21 +16,21 @@ namespace DuiLib
 	public:
 		static void RegModule(lua_State* l)
 		{
-			REG_MODULE(LuaTNotifyUI)
-			REG_MODULE(LuaTFontInfo)
-			REG_MODULE(LuaTImageInfo)
-			REG_MODULE(LuaTEventUI)
-			REG_MODULE(LuaEventMarco)
-			REG_MODULE(LuaMsgMarco)
-			REG_MODULE(LuaDuiLib)
-			REG_MODULE(LuaCDialogBuilder)
-			REG_MODULE(LuaCMarkup)
-			REG_MODULE(LuaCMarkupNode)
-			REG_MODULE(LuaCPaintManagerUI)
-			REG_MODULE(LuaCRenderClip)
-			REG_MODULE(LuaCRenderEngine)
-			REG_MODULE(LuaCNotifyPump)
-			REG_MODULE(LuaCWindowWnd)
+			LUA_CLASS_REG(TNotifyUI)
+			LUA_CLASS_REG(TFontInfo)
+			LUA_CLASS_REG(TImageInfo)
+			LUA_CLASS_REG(TEventUI)
+			LUA_CLASS_REG(EventMarco)
+			LUA_CLASS_REG(MsgArgs)
+			LUA_CLASS_REG(DuiLib)
+			LUA_CLASS_REG(CDialogBuilder)
+			LUA_CLASS_REG(CMarkup)
+			LUA_CLASS_REG(CMarkupNode)
+			LUA_CLASS_REG(CPaintManagerUI)
+			LUA_CLASS_REG(CRenderClip)
+			LUA_CLASS_REG(CRenderEngine)
+			LUA_CLASS_REG(CNotifyPump)
+			LUA_CLASS_REG(CWindowWnd)
 		}
 	};
 }

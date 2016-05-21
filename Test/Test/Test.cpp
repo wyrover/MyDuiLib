@@ -437,9 +437,8 @@ int RunLua(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nC
 {
 	CPaintManagerUI::SetInstance(hInstance);
 	CDuiString sInstPath = CPaintManagerUI::GetInstancePath();
-	Lua::ConsoleToggle(true);
 	Lua::CoInitialize();
-	Lua::SetLuaPath(sInstPath);
+	Lua::SetLuaPath(PathUtil::CombinePath(sInstPath,_T("lua")));
 	Lua::RequireModule("main");
 
 	Lua::GetGlobal("main");
@@ -451,11 +450,11 @@ int RunLua(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nC
 	LuaStackOpt::PushStack(sCmd);
 	dui_int32 nCmd = nCmdShow;
 	LuaStackOpt::PushStack(nCmd);
-
 	Lua::PCall(4, 0);
 
 	Lua::GetGlobal("exit");
 	Lua::PCall(0, 0);
+	
 	Lua::CoUninitialize();
 	return 0;
 }
@@ -513,12 +512,12 @@ extern int RunTestApp(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR /*
 
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
-	DuiLib::DuiEngine::Initialize();
+	DuiLib::DuiEngine::Initialize(VsOutput);
 	//RunCpp(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 
-	//RunLua(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+	RunLua(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 
-	RunRichEditTest(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
+	//RunRichEditTest(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 
 	//RunTestApp(hInstance, hPrevInstance, lpCmdLine, nCmdShow);
 

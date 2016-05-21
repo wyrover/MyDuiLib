@@ -2,7 +2,7 @@
 #define _LuaUtilsInclude_h
 #pragma once
 
-#include "LuaWindowExport.h"
+#include REQUIRE_H(CLuaWindow)
 
 namespace DuiLib
 {
@@ -11,7 +11,7 @@ namespace DuiLib
 	public:
 		static void RegModule(lua_State* l)
 		{
-			REG_MODULE(LuaWindowExport)
+			LUA_CLASS_REG(CLuaWindow)
 		}
 	};
 }

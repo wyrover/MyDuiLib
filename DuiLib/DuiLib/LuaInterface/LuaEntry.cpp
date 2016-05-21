@@ -58,10 +58,10 @@ namespace DuiLib
 		//CDuiString strlog = CDuiString::FormatString(_T("%s"), s.c_str());
 		CDuiString strlog;
 		lua_cstring_tool::toDuiString(s, strlog);
-		if (Lua::CanVsOutput())
+		if (DuiEngine::VsOutputLog())
 			VSOutput::Write(strlog);
 
-		if (Lua::CanConsoleOutput())
+		if (DuiEngine::ConsoleLog())
 			Console::Write(strlog);
 
 		return 0;
@@ -79,6 +79,7 @@ namespace DuiLib
 	{
 		return print(l);
 	}
+
 	int LuaStatic::loader(lua_State* l)
 	{
 		// Get script to load
@@ -100,13 +101,16 @@ namespace DuiLib
 		int oldTop = lua_gettop(l);
 
 		WinIO ioFile;
-		if (0 == ioFile.open(fileName.c_str(), true))
+		if (0 != ioFile.open(fileName.c_str(), "r"))
 		{
-			int nSize = ioFile.get_size();
-			char* buffer = new char[nSize + 1];
-			memset(buffer, 0, nSize + 1);
-			unsigned int nRead = 0;
-			ioFile.read(buffer, nSize, &nRead);
+			lua_pop(l, 1);
+			return 0;
+		}
+
+		char* buffer = NULL;
+		unsigned int nRead = 0;
+		if (0 == ioFile.readAll((void**)&buffer, &nRead))
+		{
 			ioFile.close();
 			std::string chunk = "@";
 			chunk += fileName;
@@ -117,16 +121,15 @@ namespace DuiLib
 				//Show Error
 				lua_pop(l, 1);
 			}
-
-			delete []buffer;
+			delete[]buffer;
+			buffer = NULL;
+			return 1;
 		}
 		else
 		{
 			lua_pop(l, 1);
 			return 0;
 		}
-
-		return 1;
 	}
 	int LuaStatic::loadfile(lua_State* l)
 	{
@@ -170,7 +173,7 @@ namespace DuiLib
 			lua_call(l, 0, LUA_MULTRET);
 		}
 		delete []buffer;
-
+		buffer = NULL;
 		return lua_gettop(l) - n;
 	}
 
@@ -499,9 +502,6 @@ namespace DuiLib
 		end\
 		";
 
-	bool Lua::_bVsOutput = false;
-	bool Lua::_bConsole = false;
-
 	lua_State* Lua::newState()
 	{
 		static lua_State* l = luaL_newstate();
@@ -534,11 +534,11 @@ namespace DuiLib
 
 	void Lua::StaticReg(lua_State* l)
 	{
-		lua_atpanic(l, LuaStatic::panic);
 		luaL_openlibs(l);
+		lua_atpanic(l, LuaStatic::panic);
 
-		//lua_pushcfunction(l, LuaStatic::pcall);
-		//lua_setfield(l, LUA_GLOBALSINDEX, "pcall");
+		lua_pushcfunction(l, LuaStatic::pcall);
+		lua_setfield(l, LUA_GLOBALSINDEX, "pcall");
 		lua_pushcfunction(l, LuaStatic::print);
 		lua_setfield(l, LUA_GLOBALSINDEX, "print");
 		lua_pushcfunction(l, LuaStatic::warn);
@@ -548,6 +548,8 @@ namespace DuiLib
 		lua_pushcfunction(l, LuaStatic::dofile);
 		lua_setfield(l, LUA_GLOBALSINDEX, "dofile");
 		
+		lua_pushcfunction(l, LuaStatic::traceback);
+		LuaStatic::errorFuncRef = luaL_ref(l, LUA_REGISTRYINDEX);
 		
 		/*lua_getglobal(l, "_G");
 
@@ -580,12 +582,9 @@ namespace DuiLib
 		lua_settop(l, 0);
 
 		
-		lua_pushcfunction(l, LuaStatic::traceback);
-		LuaStatic::errorFuncRef = luaL_ref(l, LUA_REGISTRYINDEX);
-
-
-		LuaStatic::InitObjsWeakTable(l);
-		lua_pop(l, 1);
+		
+		//LuaStatic::InitObjsWeakTable(l);
+		//lua_pop(l, 1);
 	}
 
 	void Lua::Register(lua_State* l)

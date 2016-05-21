@@ -9,7 +9,7 @@ namespace DuiLib
 
 	#define LUA_DECLARE_METHOD(Class, Name) {#Name, &Class::Name}
 
-	template <typename T,const char* className=CDuiString(T::GetClassName()).str().c_str()> 
+	template <typename T,const char* className> 
 	class LuaBinding 
 	{
 		typedef struct { T *pT; } userdataType;
