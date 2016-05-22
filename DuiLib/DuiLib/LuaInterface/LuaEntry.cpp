@@ -58,11 +58,13 @@ namespace DuiLib
 		//CDuiString strlog = CDuiString::FormatString(_T("%s"), s.c_str());
 		CDuiString strlog;
 		lua_cstring_tool::toDuiString(s, strlog);
-		if (DuiEngine::VsOutputLog())
+		/*if (DuiEngine::VsOutputLog())
 			VSOutput::Write(strlog);
 
 		if (DuiEngine::ConsoleLog())
-			Console::Write(strlog);
+			Console::Write(strlog);*/
+
+		DuiLogInfo(strlog.GetData());
 
 		return 0;
 	}

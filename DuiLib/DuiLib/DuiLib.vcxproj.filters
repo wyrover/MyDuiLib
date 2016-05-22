@@ -59,6 +59,9 @@
     <Filter Include="LuaInterface\LuaUtils">
       <UniqueIdentifier>{83432c68-4bb3-47f8-ad48-49d93a279062}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LuaInterface\Lua">
+      <UniqueIdentifier>{ec813cd2-88dc-4d0b-b7bc-7c11aadc4594}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
@@ -294,15 +297,6 @@
     <ClCompile Include="DllMain.cpp" />
     <ClCompile Include="DuiEngine.cpp" />
     <ClCompile Include="UIlib.cpp" />
-    <ClCompile Include="LuaInterface\LuaCWindow.cpp">
-      <Filter>LuaInterface</Filter>
-    </ClCompile>
-    <ClCompile Include="LuaInterface\LuaEntry.cpp">
-      <Filter>LuaInterface</Filter>
-    </ClCompile>
-    <ClCompile Include="LuaInterface\LuaRegister.cpp">
-      <Filter>LuaInterface</Filter>
-    </ClCompile>
     <ClCompile Include="LuaInterface\bit.c">
       <Filter>LuaInterface</Filter>
     </ClCompile>
@@ -433,6 +427,18 @@
       <Filter>LuaInterface\LuaUtils</Filter>
     </ClCompile>
     <ClCompile Include="LuaInterface\LuaUtils\Lua_CLuaWindow.cpp">
+      <Filter>LuaInterface\LuaUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaCWindow.cpp">
+      <Filter>LuaInterface\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaEntry.cpp">
+      <Filter>LuaInterface\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaRegister.cpp">
+      <Filter>LuaInterface\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="LuaInterface\LuaUtils\Lua_DuiEngine.cpp">
       <Filter>LuaInterface\LuaUtils</Filter>
     </ClCompile>
   </ItemGroup>
@@ -693,18 +699,6 @@
     <ClInclude Include="resource.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
-    <ClInclude Include="LuaInterface\LuaCWindow.h">
-      <Filter>LuaInterface</Filter>
-    </ClInclude>
-    <ClInclude Include="LuaInterface\LuaEntry.h">
-      <Filter>LuaInterface</Filter>
-    </ClInclude>
-    <ClInclude Include="LuaInterface\LuaOp.h">
-      <Filter>LuaInterface</Filter>
-    </ClInclude>
-    <ClInclude Include="LuaInterface\LuaRegister.h">
-      <Filter>LuaInterface</Filter>
-    </ClInclude>
     <ClInclude Include="LuaInterface\LuaControl\Lua_CActiveXUI.h">
       <Filter>LuaInterface\Control</Filter>
     </ClInclude>
@@ -843,8 +837,23 @@
     <ClInclude Include="LuaInterface\LuaUtils\Lua_CLuaWindow.h">
       <Filter>LuaInterface\LuaUtils</Filter>
     </ClInclude>
+    <ClInclude Include="LuaInterface\LuaRegister.h">
+      <Filter>LuaInterface\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaCWindow.h">
+      <Filter>LuaInterface\Lua</Filter>
+    </ClInclude>
     <ClInclude Include="LuaInterface\LuaDefine.h">
-      <Filter>LuaInterface</Filter>
+      <Filter>LuaInterface\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaEntry.h">
+      <Filter>LuaInterface\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaOp.h">
+      <Filter>LuaInterface\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="LuaInterface\LuaUtils\Lua_DuiEngine.h">
+      <Filter>LuaInterface\LuaUtils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

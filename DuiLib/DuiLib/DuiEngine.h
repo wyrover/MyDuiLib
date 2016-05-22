@@ -10,6 +10,7 @@ namespace DuiLib
 	public:
 		static BOOL Initialize(DWORD nFlag = 0);
 		static BOOL Unitialize();
+		static void ConsoleLogAndVsOutput(DWORD dwFlag);
 		static BOOL ConsoleLog();
 		static BOOL VsOutputLog();
 	protected:

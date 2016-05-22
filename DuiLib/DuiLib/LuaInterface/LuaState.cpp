@@ -1,164 +1,129 @@
-#include "LuaEntry.h"
 #include "LuaState.h"
-
+#include "lauxlib.h"
 
 namespace DuiLib
 {
-	lua_State* LuaState::m_Lua = NULL;
-	luaCallFunc LuaState::luaPanic = NULL;
-	luaCallFunc LuaState::luaPrint = NULL;
+	LuaVar::LuaVar() : state(NULL), valueref(0) {}
+	LuaVar::LuaVar(LuaState* state_, int ref) : state(state_), valueref(ref) {}
+	LuaVar::LuaVar(lua_State* l, int ref) {}
+	LuaVar::~LuaVar() {
+		Dispose(false);
+	}
 
-	lua_State* LuaState::newLua()
+	void LuaVar::Dispose()
 	{
-		lua_State  *ls;
+		Dispose(true);
+		
+	}
 
-		ls = luaL_newstate();
-		if (ls == NULL) {
+	void LuaVar::Dispose(bool disposeManagedResources)
+	{
+		if (valueref != 0)
+		{
+			
+		}
+	}
+
+	lua_State* LuaVar::L() {
+		return state->L;
+	}
+	int LuaVar::Ref() {
+		return valueref;
+	}
+
+	void LuaVar::push(lua_State* l)
+	{
+		lua_getref(l, valueref);
+	}
+
+	int LuaVar::GetHashCode()
+	{
+		return 0;
+	}
+	bool LuaVar::Equals(IDisposable& obj)
+	{
+		return false;
+	}
+
+	bool LuaVar::operator ==(LuaVar& obj)
+	{
+		return false;
+	}
+
+	bool LuaVar::operator !=(LuaVar& obj)
+	{
+		return false;
+	}
+
+	//////////////////////////////////////////////////
+	lua_State* LuaState::L = NULL;
+	LuaState* LuaState::mainL = NULL;
+	std::map<lua_State*, LuaState*> LuaState::statemap;
+	lua_State* LuaState::oldptr = NULL;
+	LuaState* LuaState::oldstate = NULL;
+	LuaCFunction LuaState::errorFunc = NULL;
+
+	bool LuaState::isMainThread() {
+		return true;
+	}
+
+	void LuaState::Dispose()
+	{
+		Dispose(true);
+
+	}
+
+	void LuaState::Dispose(bool disposeManagedResources)
+	{
+		
+	}
+
+	int LuaState::GetHashCode()
+	{
+		return 0;
+	}
+	bool LuaState::Equals(IDisposable& obj)
+	{
+		return false;
+	}
+
+	LuaState* LuaState::get(lua_State* l)
+	{
+		if (l == oldptr)
+			return oldstate;
+
+		std::map<lua_State*, LuaState*>::const_iterator it = statemap.find(l);
+		if (it != statemap.end())
+		{
+			oldptr = l;
+			oldstate = it->second;
+			return oldstate;
+		}
+
+		lua_getglobal(l, "__main_state");
+		if (lua_isnil(l, -1))
+		{
+			lua_pop(l, 1);
 			return NULL;
 		}
 
-		lua_atpanic(ls, lua_panic);
-		luaL_openlibs(ls);
-
-		lua_createtable(ls, 0, 32);
-
-		return ls;
+		lua_State* nl = (lua_State*)lua_touserdata(l, -1);
+		lua_pop(l, 1);
+		if (nl != l)
+			return get(nl);
+		return NULL;
 	}
 
-	void LuaState::closeLua()
+	LuaState::LuaState()
 	{
-		if (NULL != m_Lua)
-		{
-			::lua_close(m_Lua);
-			m_Lua = NULL;
-		}
-	}
-	int LuaState::lua_panic(lua_State* ls)
-	{
-		if (NULL != luaPanic)
-		{
-			return luaPanic(ls);
-		}
-		else
-		{
-			char  *errstr;
+		mainThreadId = ::GetCurrentThreadId();
+		l_ = luaL_newstate();
+		statemap.insert(std::make_pair(l_, this));
+		if (NULL == mainL)
+			mainL = this;
 
-			errstr = (char *)lua_tostring(ls, -1);
+		refQueue.clear();
 
-			MessageBox(NULL, errstr, "", MB_OK);
-		}
-		return 0;
-	}
-	int LuaState::lua_print(lua_State* ls)
-	{
-		string str;
-		int nargs = lua_gettop(ls);
-		for (int i = 1; i <= nargs; i++) {
-			if (lua_isstring(ls, i))
-			{
-				char *name = (char *)luaL_checkstring(ls, i);
-
-				name = Utf8Char::ngx_utf8_to_gb(name);
-				str.append(name);
-				free(name);
-			}
-			else if (lua_isboolean(ls, i))
-				str += (lua_toboolean(ls, i) ? _T("true") : _T("false"));
-			else if (lua_istable(ls, i))
-				str += _T("table");
-			else if (lua_isuserdata(ls, i))
-				str += _T("userdata");
-			else if (lua_isnil(ls, i))
-				str += _T("nil");
-		}
-		str += _T("\n");
-		Console::Write(str.c_str());
-		return 0;
-
-	}
-
-
-	void LuaState::AddPackagePath(const char* path)
-	{
-		if (NULL != m_Lua)
-		{
-			string new_path = "package.path = package.path .. \"";
-			if (!path || strlen(path) == 0)
-			{
-				return;
-			}
-
-			if (path[0] != ';')
-			{
-				new_path += ";";
-			}
-
-			new_path.append(path);
-
-			if (path[strlen(path) - 1] != '/')
-			{
-				new_path.append("/");
-			}
-
-			new_path.append("?.lua\" ");
-
-			if (luaL_dostring(m_Lua, new_path.c_str()))
-			{
-				char* err = (char*)lua_tostring(m_Lua, -1);
-				::lua_pop(m_Lua, 1);
-			}
-		}
-	}
-	bool LuaState::LoadFile(const char* file)
-	{
-		if (NULL != m_Lua)
-		{
-			return 0 == luaL_dofile(m_Lua, file);
-		}
-		return false;
-	}
-
-	bool LuaState::RunString(const char* str)
-	{
-		if (NULL != m_Lua)
-		{
-			return 0 == luaL_dostring(m_Lua, str);
-		}
-		return false;
-	}
-
-	const struct luaL_reg LuaState::printlib[] = {
-			{ "print", lua_print },
-			{ NULL, NULL } /* end of array */
-	};
-
-
-	bool LuaState::CoInitialize()
-	{
-		if (NULL == m_Lua)
-		{
-			m_Lua = newLua();
-
-			lua_getglobal(m_Lua, "_G");
-			luaL_register(m_Lua, NULL, printlib);
-			lua_pop(m_Lua, 1);
-
-			Register(m_Lua);
-			lua_setglobal(m_Lua, "DuiLib");
-
-			return true;
-		}
-		return false;
-	}
-
-	void LuaState::CoUninitialize()
-	{
-		closeLua();
-	}
-
-	void LuaState::Register(lua_State* ls)
-	{
-		LuaUIControl::Register(ls);
 	}
 }
 

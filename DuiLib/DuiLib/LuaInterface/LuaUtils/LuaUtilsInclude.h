@@ -3,6 +3,7 @@
 #pragma once
 
 #include REQUIRE_H(CLuaWindow)
+#include REQUIRE_H(DuiEngine)
 
 namespace DuiLib
 {
@@ -12,6 +13,7 @@ namespace DuiLib
 		static void RegModule(lua_State* l)
 		{
 			LUA_CLASS_REG(CLuaWindow)
+			LUA_CLASS_REG(DuiEngine)
 		}
 	};
 }

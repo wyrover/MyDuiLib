@@ -660,6 +660,7 @@
     <ClCompile Include="LuaInterface\LuaRegister.cpp" />
     <ClCompile Include="LuaInterface\LuaUtils\Lua_Debug.cpp" />
     <ClCompile Include="LuaInterface\LuaUtils\Lua_CLuaWindow.cpp" />
+    <ClCompile Include="LuaInterface\LuaUtils\Lua_DuiEngine.cpp" />
     <ClCompile Include="UIlib.cpp" />
     <ClCompile Include="Utils\DuiSystem.cpp" />
     <ClCompile Include="Utils\FileDialog.cpp" />
@@ -797,6 +798,7 @@
     <ClInclude Include="LuaInterface\LuaUtils\LuaUtilsInclude.h" />
     <ClInclude Include="LuaInterface\LuaUtils\Lua_Debug.h" />
     <ClInclude Include="LuaInterface\LuaUtils\Lua_CLuaWindow.h" />
+    <ClInclude Include="LuaInterface\LuaUtils\Lua_DuiEngine.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="UIlib.h" />
     <ClInclude Include="Utils\downloadmgr.h" />

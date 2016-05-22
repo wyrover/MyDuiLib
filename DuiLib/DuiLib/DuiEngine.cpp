@@ -51,6 +51,17 @@ GetCurMemoryFile().GetData());
 		return TRUE;
 	}
 
+	void DuiEngine::ConsoleLogAndVsOutput(DWORD dwFlag)
+	{
+		if ((dwFlag & ConsoleOutput) != 0)
+			dwMask |= ConsoleOutput;
+		if((dwFlag & VsOutput))
+			dwMask |= VsOutput;
+
+		DuiLogger::Instance()->ConsoleToggle((dwMask & ConsoleOutput) != 0);
+		DuiLogger::Instance()->VSOutputToggle((dwMask & VsOutput) != 0);
+	}
+
 	BOOL DuiEngine::ConsoleLog()
 	{
 		return (DuiEngine::dwMask & ConsoleOutput) != 0;
