@@ -1,11 +1,11 @@
 #ifndef _Lua_CAnimationTabLayoutUI_h
 #define _Lua_CAnimationTabLayoutUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CAnimationTabLayoutUI)
+	LUA_CLASS(CAnimationTabLayoutUI, AnimationTabLayoutUI, CAnimationTabLayoutUI, TabLayoutUI, CTabLayoutUI)
 	{
 	public:
 		

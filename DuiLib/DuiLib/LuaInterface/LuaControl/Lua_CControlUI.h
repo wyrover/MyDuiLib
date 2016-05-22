@@ -1,11 +1,10 @@
 #ifndef _Lua_CControlUI_h
 #define _Lua_CControlUI_h
 #pragma once
-
-
+#include "LuaDefine.h"
 namespace DuiLib
 {
-	LUA_CLASS(CControlUI)
+	LUA_CLASS(CControlUI, ControlUI, CControlUI, ControlUI, CControlUI)
 	{
 	public:
 		LUA_METHOD_DECL(isnil)

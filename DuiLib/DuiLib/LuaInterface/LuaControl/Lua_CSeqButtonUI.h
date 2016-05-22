@@ -1,11 +1,11 @@
 #ifndef _Lua_CSeqButtonUI_h
 #define _Lua_CSeqButtonUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CSeqButtonUI)
+	LUA_CLASS(CSeqButtonUI, SeqButtonUI, CSeqButtonUI, ButtonUI, CButtonUI)
 	{
 	public:
 		

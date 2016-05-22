@@ -1,11 +1,11 @@
 #ifndef _Lua_CAnimControlUI_h
 #define _Lua_CAnimControlUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CAnimControlUI)
+	LUA_CLASS(CAnimControlUI, AnimControlUI, CAnimControlUI, LabelUI, CLabelUI)
 	{
 	public:
 		

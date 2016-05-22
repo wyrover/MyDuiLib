@@ -1,11 +1,11 @@
 #ifndef _Lua_CFadeOptionUI_h
 #define _Lua_CFadeOptionUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CFadeOptionUI)
+	LUA_CLASS(CFadeOptionUI, FadeOptionUI, CFadeOptionUI, OptionUI, COptionUI)
 	{
 	public:
 		

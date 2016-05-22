@@ -1,11 +1,11 @@
 #ifndef _Lua_CHotKeyUI_h
 #define _Lua_CHotKeyUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CHotKeyUI)
+	LUA_CLASS(CHotKeyUI, HotKeyUI, CHotKeyUI, LabelUI, CLabelUI)
 	{
 	public:
 		

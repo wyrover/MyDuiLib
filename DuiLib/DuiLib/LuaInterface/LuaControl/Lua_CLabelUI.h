@@ -1,11 +1,11 @@
 #ifndef _Lua_CLabelUI_h
 #define _Lua_CLabelUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CLabelUI)
+	LUA_CLASS(CLabelUI, LabelUI, CLabelUI, ControlUI, CControlUI)
 	{
 	public:
 		

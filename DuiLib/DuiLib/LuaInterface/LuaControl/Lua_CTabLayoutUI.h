@@ -1,11 +1,11 @@
 #ifndef _Lua_CTabLayoutUI_h
 #define _Lua_CTabLayoutUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CTabLayoutUI)
+	LUA_CLASS(CTabLayoutUI, TabLayoutUI, CTabLayoutUI, ProgressUI, CProgressUI)
 	{
 	public:
 		

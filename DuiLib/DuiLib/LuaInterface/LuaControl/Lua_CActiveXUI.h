@@ -1,11 +1,11 @@
 #ifndef _Lua_CActiveXUI_h
 #define _Lua_CActiveXUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CActiveXUI)
+	LUA_CLASS(CActiveXUI, ActiveXUI, CActiveXUI, ControlUI, CControlUI)
 	{
 	public:
 		

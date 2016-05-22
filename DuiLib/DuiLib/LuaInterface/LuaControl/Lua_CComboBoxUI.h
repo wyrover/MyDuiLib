@@ -1,11 +1,11 @@
 #ifndef _Lua_CComboBoxUI_h
 #define _Lua_CComboBoxUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CComboBoxUI)
+	LUA_CLASS(CComboBoxUI, ComboBoxUI, CComboBoxUI, ComboUI, CComboUI)
 	{
 	public:
 		

@@ -1,10 +1,11 @@
 #ifndef _LuaCWindowWnd_H
 #define _LuaCWindowWnd_H
 #pragma once
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CNotifyPump)
+	LUA_CLASS(CNotifyPump, NotifyPump, CNotifyPump, NotifyPump, CNotifyPump)
 	{
 	public:
 		LUA_METHOD_DECL(AddVirtualWnd)
@@ -15,7 +16,7 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(CWindowWnd)
+	LUA_CLASS(CWindowWnd, WindowWnd, CWindowWnd, WindowWnd, CWindowWnd)
 	{
 	public:
 		LUA_METHOD_DECL(GetClassName)

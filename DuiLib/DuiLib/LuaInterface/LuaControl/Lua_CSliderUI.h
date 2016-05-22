@@ -1,11 +1,11 @@
 #ifndef _Lua_CSliderUI_h
 #define _Lua_CSliderUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CSliderUI)
+	LUA_CLASS(CSliderUI, SliderUI, CSliderUI, ContainerUI, CContainerUI)
 	{
 	public:
 		

@@ -1,11 +1,11 @@
 #ifndef _Lua_CProgressUI_h
 #define _Lua_CProgressUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CProgressUI)
+	LUA_CLASS(CProgressUI, ProgressUI, CProgressUI, LabelUI, CLabelUI)
 	{
 	public:
 		

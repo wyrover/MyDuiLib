@@ -1,11 +1,11 @@
 #ifndef _Lua_CAlbumButtonUI_h
 #define _Lua_CAlbumButtonUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CAlbumButtonUI)
+	LUA_CLASS(CAlbumButtonUI, AlbumButtonUI, CAlbumButtonUI, ButtonUI, CButtonUI)
 	{
 	public:
 		

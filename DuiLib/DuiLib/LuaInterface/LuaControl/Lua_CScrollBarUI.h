@@ -1,11 +1,11 @@
 #ifndef _Lua_CScrollBarUI_h
 #define _Lua_CScrollBarUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CScrollBarUI)
+	LUA_CLASS(CScrollBarUI, ScrollBarUI, CScrollBarUI, ControlUI, CControlUI)
 	{
 	public:
 		

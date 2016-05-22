@@ -843,5 +843,8 @@
     <ClInclude Include="LuaInterface\LuaUtils\Lua_CLuaWindow.h">
       <Filter>LuaInterface\LuaUtils</Filter>
     </ClInclude>
+    <ClInclude Include="LuaInterface\LuaDefine.h">
+      <Filter>LuaInterface</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

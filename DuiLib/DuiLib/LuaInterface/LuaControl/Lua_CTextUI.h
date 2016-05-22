@@ -1,11 +1,11 @@
 #ifndef _Lua_CTextUI_h
 #define _Lua_CTextUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CTextUI)
+	LUA_CLASS(CTextUI, TextUI, CTextUI, LabelUI, CLabelUI)
 	{
 	public:
 		

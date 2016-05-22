@@ -1,10 +1,11 @@
 #ifndef _LuaStruct_H
 #define _LuaStruct_H
 #pragma once
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(TNotifyUI)
+	LUA_CLASS(TNotifyUI, NotifyUI, TNotifyUI, NotifyUI, TNotifyUI)
 	{
 	public:
 		LUA_METHOD_DECL(isnil)
@@ -33,7 +34,7 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(TFontInfo)
+	LUA_CLASS(TFontInfo, FontInfo, TFontInfo, FontInfo, TFontInfo)
 	{
 	public:
 		LUA_METHOD_DECL(isnil)
@@ -60,7 +61,7 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(TImageInfo)
+	LUA_CLASS(TImageInfo, ImageInfo, TImageInfo, ImageInfo, TImageInfo)
 	{
 	public:
 		LUA_METHOD_DECL(isnil)
@@ -85,7 +86,7 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(TEventUI)
+	LUA_CLASS(TEventUI, EventUI, TEventUI, EventUI, TEventUI)
 	{
 	public:
 		LUA_METHOD_DECL(isnil)
@@ -114,7 +115,7 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(DuiLib)
+	LUA_CLASS(DuiLib, DuiLib, DuiLib, DuiLib, DuiLib)
 	{
 		LUA_METHOD_DECL(MsgBox)
 		LUA_METHOD_DECL(TraceMsg)
@@ -123,13 +124,14 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(MsgArgs)
+	LUA_CLASS(MsgArgs, MsgArgs, MsgArgs, MsgArgs, MsgArgs)
 	{
 	public:
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(EventMarco)
+	
+	LUA_CLASS(EventMarco, EventMarco, EventMarco, EventMarco, EventMarco)
 	{
 	public:
 		LUA_CLASS_REG_DECL()

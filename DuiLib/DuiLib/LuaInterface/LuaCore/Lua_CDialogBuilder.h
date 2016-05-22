@@ -1,10 +1,11 @@
 #ifndef _LuaCDialogBuilder_H
 #define _LuaCDialogBuilder_H
 #pragma once
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CDialogBuilder)
+	LUA_CLASS(CDialogBuilder, DialogBuilder, CDialogBuilder, DialogBuilder, CDialogBuilder)
 	{
 	public:
 		LUA_METHOD_DECL(isnil)

@@ -1,11 +1,11 @@
 #ifndef _Lua_CVerticalLayoutUI_h
 #define _Lua_CVerticalLayoutUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CVerticalLayoutUI)
+	LUA_CLASS(CVerticalLayoutUI, VerticalLayoutUI, CVerticalLayoutUI, ContainerUI, CContainerUI)
 	{
 	public:
 		

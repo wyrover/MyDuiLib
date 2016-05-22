@@ -1,11 +1,11 @@
 #ifndef _Lua_CFadeCheckBoxUI_h
 #define _Lua_CFadeCheckBoxUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CFadeCheckBoxUI)
+	LUA_CLASS(CFadeCheckBoxUI, FadeCheckBoxUI, CFadeCheckBoxUI, FadeOptionUI, CFadeOptionUI)
 	{
 	public:
 		

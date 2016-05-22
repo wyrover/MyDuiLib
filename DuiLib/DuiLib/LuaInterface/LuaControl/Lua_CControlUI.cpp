@@ -17,7 +17,7 @@ namespace DuiLib
 	LUA_METHOD_IMPL(CControlUI, New)
 	{
 		CControlUI  *ctrl = new CControlUI();
-		LuaStatic::AddObject2Lua(l,ctrl,METATABLE_NAME(ctrl));
+		LuaStatic::AddObject2Lua(l,ctrl, MetaName());
 		return 1;
 	}
 
@@ -2265,9 +2265,9 @@ namespace DuiLib
 			{ "New", New },
 		};
 		LuaStatic::LuaSetFuncsInTable(l, StaticFuncs,sizeof(StaticFuncs)/sizeof(StaticFuncs[0]));
-		lua_setfield(l, -2, "ControlUI");
+		lua_setfield(l, -2, ExportName());
 		
-		luaL_newmetatable(l, "CControlUI");
+		luaL_newmetatable(l, MetaName());
 			
 		lua_pushvalue(l, -1);
 		lua_setfield(l, -2, "__index");

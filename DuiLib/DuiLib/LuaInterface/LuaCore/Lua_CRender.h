@@ -1,10 +1,11 @@
 #ifndef _LuaCRender_H
 #define _LuaCRender_H
 #pragma once
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CRenderClip)
+	LUA_CLASS(CRenderClip, RenderClip, CRenderClip, RenderClip, CRenderClip)
 	{
 	public:
 		LUA_METHOD_DECL(isnil)
@@ -32,7 +33,7 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(CRenderEngine)
+	LUA_CLASS(CRenderEngine, RenderEngine, CRenderEngine, RenderEngine, CRenderEngine)
 	{
 	public:
 		LUA_METHOD_DECL(AdjustColor)

@@ -1,11 +1,11 @@
 #ifndef _Lua_CTreeViewUI_h
 #define _Lua_CTreeViewUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CTreeNodeUI)
+	LUA_CLASS(CTreeNodeUI, TreeNodeUI, CTreeNodeUI, ListContainerElementUI, CListContainerElementUI)
 	{
 	public:
 		LUA_METHOD_DECL(New)
@@ -41,7 +41,7 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(CTreeViewUI)
+	LUA_CLASS(CTreeViewUI, TreeViewUI, CTreeViewUI, ListUI, CListUI)
 	{
 	public:
 		

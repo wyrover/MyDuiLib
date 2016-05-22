@@ -1,11 +1,11 @@
 #ifndef _Lua_CEditUI_h
 #define _Lua_CEditUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CEditUI)
+	LUA_CLASS(CEditUI, EditUI, CEditUI, LabelUI, CLabelUI)
 	{
 	public:
 		

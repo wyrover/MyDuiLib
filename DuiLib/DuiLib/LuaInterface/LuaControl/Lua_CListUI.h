@@ -1,11 +1,11 @@
 #ifndef _Lua_CListUI_h
 #define _Lua_CListUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CListUI)
+	LUA_CLASS(CListUI, ListUI, CListUI, VerticalLayoutUI, CVerticalLayoutUI)
 	{
 	public:
 		LUA_METHOD_DECL(New)
@@ -65,7 +65,7 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(CListBodyUI)
+	LUA_CLASS(CListBodyUI, ListBodyUI, CListBodyUI, VerticalLayoutUI, CVerticalLayoutUI)
 	{
 	public:
 		LUA_METHOD_DECL(New)
@@ -74,7 +74,7 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(CListHeaderUI)
+	LUA_CLASS(CListHeaderUI, ListHeaderUI, CListHeaderUI, HorizontalLayoutUI, CHorizontalLayoutUI)
 	{
 	public:
 		LUA_METHOD_DECL(New)
@@ -83,7 +83,7 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(CListHeaderItemUI)
+	LUA_CLASS(CListHeaderItemUI, ListHeaderItemUI, CListHeaderItemUI, ControlUI, CControlUI)
 	{
 	public:
 		LUA_METHOD_DECL(New)
@@ -116,7 +116,7 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(CListElementUI)
+	LUA_CLASS(CListElementUI, ListElementUI, CListElementUI, ControlUI, CControlUI)
 	{
 	public:
 		LUA_METHOD_DECL(New)
@@ -133,7 +133,7 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(CListLabelElementUI)
+	LUA_CLASS(CListLabelElementUI, ListLabelElementUI, CListLabelElementUI, ListElementUI, CListElementUI)
 	{
 	public:
 		LUA_METHOD_DECL(New)
@@ -142,7 +142,7 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(CListTextElementUI)
+	LUA_CLASS(CListTextElementUI, ListTextElementUI, CListTextElementUI, ListLabelElementUI, CListLabelElementUI)
 	{
 	public:
 		LUA_METHOD_DECL(New)
@@ -155,7 +155,7 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(CListContainerElementUI)
+	LUA_CLASS(CListContainerElementUI, ListContainerElementUI, CListContainerElementUI, ContainerUI, CContainerUI)
 	{
 	public:		
 		LUA_METHOD_DECL(New)

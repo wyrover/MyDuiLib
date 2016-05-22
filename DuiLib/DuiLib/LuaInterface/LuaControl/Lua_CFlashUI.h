@@ -1,11 +1,11 @@
 #ifndef _Lua_CFlashUI_h
 #define _Lua_CFlashUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CFlashUI)
+	LUA_CLASS(CFlashUI, FlashUI, CFlashUI, ActiveXUI, CActiveXUI)
 	{
 	public:
 		

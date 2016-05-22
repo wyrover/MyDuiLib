@@ -1,11 +1,10 @@
 #ifndef _Lua_CContainerUI_h
 #define _Lua_CContainerUI_h
 #pragma once
-
-
+#include "LuaDefine.h"
 namespace DuiLib
 {
-	LUA_CLASS(CContainerUI)
+	LUA_CLASS(CContainerUI, ContainerUI, CContainerUI, ControlUI, CControlUI)
 	{
 	public:
 		LUA_METHOD_DECL(GetClassName)

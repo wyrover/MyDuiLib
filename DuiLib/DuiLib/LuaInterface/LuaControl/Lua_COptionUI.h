@@ -1,11 +1,11 @@
 #ifndef _Lua_COptionUI_h
 #define _Lua_COptionUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(COptionUI)
+	LUA_CLASS(COptionUI, OptionUI, COptionUI, ButtonUI, CButtonUI)
 	{
 	public:
 		

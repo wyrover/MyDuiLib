@@ -1,11 +1,11 @@
 #ifndef _Lua_CRadioUI_h
 #define _Lua_CRadioUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CRadioUI)
+	LUA_CLASS(CRadioUI, RadioUI, CRadioUI, OptionUI, COptionUI)
 	{
 	public:
 		

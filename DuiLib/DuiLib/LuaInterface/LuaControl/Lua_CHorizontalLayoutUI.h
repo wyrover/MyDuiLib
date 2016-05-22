@@ -1,11 +1,11 @@
 #ifndef _Lua_CHorizontalLayoutUI_h
 #define _Lua_CHorizontalLayoutUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CHorizontalLayoutUI)
+	LUA_CLASS(CHorizontalLayoutUI, HorizontalLayoutUI, CHorizontalLayoutUI, ContainerUI, CContainerUI)
 	{
 	public:
 		

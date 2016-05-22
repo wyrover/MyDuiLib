@@ -1,10 +1,11 @@
 #ifndef _LuaCPaintManagerUI_H
 #define _LuaCPaintManagerUI_H
 #pragma once
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CPaintManagerUI)
+	LUA_CLASS(CPaintManagerUI, PaintManagerUI, CPaintManagerUI, PaintManagerUI, CPaintManagerUI)
 	{
 	public:
 		LUA_METHOD_DECL(isnil)

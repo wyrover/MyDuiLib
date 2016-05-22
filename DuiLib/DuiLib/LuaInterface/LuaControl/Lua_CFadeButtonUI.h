@@ -1,11 +1,11 @@
 #ifndef _Lua_CFadeButtonUI_h
 #define _Lua_CFadeButtonUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CFadeButtonUI)
+	LUA_CLASS(CFadeButtonUI, FadeButtonUI, CFadeButtonUI, ButtonUI, CButtonUI)
 	{
 	public:
 		

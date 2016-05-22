@@ -790,6 +790,7 @@
     <ClInclude Include="LuaInterface\LuaCore\Lua_CWindowWnd.h" />
     <ClInclude Include="LuaInterface\LuaCore\Lua_Struct.h" />
     <ClInclude Include="LuaInterface\LuaCWindow.h" />
+    <ClInclude Include="LuaInterface\LuaDefine.h" />
     <ClInclude Include="LuaInterface\LuaEntry.h" />
     <ClInclude Include="LuaInterface\LuaOp.h" />
     <ClInclude Include="LuaInterface\LuaRegister.h" />

@@ -1,10 +1,11 @@
 #ifndef _LuaWindowExport_H
 #define _LuaWindowExport_H
 #pragma once
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CLuaWindow)
+	LUA_CLASS(CLuaWindow, LuaWindow, CLuaWindow, WindowWnd, CWindowWnd)
 	{
 	public:
 			LUA_METHOD_DECL(New)

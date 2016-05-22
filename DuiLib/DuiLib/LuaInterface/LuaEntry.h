@@ -3,8 +3,7 @@
 
 #pragma once
 #include <map>
-
-#include "lua.hpp"
+#include "LuaDefine.h"
 #include "LuaOp.h"
 #include "UIlib.h"
 
@@ -12,61 +11,6 @@
 
 namespace DuiLib
 {
-	class NameWarpForLua
-	{
-	public:
-		NameWarpForLua(char* s) {
-			name = s;
-		}
-		NameWarpForLua(const char* s) {
-			name = s;
-		}
-
-		const NameWarpForLua& operator=(char* s) {
-			name = s;
-			return *this;
-		}
-
-		const NameWarpForLua& operator=(const char* s) {
-			name = s;
-			return *this;
-		}
-
-		operator const char*() const {
-			return name.c_str();
-		}
-		
-
-		std::string name;
-	};
-}
-
-namespace DuiLib
-{
-#define  __string__(x)   #x
-
-#define REQUIRE_H(name) \
-	__string__(Lua_##name##.h)
-
-#define LUA_CLASS(name) \
-	class Lua_##name
-
-#define LUA_METHOD_DECL(func) \
-	static int func(lua_State* l);
-
-#define LUA_METHOD_IMPL(name,func) \
-	int Lua_##name::func(lua_State* l)
-
-#define LUA_CLASS_REG_DECL() \
-	static void Reg(lua_State* l);
-
-#define LUA_CLASS_REG_IMPL(name) \
-	void Lua_##name::Reg(lua_State* l)
-
-#define LUA_CLASS_REG(name) \
-	Lua_##name::Reg(l);
-
-
 	inline std::string ControlClass2MetatableName(IDuiObject* pControl)
 	{
 		CDuiString sName(pControl->GetClass());
@@ -80,19 +24,7 @@ namespace DuiLib
 		
 #define METATABLE_NAME(pCtrl)    ControlClass2MetatableName(pCtrl)
 
-	typedef int(*LuaCFunction)(lua_State* l);
-
-	struct LuaReg
-	{
-		const char* name;
-		LuaCFunction func;
-	};//end of LuaReg
-
-	struct LuaArgs 
-	{
-		const char* name;
-		unsigned int v;
-	};
+	
 
 	class LuaStatic
 	{

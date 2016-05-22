@@ -1,11 +1,11 @@
 #ifndef _Lua_CCheckBoxUI_h
 #define _Lua_CCheckBoxUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CCheckBoxUI)
+	LUA_CLASS(CCheckBoxUI, CheckBoxUI, CCheckBoxUI, OptionUI, COptionUI)
 	{
 	public:
 		

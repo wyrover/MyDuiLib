@@ -1,10 +1,11 @@
 #ifndef _LuaCMarkup_H
 #define _LuaCMarkup_H
 #pragma once
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CMarkup)
+	LUA_CLASS(CMarkup, Markup, CMarkup, Markup, CMarkup)
 	{
 	public:
 		LUA_METHOD_DECL(isnil)
@@ -28,7 +29,7 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
-	LUA_CLASS(CMarkupNode)
+	LUA_CLASS(CMarkupNode, MarkupNode, CMarkupNode, MarkupNode, CMarkupNode)
 	{
 	public:
 		LUA_METHOD_DECL(isnil)

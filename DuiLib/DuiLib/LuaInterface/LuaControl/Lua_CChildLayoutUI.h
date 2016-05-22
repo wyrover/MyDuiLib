@@ -1,11 +1,11 @@
 #ifndef _Lua_CChildLayoutUI_h
 #define _Lua_CChildLayoutUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CChildLayoutUI)
+	LUA_CLASS(CChildLayoutUI, ChildLayoutUI, CChildLayoutUI, ContainerUI, CContainerUI)
 	{
 	public:
 		

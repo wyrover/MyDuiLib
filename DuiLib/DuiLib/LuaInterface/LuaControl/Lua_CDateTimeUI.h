@@ -1,11 +1,11 @@
 #ifndef _Lua_CDateTimeUI_h
 #define _Lua_CDateTimeUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CDateTimeUI)
+	LUA_CLASS(CDateTimeUI, DateTimeUI, CDateTimeUI, LabelUI, CLabelUI)
 	{
 	public:
 		

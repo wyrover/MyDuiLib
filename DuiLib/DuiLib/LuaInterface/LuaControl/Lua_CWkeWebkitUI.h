@@ -1,11 +1,11 @@
 #ifndef _Lua_CWkeWebkitUI_h
 #define _Lua_CWkeWebkitUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CWkeWebkitUI)
+	LUA_CLASS(CWkeWebkitUI, WkeWebkitUI, CWkeWebkitUI, ControlUI, CControlUI)
 	{
 	public:
 		

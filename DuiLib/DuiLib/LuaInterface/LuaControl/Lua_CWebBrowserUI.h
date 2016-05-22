@@ -1,11 +1,11 @@
 #ifndef _Lua_CWebBrowserUI_h
 #define _Lua_CWebBrowserUI_h
 #pragma once
-
+#include "LuaDefine.h"
 
 namespace DuiLib
 {
-	LUA_CLASS(CWebBrowserUI)
+	LUA_CLASS(CWebBrowserUI, WebBrowserUI, CWebBrowserUI, ActiveXUI, CActiveXUI)
 	{
 	public:
 		LUA_METHOD_DECL(New)
