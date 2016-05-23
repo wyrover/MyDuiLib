@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="647,417" caption="0,0,0,30" sizebox="4,4,4,4" showdirty="false" trayiconid="107" traytiptext="PbElementData-L.DF">
+    <VerticalLayout name="bg" bkimage="arts\background\bg_002.jpg">
+        <HorizontalLayout height="30">
+            <HorizontalLayout />
+            <HorizontalLayout width="62">
+                <Button name="minbtn" width="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" transtext="168" transshadow="60" transtext1="168" transshadow1="60" textcolor1="#FFFFFFFF" textshadowcolora="#FF000000" textshadowcolorb="#FFFFFFFF" tooltip="Show Min"/>
+                <Button name="closebtn" width="30" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" transtext="168" transshadow="60" transtext1="168" transshadow1="60" textcolor1="#FFFFFFFF" textshadowcolora="#FF000000" textshadowcolorb="#FFFFFFFF" tooltip="Close"/>
+            </HorizontalLayout>
+        </HorizontalLayout>
+        <VerticalLayout />
+    </VerticalLayout>
+</Window>
