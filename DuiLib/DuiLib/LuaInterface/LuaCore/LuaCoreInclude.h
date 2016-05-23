@@ -22,6 +22,7 @@ namespace DuiLib
 			LUA_CLASS_REG(TEventUI)
 			LUA_CLASS_REG(EventMarco)
 			LUA_CLASS_REG(MsgArgs)
+			LUA_CLASS_REG(UILIB_RESOURCETYPE)
 			LUA_CLASS_REG(DuiLib)
 			LUA_CLASS_REG(CDialogBuilder)
 			LUA_CLASS_REG(CMarkup)

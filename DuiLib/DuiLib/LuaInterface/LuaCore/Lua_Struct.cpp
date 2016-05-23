@@ -1412,6 +1412,8 @@ namespace DuiLib
 			{ "WM_TIMER",WM_TIMER },
 			{ "WM_SYSCOMMAND",WM_SYSCOMMAND },
 			{ "WM_MENUCOMMAND",WM_MENUCOMMAND },
+			{ "WM_KEYDOWN",WM_KEYDOWN },
+			{ "WM_KEYUP",WM_KEYUP },
 		};
 		LuaStatic::LuaSetArgsInTable(l, StaticArgs, sizeof(StaticArgs) / sizeof(StaticArgs[0]));
 
@@ -1454,6 +1456,26 @@ namespace DuiLib
 		lua_setfield(l, -2, "EventArgs");
 	}
 }
+
+namespace DuiLib
+{
+	LUA_CLASS_REG_IMPL(UILIB_RESOURCETYPE)
+	{
+		lua_newtable(l);
+
+		static LuaArgs StaticArgs[] =
+		{
+			{ "UILIB_FILE", UILIB_FILE },
+			{ "UILIB_ZIP", UILIB_ZIP },
+			{ "UILIB_RESOURCE", UILIB_RESOURCE },
+			{ "UILIB_ZIPRESOURCE", UILIB_ZIPRESOURCE },
+		};
+		LuaStatic::LuaSetArgsInTable(l, StaticArgs, sizeof(StaticArgs) / sizeof(StaticArgs[0]));
+
+		lua_setfield(l, -2, ExportName());
+	}
+}
+
 
 namespace DuiLib
 {

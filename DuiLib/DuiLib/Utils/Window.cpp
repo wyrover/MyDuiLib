@@ -620,22 +620,34 @@ namespace DuiLib
 
 		CControlUI* pRoot = NULL;
 
-		switch (GetResourceType())
+		UILIB_RESOURCETYPE nResType = GetResourceType();
+
+		CDuiString err_msg;
+
+		switch (nResType)
 		{
 		case UILIB_FILE:
 			{
 				pRoot = builder.Create(xml, type, pCallback, _paintManager, pParent);
+				err_msg = CDuiString::FormatString(_T("Can not Load xml, file:%s,path:%s,type:UILIB_FILE"),
+					xml.m_lpstr,
+					strResourcePath.GetData());
 			}
 			break;
 		case UILIB_ZIP:
 			{
 				_paintManager->SetCurResourceZip(GetZIPFileName().GetData(), true);
 				pRoot = builder.Create(xml, type, pCallback, _paintManager, pParent);
+				err_msg = CDuiString::FormatString(_T("Can not Load xml, file:%s,path:%s,type:UILIB_ZIP"),
+					xml.m_lpstr,
+					PathUtil::CombinePath(strResourcePath.GetData(), GetZIPFileName().GetData()));
 			}
 			break;
 		case UILIB_RESOURCE:
 			{
 				pRoot = builder.Create(xml, type, pCallback, _paintManager, pParent);
+				err_msg = CDuiString::FormatString(_T("Can not Load xml, file:%s,type:UILIB_RESOURCE"),
+					xml.m_lpstr);
 			}
 			break;
 		case UILIB_ZIPRESOURCE:
@@ -668,10 +680,13 @@ namespace DuiLib
 				//_paintManager->SetResourceZip(m_lpResourceZIPBuffer, dwSize);
 
 				pRoot = builder.Create(xml, type, pCallback, _paintManager, pParent);
+				err_msg = CDuiString::FormatString(_T("Can not Load xml, file:%s,resid:%s,type:UILIB_ZIPRESOURCE"),
+					xml.m_lpstr,
+					GetResourceID());
 			}
 		}
 
-		ASSERT(pRoot);
+		DuiAssertX(pRoot, err_msg.GetData());
 		if (pRoot == NULL)
 		{
 			MessageBox(NULL, _T("加载资源文件失败"), _T("Duilib"), MB_OK | MB_ICONERROR);

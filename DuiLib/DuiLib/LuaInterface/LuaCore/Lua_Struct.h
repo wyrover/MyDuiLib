@@ -130,6 +130,12 @@ namespace DuiLib
 		LUA_CLASS_REG_DECL()
 	};
 
+	LUA_CLASS(UILIB_RESOURCETYPE, UILIB_RESOURCETYPE, UILIB_RESOURCETYPE, UILIB_RESOURCETYPE, UILIB_RESOURCETYPE)
+	{
+	public:
+		LUA_CLASS_REG_DECL()
+	};
+
 	
 	LUA_CLASS(EventMarco, EventMarco, EventMarco, EventMarco, EventMarco)
 	{
